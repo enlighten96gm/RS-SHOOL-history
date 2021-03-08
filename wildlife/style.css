@@ -288,9 +288,7 @@ form {
 }
 .email {
     border: none;
-    border-style: solid;
-    border-width: 1px;
-    border-color: #666666;
+    border: 1px solid #666666;
     outline: none;
     background-color: #CCCCCC;
     width: 530px;
