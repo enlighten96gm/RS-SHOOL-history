@@ -19,7 +19,7 @@ body {
 .container .header .logoHeader img {
     position: relative;
     right: 3px;
-    bottom: 6px;
+    bottom: 0px;
     height: 70px;
 }
 .container .header .logoMain {
