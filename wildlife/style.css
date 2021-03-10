@@ -78,7 +78,8 @@ h1 {
     width: 120px;
     height: 50px;
     margin-left: 61px; 
-    font-weight: 400;   
+    font-weight: 400;
+    cursor: pointer;
 }
 .signIn:hover {
     background-color: #CD6326;
@@ -305,16 +306,17 @@ form {
     border-radius: 0 5px 5px 0;
     position: relative;
     right: 6px;
-    top: 0px;
+    bottom: 2px;
     outline: none;
     border: none;
     width: 120px;
-    height: 60px;
+    height: 62px;
     background-color: #CD6326;
     font-size: 23px;
     font-weight: 300;
     line-height: 27px;
     color: #F7F7F7;
+    cursor: pointer;
 }
 .send:hover {
     background-color: #E39128;
