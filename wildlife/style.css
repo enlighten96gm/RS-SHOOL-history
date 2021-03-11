@@ -288,11 +288,14 @@ form {
     position: relative;
 }
 .email {
+    position: relative;
+    top: 2px;
+    right: 5px;
     border: none;
     border: 1px solid #666666;
     outline: none;
     background-color: #CCCCCC;
-    width: 530px;
+    width: 522px;
     height: 56px;
     font-size: 23px;
     font-weight: 300;
@@ -305,12 +308,12 @@ form {
 .send {
     border-radius: 0 5px 5px 0;
     position: relative;
-    right: 6px;
-    bottom: 2px;
+    right: 10px;
+    top: 2px;
     outline: none;
     border: none;
     width: 120px;
-    height: 62px;
+    height: 61px;
     background-color: #CD6326;
     font-size: 23px;
     font-weight: 300;
