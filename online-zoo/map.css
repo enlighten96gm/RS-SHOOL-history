@@ -49,7 +49,7 @@ h1 {
     top: 35px;
     position: absolute;
     justify-content: center;
-    left: 670px;
+    left: 635px;
 }
 .section-navigation__text {
     position: relative;
@@ -290,7 +290,7 @@ address a {
     align-items: center;
     justify-content: center;
     position: relative;
-    bottom: 80px;
+    bottom: 40px;
 }
 .carousel__input_number1 {
     position: relative;
