@@ -1776,6 +1776,22 @@ address a {
     line-height: 16px;
     color: white;
 }
+.lol1 {
+    position: absolute;
+    left: 20px;
+}
+.lol2 {
+    position: absolute;
+    left: 70px;
+}
+.lol3 {
+    position: absolute;
+    left: 115px;
+}
+.lol4 {
+    position: absolute;
+    left: 165px;
+}
   
 
 
