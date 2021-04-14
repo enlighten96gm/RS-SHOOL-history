@@ -29,8 +29,10 @@ h1 {
     font-family: Roboto, sans-serif;
     font-style: normal;
     font-weight: 900;
-    font-size: 36px;
+    font-size: 29px;
     line-height: 42px;
+    width: 60px;
+    height: 42px;
 }
 .section-header .section-header__online a {
     position: relative;
@@ -39,8 +41,17 @@ h1 {
     font-weight: 900;
     font-size: 18px;
     line-height: 21px;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.8px;
     bottom: 8px;
+}
+.baarger {
+    position: absolute;
+    visibility: hidden;
+    left: 1818px;
+    top: 35px;
+    width: 40px;
+    height: 21px;
+    background-image: url(./img/menu.png);
 }
 
 
