@@ -19,6 +19,18 @@ const App = () => {
     const card2 = document.querySelector('.card__map2')
     const card3 = document.querySelector('.card__map3')
     const card4 = document.querySelector('.card__map4')
+    // const barger = document.querySelector('.baarger')
+    // const nav = document.querySelector('.section-navigation')
+    // let keks = false
+    // barger.addEventListener('click', (e) => {
+    //     if (keks === false) {
+    //         nav.classList.add('.section-navigation-active')
+    //         keks = true
+    //     } else if (keks === true) {
+    //         nav.classList.remove('.section-navigation-active')
+    //         keks = false
+    //     }
+    // })
     
     
     // Dark theme state

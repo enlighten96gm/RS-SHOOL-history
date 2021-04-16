@@ -371,4 +371,13 @@
     .noora {
         padding-top: 27px;
     }
+    /* .section-navigation-active {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        flex-direction: column;
+        left: 517px;
+        top: 93px;
+        gap: 5px;
+    } */
 }
