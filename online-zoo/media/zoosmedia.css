@@ -6,7 +6,8 @@
         width: 1200px;
     }
     .section-header__zoo a {
-        font-size: 29px;
+        font-size: 27px;
+        top: 4px;
     }
     .section-navigation {
         left: 275px;
@@ -124,6 +125,10 @@
     }
 
     /* map */
+    .map__section_scroll {
+        width: 1200px;
+        position: relative;
+    }
     .map__section_scroll__allin {
         width: 1200px;
         height: 1110px;
@@ -153,12 +158,12 @@
     .arrw_slid1 {
         position: absolute;
         right: 965px;
-        bottom: -120px;
+        bottom: 767px;
     }
     .arrw_slid2 {
         position: absolute;
         left: 974px;
-        bottom: -120px;
+        bottom: 764px;
     }
     .carousel__input {
         bottom: 0px;

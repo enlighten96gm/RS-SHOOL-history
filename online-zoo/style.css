@@ -1820,7 +1820,33 @@ address a {
     position: absolute;
     left: 165px;
 }
-  
+
+@media (max-width: 1940px) {
+    header {
+        width: 1940px;
+    }
+    .watch-animal {
+        width: 1940px;
+    }
+    .how-works {
+        width: 1940px;
+    }
+    .zoo-pets {
+        width: 1940px;
+    }
+    .pay-section {
+        width: 1940px;
+    }
+    .testimonials-section {
+        width: 1940px;
+    }
+    .section-map {
+        width: 1940px;
+    }
+    footer {
+        width: 1940px;
+    }
+}
 
 
 
