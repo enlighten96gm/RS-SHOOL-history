@@ -704,6 +704,18 @@ input#image__submit{
     position: absolute;
     left: 165px;
 }
+@media (max-width: 1940px)  {
+    .headet__main {
+        width: 1940px;
+    }
+    .online__section {
+        width: 1940px;
+    }
+    footer {
+        width: 1940px;
+    }
+}
+
 
 
 

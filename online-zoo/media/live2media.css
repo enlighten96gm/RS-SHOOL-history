@@ -123,6 +123,9 @@
         padding-top: 31px;
     }
     /* heheheh */
+    .online__section {
+        width: 1200px;
+    }
     .online__section_container {
         width: 1200px;
         height: 715px;

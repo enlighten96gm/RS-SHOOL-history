@@ -1,6 +1,8 @@
 @media (max-width: 640px) {
     .headet__main {
         width: 640px;
+        position: fixed;
+        z-index: 1001;
     }
     .header__allin {
         width: 640px;
@@ -26,6 +28,7 @@
     .map__section_scroll {
         width: 640px;
         height: 1009px;
+        padding-top: 94px;
         overflow: hidden;
     }
     .map__section_scroll__allin {
@@ -41,20 +44,25 @@
         height: 86px;
     }
     .map__section-carousel {
-        width: 548px;
+        width: 608px;
+        position: relative;
     }
     .scroll__carousel {
-        bottom: -13px;
-        left: 20px;
-        gap: 17px;
+        bottom: -6px;
+        left: 47px;
+        gap: 15px;
     }
     .arrw_slid1 {
-        right: 585px;
-        bottom: -171px;
+        right: 568px;
+        bottom: 135px;
     }
     .arrw_slid2 {
-        left: 597px;
-        bottom: -171px;
+        left: 580px;
+        bottom: 136px;
+    }
+    .item5 {
+        left: 56px;
+        position: relative;
     }
     .carousel__input {
         bottom: -23px

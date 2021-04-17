@@ -1,6 +1,8 @@
 @media (max-width: 640px) {
     .headet__main {
         width: 640px;
+        position: fixed;
+        z-index: 1001
     }
     .header__allin {
         width: 640px;
@@ -26,6 +28,7 @@
     .online__section {
         width: 640px;
         height: 982px;
+        padding-top: 94px;
     }
     .online__section_container {
         grid-template-columns: 103px 537px;
@@ -33,7 +36,7 @@
     }
     .map__section-carousel {
         position: sticky;
-        top: 0px;
+        top: 94px;
         width: 103px;
         height: 113px;
     }

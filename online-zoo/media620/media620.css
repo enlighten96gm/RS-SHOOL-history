@@ -1,6 +1,8 @@
 @media (max-width: 640px) {
     .headet__main {
         width: 640px;
+        position: fixed;
+        z-index: 1001;
     }
     .header__allin {
         width: 640px;
@@ -23,6 +25,7 @@
     .watch-animal {
         width: 640px;
         height: 934px;
+        padding-top: 94px;
     }
     .watch-animal__container {
         width: 640px;
