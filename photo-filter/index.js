@@ -242,16 +242,13 @@ const App = () => {
             if (counter1 <= 9) {
                 image.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/day/0${counter1}.jpg`
                 counter1++
-                return whatWeDownload = image.src
             } else if (counter2 <= 20) {
                 image.src = `https://raw.githubusercontent.com/rolling-scopes-school/stage1-tasks/assets/images/day/${counter2}.jpg`
                 counter2++
-                return whatWeDownload = image.src
             } else {
                 counter1 = 1
                 counter2 = 10
                 image.src = 'assets/img/img.jpg'
-                return whatWeDownload = image.src
             }
         } else if (day == 'morning') {
             if (counter1 <= 9) {
