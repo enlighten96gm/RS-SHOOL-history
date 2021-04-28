@@ -43,13 +43,24 @@
         top: 362px;
         gap: 10px;
     }
+    .slider1__idiot {
+        position: relative;
+        top: -80px;
+        left: 10px;
+        display: flex;
+        width: 2500px;
+        gap: 10px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0;
+    }
     .slider1-item_eagle {
         width: 113px;
         height: 164px;
     }
     .slider1-item_panda {
-        width: 140px;
-        height: 202px;
+        width: 113px;
+        height: 164px;
     }
     .inside_slide_2 {
         width: 140px;
@@ -150,10 +161,16 @@
         height: 323px;
     }
     .how-works__slider_item {
-        width: 300px;
+        grid-template-columns: 300px 300px 300px 300px;
+        width: 1230px;
         height: 323px;
+        gap: 7px;
         background-position-x: 8%;
         background-position-y: 71%;
+    }
+    .how-works__slider_item1 {
+        width: 300px;
+        height: 323px;
     }
     .how-works__slider_input {
         left: 20px;
@@ -534,5 +551,12 @@
         transition: 0.5s;
         opacity: 1;
         display: block;
+    }
+    .active-panda_or__not {
+        width: 140px;
+        height: 202px;
+    }
+    .display_active {
+        display: initial;
     }
 }

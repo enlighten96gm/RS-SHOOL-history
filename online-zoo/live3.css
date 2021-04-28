@@ -232,6 +232,9 @@ a {
     justify-content: center;
     cursor: initial;
 }
+.watch__section1 {
+    overflow: hidden;
+}
 .scroll__carousel a {
     cursor: initial;
 }
@@ -279,7 +282,7 @@ a {
     width: 790px;
     height: 141px;
     display: grid;
-    grid-template-columns: 247px 247px 247px;
+    grid-template-columns: 247px 247px 247px 247px 247px 247px 247px;
     gap: 26px;
 }
 .number1 {

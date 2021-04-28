@@ -215,6 +215,10 @@
         transform: scale(0.7);
         top: -10px;
     }
+    .watch__section1 {
+        overflow: hidden;
+        width: 530px;
+    }
     .watch__section {
         margin-left: 0px;
         margin-top: 0px;
@@ -224,7 +228,7 @@
         right: 10px;
     }
     .watch__section1-slider {
-        grid-template-columns: 164px 164px 164px;
+        grid-template-columns: 164px 164px 164px 164px 164px 164px 164px;
         gap: 18px;
         right: 10px;
     }
