@@ -81,11 +81,11 @@ const App = () => {
         } else if (number  === 3) {
             planetImg.forEach(item => item.classList.remove('active__img'))
             planetImg[2].classList.add('active__img')
-            buttonToWatch.href = './live.html'
+            buttonToWatch.href = './live4.html'
         } else if (number  === 4) {
             planetImg.forEach(item => item.classList.remove('active__img'))
             planetImg[1].classList.add('active__img')
-            buttonToWatch.href = './live.html'
+            buttonToWatch.href = './live3.html'
         }
         if (window.screen.width < 1201) {
             if (number === 6) {
@@ -126,11 +126,11 @@ const App = () => {
         } else if (number  === 3) {
             planetImg.forEach(item => item.classList.remove('active__img'))
             planetImg[2].classList.add('active__img')
-            buttonToWatch.href = './live.html'
+            buttonToWatch.href = './live4.html'
         } else if (number  === 4) {
             planetImg.forEach(item => item.classList.remove('active__img'))
             planetImg[1].classList.add('active__img')
-            buttonToWatch.href = './live.html'
+            buttonToWatch.href = './live3.html'
         }
         if (window.screen.width < 1201) {
             if (number === 6) {
