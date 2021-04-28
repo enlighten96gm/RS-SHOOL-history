@@ -29,7 +29,20 @@
     .watch-animal__social {
         top: 740px;
     }
+    .line__circle1 {
+        right: 379px;
+        bottom: 22px;
+    }
+    .line__circle3 {
+        right: -117px;
+        bottom: 51px;
+    }
     .slider1-item_eagle {
+        width: 180px;
+        height: 261px;
+        border-radius: 5px;
+    }
+    .slider1-item_panda {
         width: 180px;
         height: 261px;
         border-radius: 5px;
@@ -49,6 +62,21 @@
         height: 261px;
         border-radius: 5px;
     }
+    .slider1-item_chees1 {
+        width: 180px;
+        height: 261px;
+        border-radius: 5px;
+    }
+    .slider1-item_chees12 {
+        width: 180px;
+        height: 261px;
+        border-radius: 5px;
+    }
+    .slider1-item_chees123 {
+        width: 180px;
+        height: 261px;
+        border-radius: 5px;
+    }
     .watch-animal__container {
         width: 1200px;
         height: 926px;
@@ -57,6 +85,16 @@
         left: 460px;
         top: 430px;
         gap: 30px;
+    }
+    .slider1__idiot {
+        position: relative;
+        left: 367px;
+        display: flex;
+        width: 2500px;
+        gap: 30px;
+        justify-content: center;
+        align-items: center;
+        margin: 0 0;
     }
     .slider1__input {
         top: 840px;
@@ -79,6 +117,11 @@
         width: 746px;
     }
     .how-works__slider_item {
+        width: 746px;
+        grid-template-columns: 746px 746px 746px 746px;
+        gap: 7px;
+    }
+    .how-works__slider_item1 {
         width: 746px;
     }
     .how-works__slider_inside::-webkit-slider-thumb {
@@ -137,9 +180,9 @@
         gap: 20px;
     }
     .idiot-class {
-        width: 900px;
+        width: 1820px;
         height: 301px;
-        grid-template-columns: 210px 210px 210px 210px;
+        grid-template-columns: 210px 210px 210px 210px 210px 210px 210px 210px;
         gap: 20px;
         padding-top: 0px;
     }
@@ -448,5 +491,12 @@
     }
     .noora {
         padding-top: 31px;
+    }
+    .active-panda_or__not {
+        width: 245px;
+        height: 352px;
+    }
+    .display_active {
+        display: initial;
     }
 }

@@ -237,12 +237,25 @@ a {
 .slider1 {
     display: flex;
     position: absolute;
+    width: 985px;
+    height: 352px;
     justify-content: center;
     align-items: center;
     z-index: 2;
     top: 420px;
     left: 823px;
     gap: 45px;
+    overflow: hidden;
+}
+.slider1__idiot {
+    position: relative;
+    left: 262px;
+    display: flex;
+    width: 1500px;
+    gap: 45px;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0;
 }
 .line {
     position: absolute;
@@ -257,6 +270,42 @@ a {
     position: relative;
     right: 540px;
     bottom: 7px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.line__circle1 {
+    position: relative;
+    right: 360px;
+    bottom: 24px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.line__circle2 {
+    position: relative;
+    right: -290px;
+    bottom: 41px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.line__circle3 {
+    position: relative;
+    right: -106px;
+    bottom: 58px;
+    width: 13px;
+    height: 13px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+.line__circle4 {
+    position: relative;
+    right: -471px;
+    bottom: 75px;
     width: 13px;
     height: 13px;
     border: 1px solid white;
@@ -283,8 +332,8 @@ a {
     background-image: url(./img/2.jpeg);
     background-size: cover;
     background-position-x: center;
-    width: 245px;
-    height: 352px;
+    width: 140px;
+    height: 203px;
     cursor: pointer;
 }
 .slider1-item_gibon {
@@ -311,7 +360,33 @@ a {
     height: 203px;
     cursor: pointer;
 }
+.slider1-item_chees1 {
+    background-image: url(./img/111.jpeg);
+    background-size: 100%;
+    background-size: cover;
+    background-position-x: center;
+    width: 140px;
+    height: 203px;
+    cursor: pointer;
+}
+.slider1-item_chees12 {
+    background-image: url(./img/122.jpeg);
+    background-size: cover;
+    background-position-x: center;
+    width: 140px;
+    height: 203px;
+    cursor: pointer;
+}
+.slider1-item_chees123 {
+    background-image: url(./img/133.jpeg);
+    background-size: cover;
+    background-position-x: center;
+    width: 140px;
+    height: 203px;
+    cursor: pointer;
+}
 .inside_slide_2 {
+    display: none;
     position: absolute;
     width: 245px;
     height: 352px;
@@ -481,11 +556,12 @@ a {
 }
 /* dayn */
 .idiot-class {
-    width: 1201px;
+    position: relative;
+    width: 2464px;
     height: 399px;
     padding-top: 0px;
     display: grid;
-    grid-template-columns: 278px 278px 278px 278px;
+    grid-template-columns: 278px 278px 278px 278px 278px 278px 278px 278px;
     justify-content: center;
     align-items: center;
     gap: 30px;
@@ -506,8 +582,19 @@ a {
     margin-top: 30px;
     width: 790px;
     height: 323px;
+    overflow: hidden;
 }
 .how-works__slider_item {
+    position: relative;
+    height: 323px;
+    width: 10000px;
+    margin: 0 0;
+    display: grid;
+    gap: 5px;
+    left: 0px;
+    grid-template-columns: 790px 790px 790px 790px;
+}
+.how-works__slider_item1 {
     width: 790px;
     height: 323px;
     background-image: url(./img/410856d0235232876b1f4b75014339bd.jpeg);
@@ -683,7 +770,7 @@ a {
 }
 .zoo-pets__slider {
     padding-top: 35px;
-    width: 1250px;
+    width: 1230px;
     height: 400px;
     display: grid;
     grid-template-columns: 278px 278px 278px 278px;
@@ -1057,7 +1144,8 @@ a {
     overflow: hidden;
 }
 .super-idiot {
-    width: 1250px;
+    position: relative;
+    width: 5625px;
     height: 349px;
     display: flex;
     gap: 20px;
@@ -1914,4 +2002,11 @@ address a {
 .section-map__planet_img4:hover + .card__map4 {
     transition: 0.5s;
     opacity: 1;
+}
+.active-panda_or__not {
+    width: 245px;
+    height: 352px;
+}
+.display_active {
+    display: initial;
 }

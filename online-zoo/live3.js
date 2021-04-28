@@ -25,28 +25,47 @@ const App = () => {
     let { flag, dayNight, counter } = state
     // dark theme work
 
-    fullTheme.addEventListener('click', (e) => {
-        if (flag === false && dayNight === 'day') {
-            flag = true
-            dayNight = 'night'
+    const liveTheme = document.querySelector('.online__section')
+    let myLocalStorage = window.localStorage
+    let setDarkTheme = (darkTheme) => {
+        if (darkTheme === 'false' || !darkTheme) {
             theme.classList.add('active__theme')
             themeCircle.classList.add('active__circle')
             header.classList.add('active-night')
+            // headerFull.classList.add('active-night')
+            liveTheme.classList.add('slight__dark')
             darkness.forEach(item => {
                 item.classList.add('dark__dark')
             })
             
-        } else if (flag === true && dayNight === 'night') {
-            dayNight = 'day'
-            flag = false
+        } else if (darkTheme === 'true') {
             theme.classList.remove('active__theme')
             themeCircle.classList.remove('active__circle')
             header.classList.remove('active-night')
+            // headerFull.classList.remove('active-night')
+            liveTheme.classList.remove('slight__dark')
             darkness.forEach(item => {
                 item.classList.remove('dark__dark')
             })
         }
-    })
+    }
+    setDarkTheme(myLocalStorage.getItem('darkTheme'))
+
+    let setEverythingDark = () => {
+        
+        if (myLocalStorage.getItem('darkTheme') == 'true') {
+            myLocalStorage.setItem('darkTheme', false)
+            setDarkTheme(myLocalStorage.getItem('darkTheme'))
+            console.log(myLocalStorage);
+          } else if (myLocalStorage.getItem('darkTheme') == 'false' || !myLocalStorage.getItem('darkTheme')) {
+            console.log('kek2');
+            myLocalStorage.setItem('darkTheme', true)
+            setDarkTheme(myLocalStorage.getItem('darkTheme'))
+            console.log(myLocalStorage);
+          }
+    }
+
+    fullTheme.addEventListener('click', setEverythingDark) 
     arrow1.addEventListener('click', (e) => {
         if (counter == 1) {
             counter += 0
@@ -119,6 +138,75 @@ const App = () => {
         item4.classList.add('active__item')
         counter = 4
     })
+    const sliderPanda = document.querySelector('.watch__section1-slider')
+    const sliderPandaItem = document.querySelector('.number1').clientWidth
+    const dotsPanda = document.querySelectorAll('.dot')
+    const videoMain = document.querySelector('.watch__section1-frame iframe')
+    const absoluteButton = document.querySelectorAll('.absolute')
+    const smallVideo = document.querySelectorAll('.number1 iframe')
 
+    let currentSrc = ''
+
+    sliderPanda.style.transition = '1s'
+
+    absoluteButton[0].addEventListener('click', (e) => {
+        currentSrc = videoMain.src
+        videoMain.src = smallVideo[0].src
+        smallVideo[0].src = currentSrc
+    })
+    absoluteButton[1].addEventListener('click', (e) => {
+        currentSrc = videoMain.src
+        videoMain.src = smallVideo[1].src
+        smallVideo[1].src = currentSrc
+    })
+    absoluteButton[2].addEventListener('click', (e) => {
+        currentSrc = videoMain.src
+        videoMain.src = smallVideo[2].src
+        smallVideo[2].src = currentSrc
+    })
+    absoluteButton[3].addEventListener('click', (e) => {
+        currentSrc = videoMain.src
+        videoMain.src = smallVideo[3].src
+        smallVideo[3].src = currentSrc
+    })
+    absoluteButton[4].addEventListener('click', (e) => {
+        currentSrc = videoMain.src
+        videoMain.src = smallVideo[4].src
+        smallVideo[4].src = currentSrc
+    })
+    absoluteButton[5].addEventListener('click', (e) => {
+        currentSrc = videoMain.src
+        videoMain.src = smallVideo[5].src
+        smallVideo[5].src = currentSrc
+    })
+    absoluteButton[6].addEventListener('click', (e) => {
+        currentSrc = videoMain.src
+        videoMain.src = smallVideo[6].src
+        smallVideo[6].src = currentSrc
+    })
+
+
+
+    dotsPanda[0].addEventListener('click', (e) => {
+        sliderPanda.style.left = '0px'
+        dotsPanda.forEach(item => {
+            item.classList.remove('active__dot')
+        })
+        dotsPanda[0].classList.add('active__dot')
+    })
+    dotsPanda[1].addEventListener('click', (e) => {
+        sliderPanda.style.left = `-${sliderPandaItem * 3 + 26 * 3}px`
+        dotsPanda.forEach(item => {
+            item.classList.remove('active__dot')
+        })
+        dotsPanda[1].classList.add('active__dot')
+    })
+    dotsPanda[2].addEventListener('click', (e) => {
+        sliderPanda.style.left = `-${sliderPandaItem * 4 + 26 * 4}px`
+        dotsPanda.forEach(item => {
+            item.classList.remove('active__dot')
+        })
+        dotsPanda[2].classList.add('active__dot')
+    })
 }
 document.addEventListener('DOMContentLoaded', App)

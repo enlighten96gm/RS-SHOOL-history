@@ -256,6 +256,9 @@ a {
     border: 5px solid white;
     cursor: initial;
 }
+.watch__section1 {
+    overflow: hidden;
+}
 .watch__section1-header {
     font-family: Roboto, sans-serif;
     font-style: normal;
@@ -279,7 +282,7 @@ a {
     width: 790px;
     height: 141px;
     display: grid;
-    grid-template-columns: 247px 247px 247px;
+    grid-template-columns: 247px 247px 247px 247px 247px 247px 247px;
     gap: 26px;
 }
 .number1 {

@@ -83,8 +83,15 @@
         margin-top: 62px;
     }
     .how-works__slider_item {
+        grid-template-columns: 600px 600px 600px 600px;
+        width: 2430px;
+        height: 323px;
+        gap: 7px
+    }
+    .how-works__slider_item1 {
         width: 600px;
         height: 323px;
+        margin: 0 0;
     }
     .how-works__slider_number1 {
         left: 81px;

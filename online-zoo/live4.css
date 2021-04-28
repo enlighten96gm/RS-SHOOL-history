@@ -269,6 +269,9 @@ a {
     margin-left: 151px;
     margin-top: 20px;
 }
+.watch__section1 {
+    overflow: hidden;
+}
 .watch__section1-frame {
     width: 790px;
     height: 442px;
@@ -280,7 +283,7 @@ a {
     width: 790px;
     height: 141px;
     display: grid;
-    grid-template-columns: 247px 247px 247px;
+    grid-template-columns: 247px 247px 247px 247px 247px 247px 247px;
     gap: 26px;
 }
 .number1 {
