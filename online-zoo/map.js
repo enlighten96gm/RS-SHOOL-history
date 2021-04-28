@@ -183,7 +183,7 @@ const App = () => {
                 myCarouselNumber.innerHTML = `0${number}/`
                 planetImg.forEach(item => item.classList.remove('active__img'))
                 planetImg[2].classList.add('active__img')
-                buttonToWatch.href = './live.html'
+                buttonToWatch.href = './live4.html'
             } else if ( i === 3 ) {
                 number = 4
                 samuraj.forEach(item => {
@@ -194,7 +194,7 @@ const App = () => {
                 myCarouselNumber.innerHTML = `0${number}/`
                 planetImg.forEach(item => item.classList.remove('active__img'))
                 planetImg[1].classList.add('active__img')
-                buttonToWatch.href = './live.html'
+                buttonToWatch.href = './live3.html'
             } else if ( i === 4 ) {
                 number = 5
                 samuraj.forEach(item => {
@@ -252,7 +252,7 @@ const App = () => {
         myCarouselInput.value = 2
         myCarouselNumber.innerHTML = `0${number}/`
         planetImg.forEach(item => item.classList.remove('active__img'))
-        buttonToWatch.href = './live2.html'
+        buttonToWatch.href = './live.html'
         planetImg[3].classList.add('active__img')
         samuraj.forEach(item => {
             item.classList.remove('active__item')
@@ -269,7 +269,7 @@ const App = () => {
         myCarouselInput.value = 3
         myCarouselNumber.innerHTML = `0${number}/`
         planetImg.forEach(item => item.classList.remove('active__img'))
-        buttonToWatch.href = './live2.html'
+        buttonToWatch.href = './live4.html'
         planetImg[2].classList.add('active__img')
         samuraj.forEach(item => {
             item.classList.remove('active__item')
@@ -281,7 +281,7 @@ const App = () => {
         myCarouselInput.value = 4
         myCarouselNumber.innerHTML = `0${number}/`
         planetImg.forEach(item => item.classList.remove('active__img'))
-        buttonToWatch.href = './live2.html'
+        buttonToWatch.href = './live3.html'
         planetImg[1].classList.add('active__img')
         samuraj.forEach(item => {
             item.classList.remove('active__item')
