@@ -1,4 +1,5 @@
-import Gleb from './call-component';
+import login from './login';
 import './style/index.scss';
 
-console.log(Gleb);
+
+login()
