@@ -5,9 +5,9 @@
             <div class="first__block-header_light">MATCH</div>
         </div>
         <div class="second__block-header">
-            <div class="second__block-header_about">About Game</div>
-            <div class="second__block-header_best">Best Score</div>
-            <div class="second__block-header_settings">Game Settings</div>
+            <div class="second__block-header_about nav__button">About Game</div>
+            <div class="second__block-header_best nav__button">Best Score</div>
+            <div class="second__block-header_settings nav__button">Game Settings</div>
         </div>
         <div class="slice_1"></div>
         <div class="slice_2"></div>
@@ -16,6 +16,12 @@
         <div class="third__block-header">
             <div class="third__block-header_text">REGISTER NEW PLAYER</div>
         </div>
+        <div class="fourth__block-header inactive__header">
+            <div class="fourth__block-header__button log__out">LOG OUT</div>
+            <div class="fourth__block-header__button start__game">START GAME</div>
+            <div class="fourth__block-header__iamge"></div>
+        </div>
+        <div class="fifth__block-header inactive__header">STOP GAME</div>
     </div>
 </header>
 <main>
@@ -106,17 +112,17 @@
                     <div class="first__segment_login__name">
                         <div class="first__segment_login__name_1">First Name</div>
                         <input required class="first__segment_login__name_2" type="text">
-                        <div class="first__segment_login__name_3"></div>
+                        <div class="first__segment_login__name_3 every__dot"></div>
                     </div>
                     <div class="first__segment_login__password">
                         <div class="first__segment_login__password_1">Last Name</div>
-                        <input required type="password" class="first__segment_login__password_2">
-                        <div class="first__segment_login__password_3"></div>
+                        <input required type="text" class="first__segment_login__password_2">
+                        <div class="first__segment_login__password_3 every__dot"></div>
                     </div>
                     <div class="first__segment_login__email">
                         <div class="first__segment_login__email_1">E-mail</div>
                         <input required type="email" class="first__segment_login__email_2">
-                        <div class="first__segment_login__email_3"></div>
+                        <div class="first__segment_login__email_3 every__dot"></div>
                     </div>
                     <div class="login__submit">
                         <label for="sisja" class="login__submit_label">Add User</label>
@@ -133,4 +139,64 @@
             </div>
         </div>
     </div>
+</div>
+<div class="game">
+    <div class="game__container">
+        <div class="game__board">
+            <div class="game__board_timer">0</div>
+            <div class="game__board_cards">
+                <div id="1" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img1 card__value"></div>
+                </div>
+                <div id="1" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img1 card__value"></div>
+                </div>
+                <div id="2" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img2 card__value"></div>
+                </div>
+                <div id="2" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img2 card__value"></div>
+                </div>
+                <div id="3" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img3 card__value"></div>
+                </div>
+                <div id="3" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img3 card__value"></div>
+                </div>
+                <div id="4" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img4 card__value"></div>
+                </div>
+                <div id="4" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img4 card__value"></div>
+                </div>
+                <div id="5" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img5 card__value"></div>
+                </div>
+                <div id="5" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img5 card__value"></div>
+                </div>
+                <div id="6" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img6 card__value"></div>
+                </div>
+                <div id="6" class="game__card">
+                    <div class="game__card_back game__card_face"></div>
+                    <div class="game__card_front game__card_face img6 card__value"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="settings">
+    <div class="settings__container"></div>
 </div>

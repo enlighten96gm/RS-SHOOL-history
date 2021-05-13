@@ -3,6 +3,9 @@ header {
     width: 100%;
     overflow: hidden;
 }
+.nav__button {
+    cursor: pointer;
+}
 .header__container {
     width: 1440px;
     height: 64px;
@@ -116,4 +119,47 @@ header {
     background-color: #7a04eb;
     box-shadow: 1px 1px 7px #7a04eb;
     color: white;
+}
+.fourth__block-header {
+    position: absolute;
+    left: 725px;
+    gap: 5px;
+    display: flex;
+}
+.fourth__block-header__button {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 157px;
+    height: 36px;
+    background-color: #7a04eb;
+    box-shadow: 1px 1px 7px #7a04eb;
+    color: white;
+}
+.fourth__block-header__iamge {
+    position: relative;
+    left: 20px;
+    margin-top: 10px;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background-color: #7a04eb;
+    box-shadow: 1px 1px 7px #7a04eb;
+}
+.fifth__block-header {
+    position: relative;
+    right: 220px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 157px;
+    height: 36px;
+    background-color: #7a04eb;
+    box-shadow: 1px 1px 7px #7a04eb;
+    color: white;
+}
+.inactive__header {
+    display: none;
 }
