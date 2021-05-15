@@ -4,7 +4,7 @@
     bottom: 960px;
     width: 100%;
     background-color: #fc76cb;
-    // display: none;
+    display: none;
     justify-content: center;
     align-items: center;
     overflow: hidden;
@@ -12,7 +12,6 @@
         width: 1440px;
         height: 960px;
         &_block {
-            margin-top: 40px;
             height: 802px;
             background: radial-gradient(#ff00a0, #fc76cb);
             display: flex;
@@ -22,6 +21,7 @@
 }
 .best__player {
     margin: 10px 60px;
+    margin-top: 40px;
     font-size: 25px;
     color: #7a04eb;
     text-shadow: 1px 1px 7px #7a04eb;
@@ -34,6 +34,7 @@
     background: radial-gradient(#ffffff, #fc76cb);
     box-shadow: 1px 1px 7px #ff00a0;
     &_img {
+        position: relative;
         margin: 0 0;
         margin-top: 5px;
         margin-left: 5px;
@@ -43,9 +44,20 @@
         background: radial-gradient(#ffffff, #7a04eb);
     }
     &_info {
+        box-sizing: border-box;
+        position: absolute;
         margin: 0 0;
         margin-top: 12px;
-        margin-left: 10px;
+        margin-left: 84px;
+        color: black;
+        text-shadow: 1px 1px 7px black;
+        display: flex;
+    }
+    &_score {
+        position: absolute;
+        margin: 0 0;
+        margin-top: 30px;
+        margin-left: 880px;
         color: black;
         text-shadow: 1px 1px 7px black;
         display: flex;
@@ -56,9 +68,20 @@
 }
 .player__container_info-email {
     position: relative;
-    right: 129px;
     color: black;
     text-shadow: 1px 1px 7px black;
     top: 45px;
     margin: 0 0;
+}
+.player__container_score-down {
+    position: relative;
+    bottom: 8px;
+    left: 20px;
+    font-size: 30px;
+    color: #7a04eb;
+    text-shadow: 1px 1px 7px #7a04eb;
+}
+
+.if__score_active {
+    display: flex;
 }

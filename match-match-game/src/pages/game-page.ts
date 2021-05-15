@@ -1,9 +1,13 @@
-import { gameType } from './../types/types';
+import Idb from '../indexed-DB';
+import { gameType, newUserType } from './../types/types';
+import BestScore from './best-score';
 
 type handlerType = (e: MouseEvent) => void
 const ActiveGame = (state: any) => {
     const card: Array<HTMLElement> = Array.from(document.querySelectorAll('.game__card'));
     const stopGame: HTMLElement = document.querySelector('.fifth__block-header')
+    const settingsWindow: HTMLElement = document.querySelector('.settings')
+    const score: HTMLElement = document.querySelector('.score')
     let gameState: gameType = {
         time: -10,
         done: false,
@@ -38,9 +42,10 @@ const ActiveGame = (state: any) => {
             card1.classList.add('matched')
             card2.classList.add('matched')
             if (gameState.matchedCards.length === gameState.cardArray.length) {
-                alert("POBEDA")
                 gameState.done = true
-                // тут будет добавление челика в скор
+                score.classList.add('if__score_active')
+                settingsWindow.classList.remove('if__settings_active')
+                Idb.getObj(state.ssn).then((res:newUserType) => BestScore(res, gameState)) 
             }
         }
         const noCardMatch = (card1: HTMLElement, card2: HTMLElement) => {
