@@ -21,9 +21,7 @@ const loginUser: handlerType = (e) => {
     if (nameFlag && surnameFlag && emailFlag) {
         Idb.openDb().then
         Idb.putObj(state)
-        setTimeout(() => {     
-            GetData(state.ssn)
-        }, 100)
+        setTimeout(() => {GetData(state.ssn)}, 100)
         state.ssn = state.ssn + '1'
         nameInput.value = ''
         surnameInput.value = ''

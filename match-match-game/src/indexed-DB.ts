@@ -1,6 +1,4 @@
-import Login from './login';
-// import Login from './login';
-import { newUserType, indexDbType } from './types/types';
+import { indexDbType } from './types/types';
 const Idb: indexDbType = {
     DB_NAME: 'match-match-db',
     DB_VERSION: 1,

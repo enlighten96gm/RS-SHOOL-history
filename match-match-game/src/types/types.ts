@@ -16,6 +16,7 @@ export type gameType = {
     cardArray: Array<HTMLElement>,
     matchedCards: any
     checkCard: any
+    goAhead: boolean
 }
 export type indexDbType = {
     DB_NAME: string
