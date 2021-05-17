@@ -5,7 +5,7 @@ import BestScore from './best-score';
 type handlerType = (e: MouseEvent) => void
 const ActiveGame = (state: any) => {
     const card: Array<HTMLElement> = Array.from(document.querySelectorAll('.game__card'));
-    const stopGame: HTMLElement = document.querySelector('.fifth__block-header')
+    // const stopGame: HTMLElement = document.querySelector('.fifth__block-header')
     const settingsWindow: HTMLElement = document.querySelector('.settings')
     const score: HTMLElement = document.querySelector('.score')
     let gameState: gameType = {
@@ -21,6 +21,8 @@ const ActiveGame = (state: any) => {
         const cardHeandler: handlerType = (e) => {
             let element = e.target as HTMLElement
             gameState.clicks++
+            console.log(gameState.clicks);
+            
             element.parentElement.classList.add('visible')
             if (gameState.checkCard) {
                 checkIfMatched(element.parentElement)
@@ -32,6 +34,7 @@ const ActiveGame = (state: any) => {
             if (getCard(card) === getCard(gameState.checkCard)) {
                 cardMatch(card, gameState.checkCard)
             } else {
+                gameState.clicks -= 2
                 noCardMatch(card, gameState.checkCard)
             }
             gameState.checkCard = null
@@ -42,6 +45,7 @@ const ActiveGame = (state: any) => {
             card1.classList.add('matched')
             card2.classList.add('matched')
             if (gameState.matchedCards.length === gameState.cardArray.length) {
+                window.alert('CONGRATULATION')
                 gameState.done = true
                 score.classList.add('if__score_active')
                 settingsWindow.classList.remove('if__settings_active')
@@ -59,10 +63,6 @@ const ActiveGame = (state: any) => {
         }
         card.forEach(card => card.addEventListener('click', cardHeandler))
     }
-    const clearState = () => {
-        // 
-    }
-    stopGame.addEventListener('click', clearState)
     // randomizer
     const randomOrder = () => {
         for (let i = gameState.cardArray.length - 1; i > 0; i--) {

@@ -12,13 +12,13 @@ let AddUser = (): void => {
     const emailInput: HTMLInputElement = document.querySelector('.first__segment_login__email_2');
     const surnameInput: HTMLInputElement = document.querySelector('.first__segment_login__password_2');
     // window.indexedDB.deleteDatabase("match-match-db");
-    const regex1 = /^[a-zA-Z]+$/;
+    const regex1 = /^[a-zA-Zа-яА-я]+$/;
     const regex2 = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     let {nameFlag, surnameFlag, emailFlag} = state
 
 const loginUser: handlerType = (e) => {
-    e.preventDefault()
     if (nameFlag && surnameFlag && emailFlag) {
+        e.preventDefault()
         Idb.openDb().then
         Idb.putObj(state)
         setTimeout(() => {GetData(state.ssn)}, 100)

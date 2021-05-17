@@ -1,7 +1,5 @@
 import GameCrash from './crash-game';
 import DifficultyToggler from './difficulty/difficultyHandler';
-import Idb from './indexed-DB';
-import BestScore from './pages/best-score';
 import Settings from './pages/settings-page';
 import { newUserType } from './types/types';
 type handlerType = (e: MouseEvent) => void
@@ -17,6 +15,7 @@ const Param = (state: newUserType): void => {
     const logOutBtn: HTMLLIElement =  document.querySelector('.log__out')
     const loginForm: HTMLElement  = document.querySelector('.login');
     const scoreBtn: HTMLElement = document.querySelector('.second__block-header_best')
+    const aboutGame: HTMLElement = document.querySelector('.second__block-header_about')
     
     if (state) {
         loginForm.classList.remove('login__active_vision')
@@ -25,6 +24,8 @@ const Param = (state: newUserType): void => {
     }
     const logOutHeandler: handlerType = (e) => {
         registerButton.style.display = 'flex'
+        settingsWindow.classList.remove('if__settings_active')
+        score.classList.remove('if__score_active')
         startButton.classList.add('inactive__header')
         settingsWindow.classList.remove('if__settings_active')
     }
@@ -52,6 +53,11 @@ const Param = (state: newUserType): void => {
         settingsWindow.classList.remove('if__settings_active')
         // Idb.getObj(state.ssn).then((res:newUserType) => BestScore(res)) 
     }
+    const aboutGameHeandler: handlerType = (e) => {
+        settingsWindow.classList.remove('if__settings_active')
+        score.classList.remove('if__score_active')
+    }
+    aboutGame.addEventListener('click', aboutGameHeandler)
     scoreBtn.addEventListener('click', scoreHeandler)
     settings.addEventListener('click', settingsHeandler)
     stopGameBtn.addEventListener('click', stopGameHeandler)

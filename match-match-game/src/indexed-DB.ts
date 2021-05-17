@@ -1,6 +1,6 @@
 import { indexDbType } from './types/types';
 const Idb: indexDbType = {
-    DB_NAME: 'match-match-db',
+    DB_NAME: 'enlighten-96-gm',
     DB_VERSION: 1,
     DB_STORE_NAME: 'users',
     db: null,

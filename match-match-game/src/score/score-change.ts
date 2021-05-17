@@ -1,6 +1,6 @@
 import { newUserType, gameType } from './../types/types';
 const ChangeScore = (state: newUserType, gameState: gameType) => {
-    console.log('changeScore');
+    let formula = (gameState.clicks * 100 - (gameState.time) * 10)
     
     const scoreContainder: HTMLElement = document.querySelector('.score__container_block')
 
@@ -14,7 +14,7 @@ const ChangeScore = (state: newUserType, gameState: gameType) => {
         <div class="player__container_info-email">${state.email}</div>
         <div class="player__container_score">
             <div class="player__container_score-up">SCORE</div>
-            <div class="player__container_score-down">69</div>
+            <div class="player__container_score-down">${formula}</div>
         </div>
     </div>
     `

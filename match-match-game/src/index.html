@@ -111,17 +111,17 @@
                 <form class="first__segment_login">
                     <div class="first__segment_login__name">
                         <div class="first__segment_login__name_1">First Name</div>
-                        <input required class="first__segment_login__name_2" type="text">
+                        <input maxlength="30" required pattern="[a-zA-Z]+" class="first__segment_login__name_2" type="text">
                         <div class="first__segment_login__name_3 every__dot"></div>
                     </div>
                     <div class="first__segment_login__password">
                         <div class="first__segment_login__password_1">Last Name</div>
-                        <input required type="text" class="first__segment_login__password_2">
+                        <input maxlength="30" required pattern="[a-zA-Z]+" type="text" class="first__segment_login__password_2">
                         <div class="first__segment_login__password_3 every__dot"></div>
                     </div>
                     <div class="first__segment_login__email">
                         <div class="first__segment_login__email_1">E-mail</div>
-                        <input required type="email" class="first__segment_login__email_2">
+                        <input maxlength="30" required pattern='^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$' type="email" class="first__segment_login__email_2">
                         <div class="first__segment_login__email_3 every__dot"></div>
                     </div>
                     <div class="login__submit">
@@ -225,7 +225,7 @@
     <div class="score__container">
         <div class="best__player">BEST PLAYER</div>
         <div class="score__container_block">
-            <div class="player__container">
+            <!-- <div class="player__container">
                 <div class="player__container_img"></div>
                 <div class="player__container_info">
                     <div class="player__container_info-name">NAME</div>
@@ -236,7 +236,7 @@
                     <div class="player__container_score-up">SCORE</div>
                     <div class="player__container_score-down">69</div>
                 </div>
-            </div>
+            </div> -->
         </div>
     </div>
 </div>
