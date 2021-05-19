@@ -2,6 +2,8 @@ type handlerType = (e: MouseEvent) => void
 const Login = (): void => {
     const loginForm: HTMLElement  = document.querySelector('.login');
     const navButtons: Array<HTMLElement> = Array.from(document.querySelectorAll('.nav__button'))
+    const loginInputs: Array<HTMLInputElement> = Array.from(document.querySelectorAll('input'));
+    const everyDot: Array<HTMLElement> = Array.from(document.querySelectorAll('.every__dot'));
     
     const toggleLoginWindow: handlerType = (e) => {
         const element = e.target as HTMLElement
@@ -10,9 +12,13 @@ const Login = (): void => {
         }
         if (element.className === "login login__active_vision") {
             loginForm.classList.remove('login__active_vision')
+            loginInputs.forEach(input => input.value = '')
+            everyDot.forEach(dot => dot.classList.remove('if__dot_active'))
         }
         if (element.className === "login__submit_cancel") {
             loginForm.classList.remove('login__active_vision')
+            loginInputs.forEach(input => input.value = '')
+            everyDot.forEach(dot => dot.classList.remove('if__dot_active'))
         } 
     }
     const buttonsHeandler: handlerType = (e) => {

@@ -8,6 +8,7 @@ export type newUserType = {
     difculty: string
     cards: string
     ssn: string
+    data64: string
 }
 export type gameType = {
     time: number,

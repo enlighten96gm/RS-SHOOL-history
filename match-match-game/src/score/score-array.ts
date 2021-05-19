@@ -1,0 +1,5 @@
+export const scoreArr: any = []
+export const nameArr: any = []
+export const surnameArr: any = []
+export const emailArr: any = []
+export const data64Arr: any = []

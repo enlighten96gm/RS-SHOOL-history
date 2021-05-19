@@ -1,5 +1,6 @@
 import GameCrash from './crash-game';
 import DifficultyToggler from './difficulty/difficultyHandler';
+import Idb from './indexed-DB';
 import Settings from './pages/settings-page';
 import { newUserType } from './types/types';
 type handlerType = (e: MouseEvent) => void
@@ -16,6 +17,9 @@ const Param = (state: newUserType): void => {
     const loginForm: HTMLElement  = document.querySelector('.login');
     const scoreBtn: HTMLElement = document.querySelector('.second__block-header_best')
     const aboutGame: HTMLElement = document.querySelector('.second__block-header_about')
+    const imageWindow: HTMLImageElement = document.querySelector('.save__picture_img')
+    const headerImageSmall: HTMLImageElement = document.querySelector('.header__upload_img')
+    
     
     if (state) {
         loginForm.classList.remove('login__active_vision')
@@ -23,6 +27,9 @@ const Param = (state: newUserType): void => {
         startButton.classList.remove('inactive__header')
     }
     const logOutHeandler: handlerType = (e) => {
+        imageWindow.style.display = 'none'
+        headerImageSmall.classList.remove('header__upload_img-visible')
+        headerImageSmall.src = ''
         registerButton.style.display = 'flex'
         settingsWindow.classList.remove('if__settings_active')
         score.classList.remove('if__score_active')
@@ -35,7 +42,6 @@ const Param = (state: newUserType): void => {
         gameWindow.classList.add('if__game_active')
         settingsWindow.classList.remove('if__settings_active')
         DifficultyToggler(state.ssn)
-        //     ActiveGame(state)
     }
     const stopGameHeandler: handlerType = (e) => {
         startButton.classList.remove('inactive__header')
@@ -51,7 +57,6 @@ const Param = (state: newUserType): void => {
     const scoreHeandler: handlerType = (e) => {
         score.classList.add('if__score_active')
         settingsWindow.classList.remove('if__settings_active')
-        // Idb.getObj(state.ssn).then((res:newUserType) => BestScore(res)) 
     }
     const aboutGameHeandler: handlerType = (e) => {
         settingsWindow.classList.remove('if__settings_active')

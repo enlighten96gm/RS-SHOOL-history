@@ -5,7 +5,7 @@ import BestScore from './best-score';
 type handlerType = (e: MouseEvent) => void
 const ActiveGame = (state: any) => {
     const card: Array<HTMLElement> = Array.from(document.querySelectorAll('.game__card'));
-    // const stopGame: HTMLElement = document.querySelector('.fifth__block-header')
+    const stopGame: HTMLElement = document.querySelector('.fifth__block-header')
     const settingsWindow: HTMLElement = document.querySelector('.settings')
     const score: HTMLElement = document.querySelector('.score')
     let gameState: gameType = {
@@ -17,12 +17,11 @@ const ActiveGame = (state: any) => {
         checkCard: null,
         goAhead: true
     }
-    const StartGame = () => {
+    const StartGame = (timerId: any) => {
         const cardHeandler: handlerType = (e) => {
             let element = e.target as HTMLElement
             gameState.clicks++
             console.log(gameState.clicks);
-            
             element.parentElement.classList.add('visible')
             if (gameState.checkCard) {
                 checkIfMatched(element.parentElement)
@@ -42,10 +41,11 @@ const ActiveGame = (state: any) => {
         const cardMatch = (card1: HTMLElement, card2: HTMLElement) => {
             gameState.matchedCards.push(card1)
             gameState.matchedCards.push(card2)
-            card1.classList.add('matched')
-            card2.classList.add('matched')
+                card1.classList.add('matched')
+                card2.classList.add('matched')
             if (gameState.matchedCards.length === gameState.cardArray.length) {
                 window.alert('CONGRATULATION')
+                clearInterval(timerId)
                 gameState.done = true
                 score.classList.add('if__score_active')
                 settingsWindow.classList.remove('if__settings_active')
@@ -63,7 +63,6 @@ const ActiveGame = (state: any) => {
         }
         card.forEach(card => card.addEventListener('click', cardHeandler))
     }
-    // randomizer
     const randomOrder = () => {
         for (let i = gameState.cardArray.length - 1; i > 0; i--) {
             let random = Math.floor(Math.random() * (i + 1))
@@ -76,13 +75,11 @@ const ActiveGame = (state: any) => {
     setTimeout(() => {
         card.forEach(card => card.classList.remove('visible'))
     }, 10000)
-    // randomizer
-    // Timer
     const timerTIme: HTMLElement = document.querySelector('.game__board_timer')
     const timerIncrease = () => {
-        setInterval(() => {
+        let timerId = setInterval(() => {
             if (gameState.time === 0) {
-                StartGame()
+                StartGame(timerId)
             }
             if (!gameState.done) {
                 gameState.time++
@@ -91,8 +88,8 @@ const ActiveGame = (state: any) => {
                 timerTIme.innerHTML = `${gameState.time}`
             }
         }, 1000)
+        stopGame.addEventListener('click', () => {clearInterval(timerId)})
     }
     timerIncrease()
-    // Timer
 }
 export default ActiveGame

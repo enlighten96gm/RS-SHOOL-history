@@ -8,6 +8,7 @@ const state: newUserType = {
     nameFlag: false,
     surnameFlag: false,
     emailFlag: false,
-    ssn: '1'
+    ssn: '1',
+    data64: ''
 }
 export default state

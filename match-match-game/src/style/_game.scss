@@ -61,12 +61,18 @@
 }
 .game__card.visible .game__card_back {
     transform: rotateY(-180deg);
+    pointer-events: none;
 }
 .game__card.visible .game__card_front {
     transform: rotateY(0deg);
+    pointer-events: none;
+}
+.game__card_front {
+    pointer-events: none;
 }
 .game__card.matched {
     animation: horray 1s infinite forwards;
+    pointer-events: none;
 }
 @keyframes horray {
     0% {
