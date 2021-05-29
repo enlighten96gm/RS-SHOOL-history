@@ -9,6 +9,7 @@ export type newUserType = {
     cards: string
     ssn: string
     data64: string
+    score: number
 }
 export type gameType = {
     time: number,
@@ -19,14 +20,23 @@ export type gameType = {
     checkCard: any
     goAhead: boolean
 }
+export type settingsType = {
+    animals: string
+    people: string
+    question: string
+    easy: string
+    medium: string
+    hard: string
+}
 export type indexDbType = {
     DB_NAME: string
     DB_VERSION: number
     DB_STORE_NAME: string
     db: IDBDatabase | null
-  
+
     openDb: any
     clearObjectStore: () => void
     getObj: (ssn: string) => any
     putObj: (newUser: newUserType) => void
+    getLength: any
   }
