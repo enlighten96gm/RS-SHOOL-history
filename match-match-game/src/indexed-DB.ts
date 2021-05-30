@@ -9,70 +9,65 @@ const Idb: indexDbType = {
   openDb() {
     return new Promise((res, rej) => {
       const request = indexedDB.open(Idb.DB_NAME, Idb.DB_VERSION);
-      request.onsuccess = (event: any) => {
+      request.onsuccess = () => {
         Idb.db = request.result;
-        console.log('IDB DONE');
         res(Idb.db);
       };
-      request.onerror = (event: any) => {
+      request.onerror = () => {
         rej(this.error);
-        console.error('wrong:', event.target.errorCode);
       };
-      request.onupgradeneeded = (event: any) => {
-        const myDB = event.target.result;
+      request.onupgradeneeded = (event: Event) => {
+        const myDB: IDBDatabase = (event.target as IDBRequest).result;
         if (!myDB.objectStoreNames.contains(Idb.DB_STORE_NAME)) {
-          const objectStore = myDB.createObjectStore(Idb.DB_STORE_NAME, { keyPath: 'ssn' });
+          myDB.createObjectStore(Idb.DB_STORE_NAME, { keyPath: 'ssn' });
         }
         res(Idb.db);
       };
     });
   },
   clearObjectStore() {
-    Idb.openDb().then((db: any) => new Promise((res, rej) => {
-      const transaction = Idb.db.transaction(Idb.DB_STORE_NAME, 'readwrite');
+    Idb.openDb().then((db) => new Promise((res, rej) => {
+      const transaction = db.transaction(Idb.DB_STORE_NAME, 'readwrite');
       const objectStore = transaction.objectStore(Idb.DB_STORE_NAME);
       const request = objectStore.clear();
-      request.onsuccess = (event: any) => {
+      request.onsuccess = () => {
         res(objectStore);
       };
-      request.onerror = (event: any) => {
+      request.onerror = () => {
         rej(this.error);
       };
     }));
   },
   getObj(ssn) {
-    return Idb.openDb().then((db: any) => new Promise((res, rej) => {
+    return Idb.openDb().then((db) => new Promise((res, rej) => {
       const transaction = db.transaction(Idb.DB_STORE_NAME, 'readonly');
       const objectStore = transaction.objectStore(Idb.DB_STORE_NAME);
       const request = objectStore.get(ssn);
-      request.onsuccess = (event: any) => res(request.result);
-      request.onerror = (event: any) => {
+      request.onsuccess = () => res(request.result);
+      request.onerror = (event: ErrorEvent) => {
         rej(event);
       };
     }));
   },
   getLength() {
-    return Idb.openDb().then((db: any) => {
-      return new Promise((res, rej) => {
-        var transaction = Idb.db.transaction(Idb.DB_STORE_NAME, 'readwrite');
-        var objectStore = transaction.objectStore(Idb.DB_STORE_NAME);
-        var count = objectStore.count()
-        count.onsuccess = function (event: any) {
-          res(count.result)
-        }
-      })
-    })
+    return Idb.openDb().then((db) => new Promise((res) => {
+      const transaction = db.transaction(Idb.DB_STORE_NAME, 'readwrite');
+      const objectStore = transaction.objectStore(Idb.DB_STORE_NAME);
+      const count = objectStore.count();
+      count.onsuccess = () => {
+        res(count.result);
+      };
+    }));
   },
   putObj(newUser) {
-    Idb.openDb().then((db: any) => new Promise((res, rej) => {
+    Idb.openDb().then((db) => new Promise((res, rej) => {
       const transaction = db.transaction(Idb.DB_STORE_NAME, 'readwrite');
       const objectStore = transaction.objectStore(Idb.DB_STORE_NAME);
       const request = objectStore.put(newUser);
-      request.onsuccess = (event: any) => {
-        event.target.result == newUser.ssn;
-        res(event.target.result);
+      request.onsuccess = (event: Event) => {
+        res((event.target as IDBRequest).result);
       };
-      request.onerror = (event: any) => {
+      request.onerror = (event: ErrorEvent) => {
         rej(event.error);
       };
     }));

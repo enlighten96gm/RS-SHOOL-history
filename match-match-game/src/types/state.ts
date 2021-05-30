@@ -11,6 +11,6 @@ const state: newUserType = {
   emailFlag: false,
   ssn: '1',
   data64: '',
-  score: 0
+  score: 0,
 };
 export default state;

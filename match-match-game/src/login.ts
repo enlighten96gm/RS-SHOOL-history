@@ -12,18 +12,27 @@ const Login = (): void => {
     }
     if (element.className === 'login login__active_vision') {
       loginForm.classList.remove('login__active_vision');
-      loginInputs.forEach((input) => input.value = '');
+      loginInputs.forEach((input) => {
+        const newInp = input;
+        newInp.value = '';
+      });
       everyDot.forEach((dot) => dot.classList.remove('if__dot_active'));
     }
     if (element.className === 'login__submit_cancel') {
       loginForm.classList.remove('login__active_vision');
-      loginInputs.forEach((input) => input.value = '');
+      loginInputs.forEach((input) => {
+        const newInp = input;
+        newInp.value = '';
+      });
       everyDot.forEach((dot) => dot.classList.remove('if__dot_active'));
     }
   };
   const buttonsHeandler: handlerType = (e) => {
     const element = e.target as HTMLElement;
-    navButtons.forEach((button) => button.style.color = '#ff00a0');
+    navButtons.forEach((button) => {
+      const newButton = button;
+      newButton.style.color = '#ff00a0';
+    });
     element.style.color = '#7a04eb';
   };
   navButtons.forEach((button) => { button.addEventListener('click', buttonsHeandler); });

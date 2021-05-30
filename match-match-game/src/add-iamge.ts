@@ -1,7 +1,7 @@
 import state from './types/state';
 
 type handlerType = (e: MouseEvent) => void
-const AddImage = () => {
+const AddImage = (): void => {
   const addImageButton: HTMLInputElement = document.querySelector('.save__picture');
   const imageWindow: HTMLImageElement = document.querySelector('.save__picture_img');
   const addImageHeandler: handlerType = () => {

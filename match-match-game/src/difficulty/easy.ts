@@ -1,7 +1,7 @@
 import ActiveGame from '../pages/game-page';
 import { newUserType } from '../types/types';
 
-const CreateEasy = (state: newUserType) => {
+const CreateEasy = (state: newUserType): void => {
   let repetitions = 0;
   let cardType = '';
   if (state.difculty === 'easy') {

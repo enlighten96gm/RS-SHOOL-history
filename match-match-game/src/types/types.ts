@@ -16,8 +16,8 @@ export type gameType = {
     done: boolean,
     clicks: number,
     cardArray: Array<HTMLElement>,
-    matchedCards: any
-    checkCard: any
+    matchedCards: Array<HTMLElement>
+    checkCard: null | HTMLElement
     goAhead: boolean
 }
 export type settingsType = {
@@ -34,9 +34,9 @@ export type indexDbType = {
     DB_STORE_NAME: string
     db: IDBDatabase | null
 
-    openDb: any
+    openDb: () => Promise<IDBDatabase>
     clearObjectStore: () => void
-    getObj: (ssn: string) => any
+    getObj: (ssn: string) => Promise<newUserType>
     putObj: (newUser: newUserType) => void
-    getLength: any
+    getLength: () => Promise<number>
   }

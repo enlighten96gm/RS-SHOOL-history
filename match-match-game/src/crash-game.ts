@@ -1,4 +1,4 @@
-const GameCrash = () => {
+const GameCrash = (): void => {
   const deleteElement: HTMLElement = document.querySelector('.game__board_cards');
   const timerTIme: HTMLElement = document.querySelector('.game__board_timer');
   deleteElement.innerHTML = '';

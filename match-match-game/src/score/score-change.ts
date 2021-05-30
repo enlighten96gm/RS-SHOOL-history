@@ -1,11 +1,12 @@
 import { newUserType, gameType } from '../types/types';
 import Idb from '../indexed-DB';
-import CreateScoreFunc from './final-score-create'
+import CreateScoreFunc from './final-score-create';
 
-const ChangeScore = (state: newUserType, gameState: gameType) => {
+const ChangeScore = (state: newUserType, gameState: gameType): void => {
   const formula: number = (gameState.clicks * 100 - (gameState.time) * 10);
-  state.score = formula
-  Idb.putObj(state)
-  CreateScoreFunc()
+  const store = state;
+  store.score = formula;
+  Idb.putObj(store);
+  CreateScoreFunc();
 };
 export default ChangeScore;

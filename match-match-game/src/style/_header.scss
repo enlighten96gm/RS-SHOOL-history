@@ -172,3 +172,7 @@ header {
 .inactive__header {
     display: none;
 }
+.log__out {
+    opacity: 0;
+    pointer-events: none;
+}

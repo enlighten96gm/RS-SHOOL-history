@@ -13,19 +13,19 @@ const AddUser = (): void => {
   const nameInput: HTMLInputElement = document.querySelector('.first__segment_login__name_2');
   const emailInput: HTMLInputElement = document.querySelector('.first__segment_login__email_2');
   const surnameInput: HTMLInputElement = document.querySelector('.first__segment_login__password_2');
-  // window.indexedDB.deleteDatabase("enlighten-96-gm");
+  // window.indexedDB.deleteDatabase('enlighten-96-gm');
   const regex1 = /^[a-zA-Zа-яА-я]+$/;
-  const regex2 = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  const regex2 = /^(([^<>()\]\\.,;:\s@"]+(\.[^<>()\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   let { nameFlag, surnameFlag, emailFlag } = state;
 
   const loginUser: handlerType = (e) => {
     if (nameFlag && surnameFlag && emailFlag) {
       e.preventDefault();
       Idb.openDb();
-      Idb.getLength().then((value: any) => {
-        state.ssn = value + 1 + ''
+      Idb.getLength().then((value: number) => {
+        state.ssn = `${value + 1}`;
         Idb.putObj(state);
-      })
+      });
       setTimeout(() => { GetData(state.ssn); }, 100);
       setTimeout(() => { RebuildImages(state.ssn); }, 100);
       // state.ssn = `${state.ssn}1`;

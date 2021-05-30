@@ -1,9 +1,9 @@
 import { newUserType } from './types/types';
 import Idb from './indexed-DB';
 
-const RebuildImages = (ssn: string) => {
+const RebuildImages = (ssn: string): void => {
   const headerImageSmall: HTMLImageElement = document.querySelector('.header__upload_img');
-  Idb.getObj(ssn).then((res: newUserType): any => {
+  Idb.getObj(ssn).then((res: newUserType) => {
     const decoded = atob(res.data64);
     headerImageSmall.src = decoded;
     if (res.data64.length > 10) {

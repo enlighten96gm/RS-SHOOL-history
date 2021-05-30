@@ -26,7 +26,6 @@ const Param = (state: newUserType): void => {
     startButton.classList.remove('inactive__header');
   }
   const logOutHeandler: handlerType = () => {
-    window.alert('Прочитай, я кнопка "полупокер", после меня можно создать нового пользователя, все данные запомнятся, кроме картинки и скора, не ругайся, вот такая я кнопка=(')
     imageWindow.style.display = 'none';
     headerImageSmall.classList.remove('header__upload_img-visible');
     headerImageSmall.src = '';

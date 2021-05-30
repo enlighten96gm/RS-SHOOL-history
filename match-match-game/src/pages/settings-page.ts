@@ -3,7 +3,7 @@ import settingsState from '../types/settings-state';
 import { newUserType } from '../types/types';
 
 type handlerType = (e: MouseEvent) => void
-const Settings = (state: newUserType) => {
+const Settings = (state: newUserType): void => {
   const copyState = state;
   const cardDifficultyBtn: HTMLElement = document.querySelector('.cards__difficulty_third');
   const cardTypeBtn: HTMLElement = document.querySelector('.cards__type_third');

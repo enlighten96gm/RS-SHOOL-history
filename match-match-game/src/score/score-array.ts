@@ -1,2 +1,3 @@
-export const data64Arr: any = [];
-// export const userArray: any = []
+const data64Arr: Array<string> = [];
+
+export default data64Arr;
