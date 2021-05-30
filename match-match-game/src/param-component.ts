@@ -40,6 +40,7 @@ const Param = (state: newUserType): void => {
     stopGameBtn.classList.remove('inactive__header');
     gameWindow.classList.add('if__game_active');
     settingsWindow.classList.remove('if__settings_active');
+    score.classList.remove('if__score_active');
     DifficultyToggler(state.ssn);
   };
   const stopGameHeandler: handlerType = () => {
