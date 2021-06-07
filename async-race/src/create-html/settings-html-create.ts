@@ -1,3 +1,5 @@
+import CreateGarage from "../components/create-garage"
+
 const CreateSettings = () => {
     const ARBody: HTMLElement = document.querySelector('body')
     ARBody.innerHTML = `
@@ -24,5 +26,6 @@ const CreateSettings = () => {
 </div>
 <div class="garage__block"></div>
 `
+CreateGarage()
 }
 export default CreateSettings

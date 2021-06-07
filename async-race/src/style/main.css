@@ -61,6 +61,8 @@
     gap: 10px;
 }
 .car__trace_button1, .car__trace_button2 {
+    width: 75px;
+    height: 20px;
     margin: 5px 0;
     text-align: center;
     color: white;
@@ -89,15 +91,30 @@
     color: gray;
 }
 .car__main {
-    position: relative;
-    transform: translate(50px, -20px);
+    position: absolute;
+    transform: translate(50px, -30px);
     width: 60px;
+    height: 60px;
+}
+.car__main svg {
+    position: relative;
+    bottom: 12px;
+}
+.flag__main {
+    filter: invert(100%);
+    position: relative;
+    margin-right: 40px;
+    bottom: 20px;
+    float: right;
+    width: 30px;
     height: 30px;
-    background-color: pink;
+    background: url(../images/flag-map-marker-1_icon-icons.com_56727.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 .car__underline {
     position: relative;
-    bottom: 20px;
+    top: 14px;
     width: 100%;
-    border-bottom: 3px dotted gray;
+    border-bottom: 3px dotted white;
 }

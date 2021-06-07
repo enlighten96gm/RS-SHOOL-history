@@ -1,4 +1,3 @@
-import CreateGarage from './components/create-garage';
 import { url } from './dal/instance';
 
 const FirstCreate = async () => {
@@ -6,6 +5,6 @@ const FirstCreate = async () => {
         method: 'GET'
     })
     const data = await response.json()
-    CreateGarage(data)
+    return data
 }
 export default FirstCreate
