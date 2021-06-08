@@ -2,8 +2,6 @@ import { carState } from './../types/state';
 import CreateGarage from '../components/create-garage';
 import { url } from './instance';
 const UpdateCaraApi = async (id: string) => {
-    console.log(id);
-    
     const newCar = {
         name: carState.name,
         color: carState.color
