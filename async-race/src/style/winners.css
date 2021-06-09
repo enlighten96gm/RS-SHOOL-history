@@ -42,6 +42,20 @@
     width: 70px;
     text-align: center;
 }
+.garage__block_buttons {
+    padding-top: 20px;
+    display: flex;
+}
+.garage__block_buttons-left {
+    margin-right: 20px;
+}
+.garage__block_buttons-left, .garage__block_buttons-right {
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    width: 70px;
+    text-align: center;
+}
 
 .celebration__for_win {
     position: absolute;

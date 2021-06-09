@@ -1,14 +1,16 @@
+import { HowLargeMyGarage } from './../types/pagination-state';
 import ActiveAllEngines from "../engine/active-all-engines"
 import StartButton from "../engine/start-engine-button"
 import StopAllEngines from "../engine/stop-all-engines"
 import FirstCreate from "../first-request"
+import { pageCounter } from "../types/pagination-state"
 import DeleteCar from "./delete-car"
+import Pagination from "./pagination"
 import UpdateCar from "./update-car"
 
 const CreateGarage = () => {
     const garageMain: HTMLElement = document.querySelector('.garage__block')
     FirstCreate().then((data: any) => {
-        const carsCount: number = data.length
         const viewCars = data.map((item: any) => {            
             return `
         <div class="car__trace">
@@ -33,10 +35,15 @@ const CreateGarage = () => {
         </div>`
         })
         garageMain.innerHTML = `
-        <div class="garge__inside_main">GARAGE (${carsCount})</div>
-        <div class="pagination">Page #</div>
+        <div class="garge__inside_main">GARAGE (${HowLargeMyGarage.a})</div>
+        <div class="pagination">Page #${pageCounter}</div>
         ${viewCars}
+        <div class="garage__block_buttons">
+            <div class="garage__block_buttons-left">PREV</div>
+            <div class="garage__block_buttons-right">NEXT</div>
+        </div>
         `
+        Pagination()
         DeleteCar()
         UpdateCar()
         StartButton()
