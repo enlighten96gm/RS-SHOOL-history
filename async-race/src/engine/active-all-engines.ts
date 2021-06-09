@@ -1,4 +1,3 @@
-import GetWinnerApi from "../dal/get-winner"
 import StartCarApi from "../dal/start-car-engine"
 import CarsArray from "../types/cars-array"
 import flag from "../types/winner-bollean"

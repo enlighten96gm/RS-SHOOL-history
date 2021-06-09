@@ -1,15 +1,10 @@
 import { nameOfTheCar, colorOfTheCar } from './../types/for-winners-state';
-import GetAllWiners from "../dal/get-all-winners"
-import GetSingleCar from "../dal/get-single-car"
 import WinnersToggler from './winners-toggler';
-
-const CreateWinnerPage = () => {
+const SortWInnersToggler = (data: any) => {
     const winnersBlock: HTMLElement = document.querySelector('.winners__block')
-    winnersBlock.classList.remove('inactive__winers')
-    GetAllWiners().then((res: any) => {
         let counterForWinners = -1
         let counter = 0
-        const createCars = res.map((item: any) => {
+        const createCars = data.map((item: any) => {
             counterForWinners += 1
             counter += 1
             return `
@@ -26,7 +21,7 @@ const CreateWinnerPage = () => {
             ` 
         })  
         winnersBlock.innerHTML = `
-        <div class="winners__block_hello">Winners (${res.length})</div>
+        <div class="winners__block_hello">Winners (${data.length})</div>
         <div class="winners__block_page">Page #</div>
         <div class="winners__block_header">
             <div class="winners__block_header-number">Number</div>
@@ -41,7 +36,6 @@ const CreateWinnerPage = () => {
             <div class="winners__block_buttons-right">NEXT</div>
         </div>
         `
-        WinnersToggler(res)
-    })
+        WinnersToggler(data)
 }
-export default CreateWinnerPage
+export default SortWInnersToggler

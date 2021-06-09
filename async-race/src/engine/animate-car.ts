@@ -1,6 +1,7 @@
 import checkIfCrash from "../dal/check-crash-api"
 import RaceState from "../types/race-state"
 import GetWinner from "../winners/get-winner"
+import ConstructWinnerArray from "./construct-winner-array"
 import stopEngineHeandler from "./stop-engine-animation"
 
 const AnimateCar = (res: any, id: string) => {
@@ -34,6 +35,7 @@ const AnimateCar = (res: any, id: string) => {
         startEngine.style.pointerEvents = 'all'
         startEngine.style.color = 'green'
         GetWinner(res, id)
+        ConstructWinnerArray()
       }
  })
  stopCapEngine.addEventListener('click', stopEngineHeandler)

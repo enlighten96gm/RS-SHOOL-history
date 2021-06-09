@@ -3,10 +3,12 @@ import CreateGarage from "../components/create-garage"
 const CreateSettings = () => {
     const ARBody: HTMLElement = document.querySelector('body')
     ARBody.innerHTML = `
+<div class="celebration__for_win celebration__none">WIN WITH</div>
 <div class="button__block">
     <div class="garage__button">TO GARAGE</div>
     <div class="winners__button">TO WINNERS</div>
 </div>
+<div class="inactive__winers winners__block">WINNERS</div>
 <div class="input__block">
     <div class="first__input_block">
         <input class="first__input_block-input1" type="text">
