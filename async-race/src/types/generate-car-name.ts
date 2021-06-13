@@ -1,4 +1,4 @@
-const brandArr: Array<modelsKeys>= ['Audi', 'Bmw', 'Citroen', 'Ferrari', 'Honda', 'Jaguar', 'Mazda', 'Chery', 'Dodge', 'Hyundai'];
+const brandArr: Array<modelsKeys> = ['Audi', 'Bmw', 'Citroen', 'Ferrari', 'Honda', 'Jaguar', 'Mazda', 'Chery', 'Dodge', 'Hyundai'];
 
 type modelsKeys = keyof typeof models
 
@@ -18,7 +18,7 @@ const models = {
 const NameRandom = (): string => {
   const newBrandNameIndex: number = Math.floor(Math.random() * brandArr.length);
   const newModelNameIndex: number = Math.floor(Math.random() * models[brandArr[newBrandNameIndex]].length);
-  const newName: string = `${brandArr[newBrandNameIndex]} ${models[brandArr[newBrandNameIndex]][newModelNameIndex]}`;
+  const newName = `${brandArr[newBrandNameIndex]} ${models[brandArr[newBrandNameIndex]][newModelNameIndex]}`;
   return newName;
 };
 
