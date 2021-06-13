@@ -1,27 +1,17 @@
+import { newColorNameId } from '../types/color-name-id';
 import { HowLargeMyGarage, pageCounter } from '../types/pagination-state';
-import ActiveAllEngines from '../engine/active-all-engines';
 import StartButton from '../engine/start-engine-button';
-import StopAllEngines from '../engine/stop-all-engines';
 import FirstCreate from '../first-request';
-
 import DeleteCar from './delete-car';
 import Pagination from './pagination';
 import UpdateCar from './update-car';
 
 const CreateGarage = () => {
   const garageMain: HTMLElement = document.querySelector('.garage__block');
-  FirstCreate().then((data: any) => {
-    const viewCars = data.map((item: any) => `
-        <div class="car__trace">
-            <div class="car__trace_inside">
-                <div class="car__trace_button1" id="${item.id}">SELECT</div>
-                <div class="car__trace_button2" id="${item.id}">REMOVE</div>
-                <div class="car__trace_text">${item.name}</div>
-            </div>
-            <div class="car__trace_engine">
-                <div class="car__trace_engine-1 start__car_${item.id}" id="${item.id}">A</div>
-                <div class="car__trace_engine-2 stop__car_${item.id}" id="${item.id}">B</div>
-            </div>
+  FirstCreate().then((data: Array<newColorNameId>) => {
+    const viewCars = data.map((item: newColorNameId) => `
+        <div class="car__trace"><div class="car__trace_inside"><div class="car__trace_button1" id="${item.id}">SELECT</div><div class="car__trace_button2" id="${item.id}">REMOVE</div><div class="car__trace_text">${item.name}</div></div>
+            <div class="car__trace_engine"><div class="car__trace_engine-1 start__car_${item.id}" id="${item.id}">A</div><div class="car__trace_engine-2 stop__car_${item.id}" id="${item.id}">B</div></div>
             <div class="car__main single__car_${item.id}" id="${item.id}">
                 <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="79.536px" height="79.536px" viewBox="0 0 79.536 79.536" style="enable-background:new 0 0 79.536 79.536;" xml:space="preserve">
             <g>
@@ -36,17 +26,12 @@ const CreateGarage = () => {
         <div class="garge__inside_main">GARAGE (${HowLargeMyGarage.a})</div>
         <div class="pagination">Page #${pageCounter}</div>
         ${viewCars}
-        <div class="garage__block_buttons">
-            <div class="garage__block_buttons-left">PREV</div>
-            <div class="garage__block_buttons-right">NEXT</div>
-        </div>
+        <div class="garage__block_buttons"><div class="garage__block_buttons-left">PREV</div><div class="garage__block_buttons-right">NEXT</div></div>
         `;
     Pagination();
     DeleteCar();
     UpdateCar();
     StartButton();
-    // ActiveAllEngines()
-    // StopAllEngines()
   });
 };
 export default CreateGarage;

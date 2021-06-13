@@ -1,12 +1,11 @@
+import { VelocityAndDist } from '../types/velocity-and-time';
 import checkIfCrash from '../dal/check-crash-api';
 import RaceState from '../types/race-state';
 import GetWinner from '../winners/get-winner';
 import ConstructWinnerArray from './construct-winner-array';
 import stopEngineHeandler from './stop-engine-animation';
 
-const AnimateCar = (res: any, id: string) => {
-  console.log(res);
-  
+const AnimateCar = (res: VelocityAndDist, id: string) => {
   const singleCar: HTMLElement = document.querySelector(`.single__car_${id}`);
   const stopCapEngine: HTMLElement = document.querySelector(`.stop__car_${id}`);
   const startEngine: HTMLElement = document.querySelector(`.start__car_${id}`);
@@ -16,7 +15,7 @@ const AnimateCar = (res: any, id: string) => {
   RaceState[id].isCarStoped = false;
   const duration = res.distance / res.velocity;
   const start = performance.now();
-  checkIfCrash(id, 'drive').then((item: any) => {
+  checkIfCrash(id, 'drive').then((item: Response) => {
     RaceState[id].driveStatus = item?.status;
   });
   requestAnimationFrame(function animate(time) {

@@ -28,18 +28,9 @@ const CreateWinnerPage = () => {
     winnersBlock.innerHTML = `
         <div class="winners__block_hello">Winners (${res.length})</div>
         <div class="winners__block_page">Page #</div>
-        <div class="winners__block_header">
-            <div class="winners__block_header-number">Number</div>
-            <div class="winners__block_header-car">Car</div>
-            <div class="winners__block_header-name">Name</div>
-            <div class="winners__block_header-wins">Wins</div>
-            <div class="winners__block_header-best">Best score</div>
-        </div>
+        <div class="winners__block_header"><div class="winners__block_header-number">Number</div><div class="winners__block_header-car">Car</div><div class="winners__block_header-name">Name</div><div class="winners__block_header-wins">Wins</div><div class="winners__block_header-best">Best score</div></div>
         <div class="for__the_win">${createCars}</div>
-        <div class="winners__block_buttons">
-            <div class="winners__block_buttons-left">PREV</div>
-            <div class="winners__block_buttons-right">NEXT</div>
-        </div>
+        <div class="winners__block_buttons"><div class="winners__block_buttons-left">PREV</div><div class="winners__block_buttons-right">NEXT</div></div>
         `;
     WinnersToggler(res);
   });

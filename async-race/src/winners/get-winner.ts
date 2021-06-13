@@ -17,7 +17,6 @@ const GetWinner = (res: VelocityAndDist, id: string) => {
     finalTime.push(`${timeArr[0]},${timeArr[1]}${timeArr[2]}`);
     const time = finalTime.join('');
     ShowMeTheWinner(id, time);
-
     if (WinnersArray.includes(id)) {
       UpadtePrevWiner(id, time);
     } else {

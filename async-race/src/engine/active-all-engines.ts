@@ -1,3 +1,4 @@
+import { VelocityAndDist } from '../types/velocity-and-time';
 import StartCarApi from '../dal/start-car-engine';
 import CarsArray from '../types/cars-array';
 import flag from '../types/winner-bollean';
@@ -8,9 +9,9 @@ const ActiveAllEngines = () => {
   const activeAllHeandler = () => {
     flag.splice(0, flag.length);
     flag.push(true);
-    CarsArray.map((item: any) => {
-      StartCarApi(item).then((res: any) => {
-        AnimateCar(res, item);
+    CarsArray.map((item: number) => {
+      StartCarApi(`${item}`).then((res: VelocityAndDist) => {
+        AnimateCar(res, `${item}`);
       });
     });
   };

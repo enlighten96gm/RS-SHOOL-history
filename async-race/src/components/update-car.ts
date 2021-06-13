@@ -1,3 +1,4 @@
+import { newColorNameId } from '../types/color-name-id';
 import { carState } from '../types/state';
 import GetSingleCar from '../dal/get-single-car';
 import UpdateInputsCar from './update-inputs-car';
@@ -10,12 +11,12 @@ const UpdateCar = () => {
   updateButton.forEach((item: HTMLElement) => {
     const updateCarHeandler = (e: Event) => {
       const element = e.target as HTMLElement;
-      GetSingleCar(element.id).then((data: any) => {
+      GetSingleCar(element.id).then((data: newColorNameId) => {
         carState.name = data.name;
         carState.color = data.color;
         updateNameINput.value = data.name;
         updateColorINput.value = data.color;
-        UpdateInputsCar(data.id);
+        UpdateInputsCar(`${data.id}`);
       });
     };
     item.addEventListener('click', updateCarHeandler);

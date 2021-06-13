@@ -1,9 +1,10 @@
+import { newIdWinTIme } from '../types/id-wins-time';
 import GetWinnerApi from './get-winner';
 import { url } from './instance';
 
 const UpadtePrevWiner = async (id: string, time: string) => {
   const newTime = parseFloat(time.replace(',', '.').replace(' ', ''));
-  await GetWinnerApi(id).then(async (res: any) => {
+  await GetWinnerApi(id).then(async (res: newIdWinTIme) => {
     const newInfo = {
       wins: res.wins + 1,
       time: newTime,
