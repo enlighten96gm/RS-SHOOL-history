@@ -14,11 +14,14 @@ const ToggleAllWiners = async (sort: string, oreder: string, res: Array<newIdWin
       colorOfTheCar.push(car.color);
     });
   });
+  
   const response = await fetch(`${url}/winners?_sort=${sort}&_order=${oreder}`, {
     method: 'GET',
   });
   const greeting = await response.json();
-  SortWInnersToggler(greeting);
+  setTimeout(() => {
+    SortWInnersToggler(greeting);
+  }, 100)
   return greeting;
 };
 export default ToggleAllWiners;
