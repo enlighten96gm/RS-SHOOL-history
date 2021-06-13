@@ -1,3 +1,3 @@
-const RaceState: any = {}
+const RaceState: any = {};
 
-export default RaceState
+export default RaceState;

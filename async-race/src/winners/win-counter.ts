@@ -1,3 +1,3 @@
-const WinCounter: number = 1
+const WinCounter = 1;
 
-export default WinCounter
+export default WinCounter;

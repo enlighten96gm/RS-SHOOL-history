@@ -1,2 +1,2 @@
-export const nameOfTheCar: any = []
-export const colorOfTheCar: any = []
+export const nameOfTheCar: Array<string> = [];
+export const colorOfTheCar: Array<string> = [];

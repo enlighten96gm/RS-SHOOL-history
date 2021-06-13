@@ -1,2 +1,2 @@
-const CarsArray: any = []
-export default CarsArray
+const CarsArray: Array<unknown> = [];
+export default CarsArray;

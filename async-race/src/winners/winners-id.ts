@@ -1,3 +1,3 @@
-const WinnersArray: any = [1]
+const WinnersArray: Array<unknown> = [1];
 
-export default WinnersArray
+export default WinnersArray;

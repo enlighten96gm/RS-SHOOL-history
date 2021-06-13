@@ -1,8 +1,8 @@
-import CreateGarage from "../components/create-garage"
+import CreateGarage from '../components/create-garage';
 
 const CreateSettings = () => {
-    const ARBody: HTMLElement = document.querySelector('body')
-    ARBody.innerHTML = `
+  const ARBody: HTMLElement = document.querySelector('body');
+  ARBody.innerHTML = `
 <div class="celebration__for_win celebration__none">WIN WITH</div>
 <div class="button__block">
     <div class="garage__button">TO GARAGE</div>
@@ -27,7 +27,7 @@ const CreateSettings = () => {
     <div class="buttons__block_3">GENERATE CARS</div>
 </div>
 <div class="garage__block"></div>
-`
-CreateGarage()
-}
-export default CreateSettings
+`;
+  CreateGarage();
+};
+export default CreateSettings;

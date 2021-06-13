@@ -1,13 +1,15 @@
-import { nameOfTheCar, colorOfTheCar } from './../types/for-winners-state';
+import { newIdWinTIme } from '../types/id-wins-time';
+import { nameOfTheCar, colorOfTheCar } from '../types/for-winners-state';
 import WinnersToggler from './winners-toggler';
-const SortWInnersToggler = (data: any) => {
-    const winnersBlock: HTMLElement = document.querySelector('.winners__block')
-        let counterForWinners = -1
-        let counter = 0
-        const createCars = data.map((item: any) => {
-            counterForWinners += 1
-            counter += 1
-            return `
+
+const SortWInnersToggler = (data: Array<newIdWinTIme>) => {
+  const winnersBlock: HTMLElement = document.querySelector('.winners__block');
+  let counterForWinners = -1;
+  let counter = 0;
+  const createCars = data.map((item: newIdWinTIme) => {
+    counterForWinners += 1;
+    counter += 1;
+    return `
             <div class="for__the_win-number">${counter}</div>
             <div class="for__the_win-car">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="79.536px" height="79.536px" viewBox="0 0 79.536 79.536" style="enable-background:new 0 0 79.536 79.536;" xml:space="preserve">
@@ -18,9 +20,9 @@ const SortWInnersToggler = (data: any) => {
             <div class="for__the_win-name">${nameOfTheCar[counterForWinners]}</div>
             <div class="for__the_win-wins">${item.wins}</div>
             <div class="for__the_win-best">${item.time}</div>
-            ` 
-        })  
-        winnersBlock.innerHTML = `
+            `;
+  });
+  winnersBlock.innerHTML = `
         <div class="winners__block_hello">Winners (${data.length})</div>
         <div class="winners__block_page">Page #</div>
         <div class="winners__block_header">
@@ -35,7 +37,7 @@ const SortWInnersToggler = (data: any) => {
             <div class="winners__block_buttons-left">PREV</div>
             <div class="winners__block_buttons-right">NEXT</div>
         </div>
-        `
-        WinnersToggler(data)
-}
-export default SortWInnersToggler
+        `;
+  WinnersToggler(data);
+};
+export default SortWInnersToggler;

@@ -1,4 +1,4 @@
-const brandArr = ['Audi', 'Bmw', 'Citroen', 'Ferrari', 'Honda', 'Jaguar', 'Mazda', 'Chery', 'Dodge', 'Hyundai']
+const brandArr = ['Audi', 'Bmw', 'Citroen', 'Ferrari', 'Honda', 'Jaguar', 'Mazda', 'Chery', 'Dodge', 'Hyundai'];
 
 const models = {
   Audi: ['A4', 'A5', 'A6', 'S5', 'A8', 'A3', 'A7', 'RS6', 'A3', 'Q3'],
@@ -11,13 +11,13 @@ const models = {
   Chery: ['Arrizo 6', 'Arrizo 3', 'Tiggo 5', 'Tiggo 7', 'Arrizo 5', 'Arrizo GX', 'Arrizo EX', 'Arrizo 5e 450', 'Tiggo 5x', 'Arrizo 5e'],
   Dodge: ['Durango SRT Hellcat', 'Challenger SRT Demon', 'Viper', 'Challenger', 'Durango', 'Durango R/T', 'Charger', 'Challenger SRT', 'Charger Daytona', 'Durango Citadel (WD)'],
   Hyundai: ['Tucson', 'Tucson 2022', 'Kona Night', 'Santa Fe Active X', 'i10 N', 'Palisade', 'HB20', 'Elantra', 'Xcient', 'Xcient Fuel Cell'],
-} as any
+} as any;
 
 const NameRandom = () => {
-  let newBrandNameIndex = Math.floor(Math.random() * brandArr.length)
-  let newModelNameIndex = Math.floor(Math.random() * models[brandArr[newBrandNameIndex]].length)
-  let newName = `${brandArr[newBrandNameIndex]} ${models[brandArr[newBrandNameIndex]][newModelNameIndex]}`
-  return newName
-}
+  const newBrandNameIndex = Math.floor(Math.random() * brandArr.length);
+  const newModelNameIndex = Math.floor(Math.random() * models[brandArr[newBrandNameIndex]].length);
+  const newName = `${brandArr[newBrandNameIndex]} ${models[brandArr[newBrandNameIndex]][newModelNameIndex]}`;
+  return newName;
+};
 
-export default NameRandom
+export default NameRandom;

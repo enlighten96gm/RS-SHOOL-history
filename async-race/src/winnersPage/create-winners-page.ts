@@ -1,18 +1,18 @@
-import { nameOfTheCar, colorOfTheCar } from './../types/for-winners-state';
-import GetAllWiners from "../dal/get-all-winners"
-import GetSingleCar from "../dal/get-single-car"
+import { newIdWinTIme } from '../types/id-wins-time';
+import { nameOfTheCar, colorOfTheCar } from '../types/for-winners-state';
+import GetAllWiners from '../dal/get-all-winners';
 import WinnersToggler from './winners-toggler';
 
 const CreateWinnerPage = () => {
-    const winnersBlock: HTMLElement = document.querySelector('.winners__block')
-    winnersBlock.classList.remove('inactive__winers')
-    GetAllWiners().then((res: any) => {
-        let counterForWinners = -1
-        let counter = 0
-        const createCars = res.map((item: any) => {
-            counterForWinners += 1
-            counter += 1
-            return `
+  const winnersBlock: HTMLElement = document.querySelector('.winners__block');
+  winnersBlock.classList.remove('inactive__winers');
+  GetAllWiners().then((res: Array<newIdWinTIme>) => {
+    let counterForWinners = -1;
+    let counter = 0;
+    const createCars = res.map((item: newIdWinTIme) => {
+      counterForWinners += 1;
+      counter += 1;
+      return `
             <div class="for__the_win-number">${counter}</div>
             <div class="for__the_win-car">
             <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="79.536px" height="79.536px" viewBox="0 0 79.536 79.536" style="enable-background:new 0 0 79.536 79.536;" xml:space="preserve">
@@ -23,9 +23,9 @@ const CreateWinnerPage = () => {
             <div class="for__the_win-name">${nameOfTheCar[counterForWinners]}</div>
             <div class="for__the_win-wins">${item.wins}</div>
             <div class="for__the_win-best">${item.time}</div>
-            ` 
-        })  
-        winnersBlock.innerHTML = `
+            `;
+    });
+    winnersBlock.innerHTML = `
         <div class="winners__block_hello">Winners (${res.length})</div>
         <div class="winners__block_page">Page #</div>
         <div class="winners__block_header">
@@ -40,8 +40,8 @@ const CreateWinnerPage = () => {
             <div class="winners__block_buttons-left">PREV</div>
             <div class="winners__block_buttons-right">NEXT</div>
         </div>
-        `
-        WinnersToggler(res)
-    })
-}
-export default CreateWinnerPage
+        `;
+    WinnersToggler(res);
+  });
+};
+export default CreateWinnerPage;

@@ -8,11 +8,11 @@ import FirstCreate from './first-request';
 import './style/index.css';
 import DisplayWinners from './winnersPage/display-winners';
 
-CreateSettings()
-FirstCreate()
-CreateCar()
-RandomCars()
-ActiveAllEngines()
-StopAllEngines()
-DisplayWinners()
-ConstructWinnerArray()
+CreateSettings();
+FirstCreate();
+CreateCar();
+RandomCars();
+ActiveAllEngines();
+StopAllEngines();
+DisplayWinners();
+ConstructWinnerArray();
