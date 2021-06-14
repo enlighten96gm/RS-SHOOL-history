@@ -13,6 +13,7 @@ const ConstructWinnerArray = () => {
         nameOfTheCar.push(car.name);
         colorOfTheCar.push(car.color);
       });
+      return res;
     });
   });
 };

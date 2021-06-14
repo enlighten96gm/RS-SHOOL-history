@@ -1,8 +1,6 @@
-const brandArr: Array<modelsKeys> = ['Audi', 'Bmw', 'Citroen', 'Ferrari', 'Honda', 'Jaguar', 'Mazda', 'Chery', 'Dodge', 'Hyundai'];
+const brandArr: Array<modelsKeys> = ['Audi', 'Bmw', 'Citroen', 'Ferrari', 'Honda', 'Jaguar', 'Mazda', 'Chery', 'Dodge', 'Hyundai']; // eslint-disable-line no-use-before-define
 
-type modelsKeys = keyof typeof models
-
-const models = {
+const models = { // eslint-disable-line no-use-before-define
   Audi: ['A4', 'A5', 'A6', 'S5', 'A8', 'A3', 'A7', 'RS6', 'A3', 'Q3'],
   Bmw: ['3', '5', '7', '4', 'M2', '8', 'M5', 'M8', '6', '1'],
   Citroen: ['2 CV', 'AMI', 'AX', 'BX', 'C1', 'C2', 'C3', 'C15', 'C5', 'C6'],
@@ -14,10 +12,11 @@ const models = {
   Dodge: ['Durango SRT Hellcat', 'Challenger SRT Demon', 'Viper', 'Challenger', 'Durango', 'Durango R/T', 'Charger', 'Challenger SRT', 'Charger Daytona', 'Durango Citadel (WD)'],
   Hyundai: ['Tucson', 'Tucson 2022', 'Kona Night', 'Santa Fe Active X', 'i10 N', 'Palisade', 'HB20', 'Elantra', 'Xcient', 'Xcient Fuel Cell'],
 };
+type modelsKeys = keyof typeof models // eslint-disable-line no-use-before-define
 
 const NameRandom = (): string => {
   const newBrandNameIndex: number = Math.floor(Math.random() * brandArr.length);
-  const newModelNameIndex: number = Math.floor(Math.random() * models[brandArr[newBrandNameIndex]].length);
+  const newModelNameIndex: number = Math.floor(Math.random() * models[brandArr[newBrandNameIndex]].length); // eslint-disable-line max-len
   const newName = `${brandArr[newBrandNameIndex]} ${models[brandArr[newBrandNameIndex]][newModelNameIndex]}`;
   return newName;
 };

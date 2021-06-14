@@ -22,5 +22,6 @@ ConstructWinnerArray();
 GetAllWiners().then((res: Array<newIdWinTIme>) => {
   res.map((item: newIdWinTIme) => {
     WinnersArray.push(`${item.id}`);
+    return item;
   });
 });

@@ -13,6 +13,7 @@ const FirstCreate = async () => {
   CarsArray.splice(0, CarsArray.length);
   data.map((item: newColorNameId) => {
     CarsArray.push(item.id);
+    return item;
   });
   const count = await response.headers.get('X-Total-Count');
   HowLargeMyGarage.a = Number(count);

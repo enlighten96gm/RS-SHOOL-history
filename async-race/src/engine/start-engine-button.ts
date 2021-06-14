@@ -7,7 +7,7 @@ const StartButton = () => {
   startEngine.forEach((item: HTMLElement) => {
     const startButtonHeandler = (e: Event) => {
       const element = e.target as HTMLElement;
-      StartCarApi(element.id).then((item: VelocityAndDist) => {
+      StartCarApi(element.id).then((item: VelocityAndDist) => { // eslint-disable-line no-shadow
         AnimateCar(item, element.id);
       });
     };

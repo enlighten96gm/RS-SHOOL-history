@@ -10,5 +10,6 @@ const CreateFirstWinner = async (NewWinnerData: newWinner) => {
     },
   });
   const greeting = await response.json();
+  return greeting;
 };
 export default CreateFirstWinner;

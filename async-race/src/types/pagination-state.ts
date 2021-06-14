@@ -1,4 +1,4 @@
-export let pageCounter = 1;
+export let pageCounter = 1; // eslint-disable-line import/no-mutable-exports
 export class HowLargeMyGarage {
     public static a = 0
 }

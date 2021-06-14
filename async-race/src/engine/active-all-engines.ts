@@ -13,6 +13,7 @@ const ActiveAllEngines = () => {
       StartCarApi(`${item}`).then((res: VelocityAndDist) => {
         AnimateCar(res, `${item}`);
       });
+      return item;
     });
   };
   ActiveAll.addEventListener('click', activeAllHeandler);
