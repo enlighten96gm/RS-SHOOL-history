@@ -2,9 +2,9 @@ import { newColorNameId } from '../types/color-name-id';
 import { HowLargeMyGarage, pageCounter } from '../types/pagination-state';
 import StartButton from '../engine/start-engine-button';
 import FirstCreate from '../first-request';
-import DeleteCar from './delete-car';
-import Pagination from './pagination';
-import UpdateCar from './update-car';
+import DeleteCar from './delete-car'; // eslint-disable-line import/no-cycle
+import Pagination from './pagination'; // eslint-disable-line import/no-cycle
+import UpdateCar from './update-car'; // eslint-disable-line import/no-cycle
 
 const CreateGarage = () => {
   const garageMain: HTMLElement = document.querySelector('.garage__block');

@@ -1,6 +1,6 @@
 import { newIdWinTIme } from '../types/id-wins-time';
 import upDown from '../types/up-down-flag';
-import ToggleAllWiners from './toggle-new-winners';
+import ToggleAllWiners from './toggle-new-winners'; // eslint-disable-line import/no-cycle
 
 const WinnersToggler = (res: Array<newIdWinTIme>) => {
   const WinsToggler: HTMLElement = document.querySelector('.winners__block_header-wins');

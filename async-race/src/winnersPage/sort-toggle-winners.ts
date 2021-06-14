@@ -1,6 +1,6 @@
 import { newIdWinTIme } from '../types/id-wins-time';
 import { nameOfTheCar, colorOfTheCar } from '../types/for-winners-state';
-import WinnersToggler from './winners-toggler';
+import WinnersToggler from './winners-toggler'; // eslint-disable-line import/no-cycle
 
 const SortWInnersToggler = (data: Array<newIdWinTIme>) => {
   const winnersBlock: HTMLElement = document.querySelector('.winners__block');

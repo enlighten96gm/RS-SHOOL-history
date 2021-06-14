@@ -1,5 +1,5 @@
 import { increaseCounterPage, decreaseCounterPage } from '../types/pagination-state';
-import CreateGarage from './create-garage';
+import CreateGarage from './create-garage'; // eslint-disable-line import/no-cycle
 
 const Pagination = () => {
   const prevButton: HTMLElement = document.querySelector('.garage__block_buttons-left');

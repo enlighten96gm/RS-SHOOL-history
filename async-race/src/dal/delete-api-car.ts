@@ -1,4 +1,4 @@
-import CreateGarage from '../components/create-garage';
+import CreateGarage from '../components/create-garage'; // eslint-disable-line import/no-cycle
 import { url } from './instance';
 
 const DeleteCarFromApi = async (id: string) => {

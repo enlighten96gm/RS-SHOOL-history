@@ -1,4 +1,4 @@
-import DeleteCarFromApi from '../dal/delete-api-car';
+import DeleteCarFromApi from '../dal/delete-api-car'; // eslint-disable-line import/no-cycle
 import DeleteFromWinners from '../dal/delete-from-winners';
 
 const DeleteCar = () => {

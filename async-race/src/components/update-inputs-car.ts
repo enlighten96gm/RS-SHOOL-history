@@ -1,4 +1,4 @@
-import UpdateCaraApi from '../dal/update-car-api';
+import UpdateCaraApi from '../dal/update-car-api'; // eslint-disable-line import/no-cycle
 import { carState } from '../types/state';
 
 const UpdateInputsCar = (id: string) => {

@@ -1,7 +1,7 @@
 import { newColorNameId } from '../types/color-name-id';
 import { carState } from '../types/state';
 import GetSingleCar from '../dal/get-single-car';
-import UpdateInputsCar from './update-inputs-car';
+import UpdateInputsCar from './update-inputs-car'; // eslint-disable-line import/no-cycle
 
 const UpdateCar = () => {
   const updateButton: Array<HTMLElement> = Array.from(document.querySelectorAll('.car__trace_button1'));
