@@ -1,0 +1,203 @@
+.button__block {
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+}
+.garage__button, .winners__button  {
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.input__block {
+    margin-top: 20px;
+}
+.first__input_block, .second__input_block {
+    display: flex;
+    margin-top: 10px;
+    gap: 7px;
+}
+.first__input_block-button, .second__input_block-button {
+    width: 100px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.buttons__block {
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+}
+.buttons__block_1, .buttons__block_2 {
+    width: 70px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.buttons__block_3 {
+    width: 142px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.garage__block {
+    margin-top: 80px;
+}
+.garge__inside_main {
+    color: white;
+    font-size: 25px;
+}
+.pagination {
+    padding-top: 10px;
+    font-size: 20px;
+    color: white;
+}
+.car__trace_inside {
+    display: flex;
+    gap: 10px;
+}
+.car__trace_button1, .car__trace_button2 {
+    width: 75px;
+    height: 20px;
+    margin: 5px 0;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.car__trace_text {
+    margin: 5px 0;
+    color: rgb(255, 196, 0);
+}
+.car__trace_engine {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+.car__trace_engine-1 {
+    cursor: pointer;
+    border: 1px solid green;
+    font-size: 20px;
+    color: green;
+}
+.car__trace_engine-2 {
+    cursor: pointer;
+    border: 1px solid gray;
+    font-size: 20px;
+    color: gray;
+}
+.car__main {
+    position: absolute;
+    transform: translate(50px, -30px);
+    width: 60px;
+    height: 60px;
+}
+.car__main svg {
+    position: relative;
+    bottom: 12px;
+}
+.flag__main {
+    filter: invert(100%);
+    position: relative;
+    margin-right: 40px;
+    bottom: 20px;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pg0KPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE2LjAuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPg0KPCFET0NUWVBFIHN2ZyBQVUJMSUMgIi0vL1czQy8vRFREIFNWRyAxLjEvL0VOIiAiaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkIj4NCjxzdmcgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB4PSIwcHgiIHk9IjBweCINCgkgd2lkdGg9IjQ4NS4yMTNweCIgaGVpZ2h0PSI0ODUuMjEycHgiIHZpZXdCb3g9IjAgMCA0ODUuMjEzIDQ4NS4yMTIiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ4NS4yMTMgNDg1LjIxMjsiDQoJIHhtbDpzcGFjZT0icHJlc2VydmUiPg0KPGc+DQoJPHBhdGggZD0iTTQ3MC4wNTIsMTM2LjQ2N2MtNjIuMzQzLDIyLjk1My0xMDkuODQsMzkuMjk5LTE1MS42MjksOTAuOTc4Yy0zNy4yMjksNDYuMDUtOTAuOTgsNjIuMDExLTE1MS42MjgsMzEuNjU3djE2NS40NTdoLTMwLjMyOQ0KCQlWMTUuMTYzQzEzNi40NjUsNi43ODEsMTQzLjI0NywwLDE1MS42MjgsMGM4LjM4LDAsMTUuMTY2LDYuNzgxLDE1LjE2NiwxNS4xNjNjMzMuNjcsNDguOTUzLDkyLjE4OSw1OS43OTUsMTUxLjYyOCw2MC42NTMNCgkJQzQwOS4zOTgsNzcuMTQ2LDQ3MC4wNTIsMTM2LjQ2Nyw0NzAuMDUyLDEzNi40Njd6IE0xOTcuMTE2LDMzNy42MTJ2MzAuODU0YzM1Ljc3NSw3LjMxOCw2MC42NTMsMjIuODQxLDYwLjY1Myw0MC45MzYNCgkJYzAsMjUuMTEzLTQ3LjUzNCw0NS40OS0xMDYuMTQxLDQ1LjQ5Yy01OC42MDksMC0xMDYuMTM5LTIwLjM3Ny0xMDYuMTM5LTQ1LjQ5NWMwLTE4LjA5LDI0Ljg3NS0zMy42MTIsNjAuNjQ5LTQwLjkzMXYtMzAuODU0DQoJCWMtNTUuMDgxLDkuNTM1LTkwLjk3OCwzNi4yNDktOTAuOTc4LDcxLjc4NGMwLDQ0LjYzMSw1Ni4xMjEsNzUuODE2LDEzNi40NjcsNzUuODE2YzgwLjM0NCwwLDEzNi40NjgtMzEuMTg2LDEzNi40NjgtNzUuODE2DQoJCUMyODguMDk3LDM3My44NjEsMjUyLjE5NywzNDcuMTQ3LDE5Ny4xMTYsMzM3LjYxMnoiLz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjxnPg0KPC9nPg0KPGc+DQo8L2c+DQo8Zz4NCjwvZz4NCjwvc3ZnPg0K);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.car__underline {
+    position: relative;
+    top: 14px;
+    width: 100%;
+    border-bottom: 3px dotted white;
+}
+.winners__block_hello {
+    color: white;
+    font-size: 30px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+.winners__block_page {
+    color: white;
+    font-size: 20px;
+}
+.winners__block_header {
+    margin-top: 10px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    text-align: center;
+    background-color: hotpink;
+    font-size: 20px;
+}
+.for__the_win {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    text-align: center;
+    font-size: 20px;
+    background-color: white;
+}
+.winners__block_header-number, .winners__block_header-car, .winners__block_header-name, .winners__block_header-wins {
+    border-right: 3px solid white;
+}
+.winners__block_buttons {
+    padding-top: 20px;
+    display: flex;
+}
+.winners__block_buttons-left {
+    margin-right: 20px;
+}
+.winners__block_buttons-left, .winners__block_buttons-right {
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    width: 70px;
+    text-align: center;
+}
+.garage__block_buttons {
+    padding-top: 20px;
+    display: flex;
+}
+.garage__block_buttons-left {
+    margin-right: 20px;
+}
+.garage__block_buttons-left, .garage__block_buttons-right {
+    color: white;
+    border: 2px solid white;
+    cursor: pointer;
+    width: 70px;
+    text-align: center;
+}
+
+.celebration__for_win {
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: hotpink;
+    font-size: 45px;
+}
+.celebration__none {
+    display: none;
+}
+body {
+  background-color: #313131;
+}
+
+.inactive__race {
+  display: none;
+}
+
+.inactive__winers {
+  display: none;
+}
