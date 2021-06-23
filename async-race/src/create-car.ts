@@ -26,6 +26,7 @@ const CreateCar = (random?: boolean) => {
   if (random === true) {
     carState.color = ColorRandom();
   }
+
   createNameINput.addEventListener('change', nameHeandler);
   createColorINput.addEventListener('change', colorHeandler);
   createCarButton.addEventListener('click', buttonHeanler);
