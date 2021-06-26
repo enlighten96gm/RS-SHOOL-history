@@ -1,0 +1,63 @@
+.sets {
+    position: relative;
+    padding-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    height: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.image {
+    margin-top: 10px;
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border-radius: 34px;
+    border: 2px solid white;
+}
+.single {
+    position: absolute;
+    cursor: pointer;
+    width: 90%;
+    height: 340px;
+    margin-top: 50px;
+    background: linear-gradient(1turn, #ffffff, #ff9100);
+    color: white;
+    text-shadow: #3b249e 1px 0 10px;
+    border-radius: 34px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+}
+.single:hover {
+    transition: 0.5s;
+    color: rgb(255, 0, 85);
+    text-shadow: #e210f5 1px 0 2px;
+    box-shadow: 10px 5px 50px #ff9900;
+}
+.game__btn {
+    position: absolute;
+    left: 72%;
+    top: 80%;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(1turn, #ffffff, #ff9100);
+    box-shadow: 10px 5px 50px #ff9100;
+    color: rgb(255, 0, 85);
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    text-align: center;
+    transition: 1s;
+    border-radius: 10px;
+}
+.game__btn:hover {
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 10px 5px 50px #00ffea;
+    background: linear-gradient(1turn, #ffffff, #00ffea);
+    transition: 1s;
+}
