@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import css from './header-info.module.css'
 
@@ -21,6 +21,9 @@ const HeaderInfo = ({dataCard}: any) => {
                 <div className={css.row}>Menu</div>
             </NavLink>
             {createRows}
+            <NavLink className={css.link} to='/Statistics'>
+                <div className={css.row}>Statistics</div>
+            </NavLink>
         </div>
     )
 }

@@ -5,6 +5,16 @@ import HeaderToggler from './toggler';
 const Header = ({dataCard, onClick}: any) => {
     const [flag, setFlag] = useState(false)
     useEffect(() => {
+        const switchNav = document.querySelector(`.${css.floatNav2}`)
+        const burger = document.querySelector(`.${css.menu}`)
+        const leaveHeandler = () => {
+            setFlag(false)
+            burger?.classList.remove(`${css.animate1}`)
+        }
+        switchNav?.addEventListener('mouseleave', leaveHeandler)
+        return () => switchNav?.removeEventListener('mouseleave', leaveHeandler)
+    })
+    useEffect(() => {
         const burger = document.querySelector(`.${css.menu}`)
         const burgerHeandler = () => {
             if (!flag) {
@@ -25,7 +35,9 @@ const Header = ({dataCard, onClick}: any) => {
             <div className={css.menu}>
                 <div className={css.menu__btn}></div>
             </div>
-            {flag === true ? <HeaderInfo dataCard={dataCard}/> : null}
+            <div className={flag === false ? css.floatNav : css.floatNav2}>
+                <HeaderInfo dataCard={dataCard}/>
+            </div>
         </div>
     )
 }

@@ -1,25 +1,23 @@
 .toggler {
     transition: 1.5s;
-    transform: scaleX(1);
     position: relative;
     left: 3px;
-    top: 1px;
-    width: 28px;
-    height: 28px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     background-color: #00ccff;
     cursor: pointer;
 }
 .toggler__game {
-    transform: scaleX(-1);
     transition: 1.5s;
     background-color: #ffffff;
-    left: 70px;
+    left: 100px;
 }
 .text1 {
     transition: 1.5s;
     position: absolute;
-    left: 35px;
+    left: 55px;
+    top: 5px;
     font-size: 22px;
     color: rgb(255, 0, 85);
     text-shadow: #e210f5 1px 0 2px;
@@ -28,6 +26,7 @@
     transition: 1.5s;
     position: absolute;
     left: 10px;
+    top: 5px;
     font-size: 22px;
     color: rgb(255, 0, 85);
     text-shadow: #e210f5 1px 0 2px;
