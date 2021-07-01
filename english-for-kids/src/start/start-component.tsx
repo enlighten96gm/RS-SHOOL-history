@@ -14,7 +14,7 @@ const StartComp: React.FC<PropsT> = ({item, wrongWords}) => {
     if (wrongWords) {
         const singleCompData = []
         for( let i = 0; i < wrongWords.length; i++) {
-            singleCompData.push([`/images/${wrongWords[i][0]}.jpg`, [wrongWords[i][0], wrongWords[i][1], `/souns/${wrongWords[i][0]}.mp3`]])
+            singleCompData.push([`./images/${wrongWords[i][0]}.jpg`, [wrongWords[i][0], wrongWords[i][1], `./souns/${wrongWords[i][0]}.mp3`]])
             
         }
         const iteration = singleCompData.length + 1
@@ -25,7 +25,7 @@ const StartComp: React.FC<PropsT> = ({item, wrongWords}) => {
             sobachijNos = {...sobachijNos,
                 [key]: value}
         }    
-        item = ["Action Z", {"huimage": sobachijNos} as any] 
+        item = ["Action Z", {"./huimage": sobachijNos} as any] 
         
     }
     
@@ -44,9 +44,9 @@ const StartComp: React.FC<PropsT> = ({item, wrongWords}) => {
     const switchTwo = 'REPEAT'
     const creatStars = stars.map((item) => {
         if (item === 1) {
-            return <img src={process.env.PUBLIC_URL + `/images/star-win.svg`} alt="#"/>
+            return <img src={process.env.PUBLIC_URL + `./images/star-win.svg`} alt="#"/>
         } else {
-            return <img src={process.env.PUBLIC_URL + `/images/star.svg`} alt="#"/>
+            return <img src={process.env.PUBLIC_URL + `./images/star.svg`} alt="#"/>
         }
     })
     for (let key of Object.entries(renderArr)) {
@@ -82,10 +82,10 @@ const StartComp: React.FC<PropsT> = ({item, wrongWords}) => {
     
     if (counter === countToWin.length) {
         if (errorCount === 0) {
-            let music1 = new Audio('/souns/success.mp3') 
+            let music1 = new Audio('./souns/success.mp3') 
             music1.play()
         } else {
-            let music2 = new Audio('/souns/failure.mp3') 
+            let music2 = new Audio('./souns/failure.mp3') 
             music2.play()
         }
         setTimeout(() => { history.push('/Sets') }, 2500)
@@ -98,11 +98,11 @@ const StartComp: React.FC<PropsT> = ({item, wrongWords}) => {
                 {errorCount === 0 
                 ? <div>
                     <div className={css.winPage}>YOU WIN</div>
-                    <img className={css.success} src={process.env.PUBLIC_URL + `/images/success.jpg`} alt="#"/>
+                    <img className={css.success} src={process.env.PUBLIC_URL + `./images/success.jpg`} alt="#"/>
                   </div>
                 : <div>
                     <div className={css.winPage}>Error: {errorCount}</div>
-                    <img className={css.success} src={process.env.PUBLIC_URL + `/images/failure.jpg`} alt="#"/>
+                    <img className={css.success} src={process.env.PUBLIC_URL + `./images/failure.jpg`} alt="#"/>
                   </div>
                   }
               </div> 

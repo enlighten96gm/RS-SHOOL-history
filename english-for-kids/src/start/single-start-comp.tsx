@@ -53,7 +53,7 @@ const SingleStartComponent: React.FC<PropsT> = ({item, rightWord, counter, seCou
                 }
             }
             // + clicks + right
-            let music = new Audio('/souns/correct.mp3') 
+            let music = new Audio('./souns/correct.mp3') 
             music.play()
             setStars([...stars, 1])
         } else {
@@ -69,7 +69,7 @@ const SingleStartComponent: React.FC<PropsT> = ({item, rightWord, counter, seCou
                 }
             }
             // + whong
-            let music = new Audio('/souns/error.mp3') 
+            let music = new Audio('./souns/error.mp3') 
             music.play()
             setStars([...stars, 0])
         }
