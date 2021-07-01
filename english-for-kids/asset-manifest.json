@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/static/css/main.2b57f59f.chunk.css",
-    "main.js": "/static/js/main.ccfdb296.chunk.js",
-    "main.js.map": "/static/js/main.ccfdb296.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.c3ba5724.js",
-    "runtime-main.js.map": "/static/js/runtime-main.c3ba5724.js.map",
-    "static/js/2.dc089738.chunk.js": "/static/js/2.dc089738.chunk.js",
-    "static/js/2.dc089738.chunk.js.map": "/static/js/2.dc089738.chunk.js.map",
-    "static/js/3.739d2139.chunk.js": "/static/js/3.739d2139.chunk.js",
-    "static/js/3.739d2139.chunk.js.map": "/static/js/3.739d2139.chunk.js.map",
-    "index.html": "/index.html",
-    "static/css/main.2b57f59f.chunk.css.map": "/static/css/main.2b57f59f.chunk.css.map",
-    "static/js/2.dc089738.chunk.js.LICENSE.txt": "/static/js/2.dc089738.chunk.js.LICENSE.txt"
+    "main.css": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/css/main.2b57f59f.chunk.css",
+    "main.js": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/main.4c10b4c2.chunk.js",
+    "main.js.map": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/main.4c10b4c2.chunk.js.map",
+    "runtime-main.js": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/runtime-main.e0c23495.js",
+    "runtime-main.js.map": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/runtime-main.e0c23495.js.map",
+    "static/js/2.dc089738.chunk.js": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/2.dc089738.chunk.js",
+    "static/js/2.dc089738.chunk.js.map": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/2.dc089738.chunk.js.map",
+    "static/js/3.739d2139.chunk.js": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/3.739d2139.chunk.js",
+    "static/js/3.739d2139.chunk.js.map": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/3.739d2139.chunk.js.map",
+    "index.html": "/enlighten96gm-JSFE2021Q1/english-for-kids/index.html",
+    "static/css/main.2b57f59f.chunk.css.map": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/css/main.2b57f59f.chunk.css.map",
+    "static/js/2.dc089738.chunk.js.LICENSE.txt": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/2.dc089738.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.c3ba5724.js",
+    "static/js/runtime-main.e0c23495.js",
     "static/js/2.dc089738.chunk.js",
     "static/css/main.2b57f59f.chunk.css",
-    "static/js/main.ccfdb296.chunk.js"
+    "static/js/main.4c10b4c2.chunk.js"
   ]
 }
