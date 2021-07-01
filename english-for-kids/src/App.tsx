@@ -54,7 +54,7 @@ const App = () => {
   })
   
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
             <Header dataCard={dataCard} onClick={mainFlagHandler}/>
         <Switch>
           <Route exact path='/' render={() => <Redirect to={'/Sets'} />}/>
