@@ -2,7 +2,6 @@
   "name": "english-for-kids",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://rolling-scopes-school.github.io/enlighten96gm-JSFE2021Q1/english-for-kids/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
     "@testing-library/react": "^11.2.7",
