@@ -27,12 +27,12 @@ const SingleGameComponent = ({item}: any) => {
     return (
         <div onClick={audioHeandler} className="relative">
             <div className="game__card_back single">
-                <img className={css.image} src={process.env.PUBLIC_URL + `${item[0]}`} alt="#"/>
+                <img className={css.image} src={`${item[0]}`} alt="#"/>
                 <div className={css.english__word}>{wordsArr[0]}</div>
                 <div className={css.switch}>Flip</div>
             </div>
             <div className="game__card_front single visible">
-                <img className={css.image} src={process.env.PUBLIC_URL + `${item[0]}`} alt="#"/>
+                <img className={css.image} src={`${item[0]}`} alt="#"/>
                 <div className={css.english__word}>{wordsArr[1]}</div>
             </div>
         </div>

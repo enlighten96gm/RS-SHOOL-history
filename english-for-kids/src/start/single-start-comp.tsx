@@ -77,7 +77,7 @@ const SingleStartComponent: React.FC<PropsT> = ({item, rightWord, counter, seCou
     return (
         <div style={newStyle} onMouseDown={started === true ? chechIfRight : undefined} className="relative">
             <div className={css.single}>
-                <img className={css.image} src={process.env.PUBLIC_URL + `${soundArr}`} alt="#"/>
+                <img className={css.image} src={`${soundArr}`} alt="#"/>
             </div>
         </div>
     )

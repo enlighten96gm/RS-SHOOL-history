@@ -44,9 +44,9 @@ const StartComp: React.FC<PropsT> = ({item, wrongWords}) => {
     const switchTwo = 'REPEAT'
     const creatStars = stars.map((item) => {
         if (item === 1) {
-            return <img src={process.env.PUBLIC_URL + `./images/star-win.svg`} alt="#"/>
+            return <img src={`./images/star-win.svg`} alt="#"/>
         } else {
-            return <img src={process.env.PUBLIC_URL + `./images/star.svg`} alt="#"/>
+            return <img src={`./images/star.svg`} alt="#"/>
         }
     })
     for (let key of Object.entries(renderArr)) {
@@ -98,11 +98,11 @@ const StartComp: React.FC<PropsT> = ({item, wrongWords}) => {
                 {errorCount === 0 
                 ? <div>
                     <div className={css.winPage}>YOU WIN</div>
-                    <img className={css.success} src={process.env.PUBLIC_URL + `./images/success.jpg`} alt="#"/>
+                    <img className={css.success} src={`./images/success.jpg`} alt="#"/>
                   </div>
                 : <div>
                     <div className={css.winPage}>Error: {errorCount}</div>
-                    <img className={css.success} src={process.env.PUBLIC_URL + `./images/failure.jpg`} alt="#"/>
+                    <img className={css.success} src={`./images/failure.jpg`} alt="#"/>
                   </div>
                   }
               </div> 

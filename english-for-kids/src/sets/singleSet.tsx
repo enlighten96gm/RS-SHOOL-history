@@ -7,7 +7,7 @@ const SingleSet = ({item, mainFlag}: any) => {
     return (
         <NavLink className={css.link} to={item[0]}>
             <div className={mainFlag === true ? css.single : css.gameSingle}>{item[0]}
-                <img className={css.image} src={process.env.PUBLIC_URL + `${imageSrc}`} alt="#"/>
+                <img className={css.image} src={`${imageSrc}`} alt="#"/>
             </div>
         </NavLink>
     )
