@@ -1,9 +1,16 @@
-import React, { useEffect, useState } from 'react';
-import { Redirect, useHistory } from 'react-router-dom';
+import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
+import { SetsEntriesT } from '../types/types';
 import GameCycle from './game-cycle';
 import SingleStartComponent from './single-start-comp';
 import css from './start.module.css'
-const StartComp = ({item, wrongWords}: any) => {
+
+type PropsT = {
+    item?: SetsEntriesT,
+    wrongWords?: Array<Array<string>>
+}
+
+const StartComp: React.FC<PropsT> = ({item, wrongWords}) => {
     if (wrongWords) {
         const singleCompData = []
         for( let i = 0; i < wrongWords.length; i++) {
@@ -13,26 +20,26 @@ const StartComp = ({item, wrongWords}: any) => {
         const iteration = singleCompData.length + 1
         let sobachijNos = {}
         for (let i = 1; i < iteration; i++) {
-            let key: any = singleCompData[i - 1][0]
-            let value: any = singleCompData[i - 1][1]
+            let key = singleCompData[i - 1][0] as string
+            let value = singleCompData[i - 1][1] as string
             sobachijNos = {...sobachijNos,
                 [key]: value}
         }    
-        item = ["Action Z", {"huimage": sobachijNos}] 
+        item = ["Action Z", {"huimage": sobachijNos} as any] 
         
     }
     
     const history = useHistory()
     const [started, setStarted] = useState(false)
-    const [rightWord, setRightWord] = useState([])
+    const [rightWord, setRightWord] = useState([] as Array<string>)
     const [stars, setStars] = useState([])
     let [counter, seCounter] = useState(0)
     let [errorCount, setErrorCount] = useState(0)
-    const renderArr: any = Object.values(item[1])[0]
-    const countToWin: any = []
+    const renderArr = Object.values(item![1])[0]
+    const countToWin = []
     const gameArrayToCheck = []
-    const singleCompData = []
-    const soundArray: any = []
+    const singleCompData: any = []
+    const soundArray: Array<string> = []
     const switchOne = 'START GAME'
     const switchTwo = 'REPEAT'
     const creatStars = stars.map((item) => {
@@ -49,29 +56,30 @@ const StartComp = ({item, wrongWords}: any) => {
         gameArrayToCheck.push(key)
     }
     for (let i = 0; i < gameArrayToCheck.length; i += 1) {
-        const matrix: any = gameArrayToCheck[i]
+        const matrix: Array<string> = gameArrayToCheck[i] as Array<string>
         for (let j = 0; j < matrix.length; j += 1) {
             if (j % 3 === 2) {
                 soundArray.push(matrix[j])
             }
         }
     }
-    const singleSComp = singleCompData.map((item: any) => {
+    const singleSComp = singleCompData.map((item : any) => {
+        console.log(item);
+        
         countToWin.push(item)
-        
-        
-        
         return <SingleStartComponent item={item} rightWord={rightWord} counter={counter} seCounter={seCounter} started={started} stars={stars} setStars={setStars} setErrorCount={setErrorCount} errorCount={errorCount}/>
     })
     const startGameHeandler = () => {
         if (!started) {
-            GameCycle(soundArray).then((item: any) => setRightWord(item))
+            GameCycle(soundArray).then((item: Array<string>): void => setRightWord(item))
             setStarted(true)  
         } else {
             let inerpritation = new Audio(rightWord[counter])
             inerpritation.play()  
         }  
     }
+    console.log(singleCompData);
+    
     if (counter === countToWin.length) {
         if (errorCount === 0) {
             let music1 = new Audio('/souns/success.mp3') 

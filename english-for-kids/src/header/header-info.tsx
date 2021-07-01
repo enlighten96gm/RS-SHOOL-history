@@ -1,13 +1,14 @@
 import React, { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
+import { DataType } from '../types/types';
 import css from './header-info.module.css'
 
-const HeaderInfo = ({dataCard}: any) => {
+const HeaderInfo: React.FC<{dataCard: DataType}> = ({dataCard}) => {
     const everyTitle = []
     for (let key of Object.keys(dataCard.sets)) {
         everyTitle.push(key)   
     }
-    const createRows = everyTitle.map((item: string) => { 
+    const createRows = everyTitle.map((item) => { 
         return (
             <NavLink className={css.link} to={item}>
                 <div className={css.row} key={item}>{item}</div> 

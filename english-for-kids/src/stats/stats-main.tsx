@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
+import { DataType } from '../types/types';
 import SingleRow from './row-comp';
 import css from './statsMain.module.css'
-const StatsMain = ({dataCard}: any) => {
+const StatsMain: React.FC<{dataCard: DataType}> = ({dataCard}) => {
     const [rerender, setRerender] = useState(false)
     const [reverse, setReverse] = useState(true)
     const clearStorage = () => {
@@ -10,8 +11,8 @@ const StatsMain = ({dataCard}: any) => {
         setRerender(true)
         if (!localStorage.getItem('scoreState')) {
             let scoreState = {}
-            Object.values(dataCard.sets).map((item: any) => {
-              let somt: any = Object.values(item)[0]
+            Object.values(dataCard.sets).map((item) => {
+              let somt = Object.values(item)[0]
               const arr: any = Object.values(somt)
               for (let i = 0; i < arr.length; i++) {
                 const newArr = arr[i]

@@ -21,7 +21,7 @@ const App = () => {
   }
   if (!localStorage.getItem('scoreState')) {
     let scoreState = {}
-    Object.values(dataCard.sets).map((item: any) => {
+    Object.values(dataCard.sets).map((item) => {
       let somt: any = Object.values(item)[0]
       const arr: any = Object.values(somt)
       for (let i = 0; i < arr.length; i++) {
@@ -46,11 +46,11 @@ const App = () => {
     routesNames.push(key)
   }
 
-  const routerTrain = routesNames.map((item: any) => {
-    return <Route path={`/${item[0]}`} render={() => <GameComponent key={item} item={item}/>}/>
+  const routerTrain = routesNames.map((item, id) => {
+    return <Route path={`/${item[0]}`} render={() => <GameComponent key={id} item={item}/>}/>
   })
-  const routerGame = routesNames.map((item: any) => {
-    return <Route path={`/${item[0]}`} render={() => <StartComp key={item} item={item}/>}/>
+  const routerGame = routesNames.map((item, id) => {
+    return <Route path={`/${item[0]}`} render={() => <StartComp key={id} item={item}/>}/>
   })
   
   return (

@@ -1,7 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import css from './toggler.module.css'
 
-const HeaderToggler = ({onClick}: any) => {
+type PropsT = {
+    onClick?: ((event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void) | undefined
+}
+
+const HeaderToggler: React.FC<PropsT> = ({onClick}) => {
     const [flag, setFlag] = useState(false)
     useEffect(() => {
         const togglerChange = document.querySelector(`.${css.toggler}`)

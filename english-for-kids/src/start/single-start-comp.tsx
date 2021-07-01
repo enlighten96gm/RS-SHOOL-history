@@ -1,16 +1,30 @@
 import React, { useState } from 'react';
 import css from './start.module.css'
 import '../App.css';
+import { cardsDataT } from '../types/types';
 
-
-const SingleStartComponent = ({item, rightWord, counter, seCounter, started, stars, setStars, setErrorCount, errorCount}: any) => {
+type PropsT = {
+    item?: cardsDataT
+    rightWord: Array<string>
+    counter: number
+    seCounter: (counter: number) => void
+    started: boolean
+    stars: any
+    setStars: any
+    setErrorCount: (errorCount: number) => void
+    errorCount: number
+    
+}
+const SingleStartComponent: React.FC<PropsT> = ({item, rightWord, counter, seCounter, started, stars, setStars, setErrorCount, errorCount}) => {
     const [noRepeat, setNoRepeat] = useState(true)
     const [newStyle, setNewStyle] = useState({
         filter: 'blur(0px)',
         display: 'block',
     })
-    let wordsArr = item[1] 
-    let soundArr = item[0]
+    let wordsArr: any = item![1] 
+    let soundArr: Array<string> = item![0]
+    console.log(wordsArr);
+    
     
     if (started && wordsArr[2] === rightWord[0] && noRepeat) {
         let inerpritation = new Audio(rightWord[counter])

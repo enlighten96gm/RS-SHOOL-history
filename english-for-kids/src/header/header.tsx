@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from 'react';
+import { DataType } from '../types/types';
 import HeaderInfo from './header-info';
 import css from './header.module.css'
 import HeaderToggler from './toggler';
-const Header = ({dataCard, onClick}: any) => {
+
+type PropsT = {
+    dataCard: DataType,
+    onClick?: ((event: React.MouseEvent<HTMLDivElement, MouseEvent>) => void) | undefined
+}
+
+const Header: React.FC<PropsT> = ({dataCard, onClick}) => {
     const [flag, setFlag] = useState(false)
     useEffect(() => {
         const switchNav = document.querySelector(`.${css.floatNav2}`)
