@@ -1,8 +1,7 @@
 .sets {
     position: relative;
     padding-top: 40px;
-    padding-left: 100px;
-    padding-right: 100px;
+    padding-left: 5%;
     height: 1200px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -87,10 +86,31 @@
         top: 108%;
         left: 38%;
     }
+    .success {
+        width: 600px;
+        height: 500px;
+    }
 }
 @media (max-width: 800px) {
     .sets {
         height: 2850px;
         grid-template-columns: 1fr;
+    }
+    .success {
+        width: 400px;
+        height: 300px;
+    }
+}
+@media (max-width: 400px) {
+    .sets {
+        height: 2850px;
+        grid-template-columns: 1fr;
+    }
+    .winPage {
+        font-size: 20px;
+    }
+    .success {
+        width: 200px;
+        height: 100px;
     }
 }

@@ -10,7 +10,7 @@ const GameComponent: React.FC<PropsT> = ({item, wrongWords}) => {
     const singleCompData = []
     if (wrongWords) {
         for( let i = 0; i < wrongWords.length; i++) {
-            singleCompData.push([`./images/${wrongWords[i][0]}.jpg`, [wrongWords[i][0], wrongWords[i][1], `/souns/${wrongWords[i][0]}.mp3`]])
+            singleCompData.push([`./images/${wrongWords[i][0]}.jpg`, [wrongWords[i][0], wrongWords[i][1], `./souns/${wrongWords[i][0]}.mp3`]])
         }
     } else {
         const renderArr = Object.values(item![1])[0]

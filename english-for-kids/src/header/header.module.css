@@ -95,7 +95,7 @@
     .name {
         position: absolute;
         margin-left: 30%;
-        font-size: 60px;
+        font-size: 50px;
         color: #10f5c3;
         text-shadow: #10b4f5 1px 0 3px;
     }
@@ -107,8 +107,12 @@
     .name {
         position: absolute;
         margin-left: 25%;
-        font-size: 50px;
+        font-size: 30px;
         color: #10f5c3;
         text-shadow: #10b4f5 1px 0 3px;
+    }
+    .toggler {
+        top: 40%;
+        left: 60%;
     }
 }

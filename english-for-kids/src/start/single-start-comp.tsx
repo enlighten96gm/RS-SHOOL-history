@@ -18,7 +18,6 @@ type PropsT = {
 const SingleStartComponent: React.FC<PropsT> = ({item, rightWord, counter, seCounter, started, stars, setStars, setErrorCount, errorCount}) => {
     const [noRepeat, setNoRepeat] = useState(true)
     const [newStyle, setNewStyle] = useState({
-        filter: 'blur(0px)',
         display: 'block',
     })
     let wordsArr: any = item![1] 
@@ -35,7 +34,6 @@ const SingleStartComponent: React.FC<PropsT> = ({item, rightWord, counter, seCou
         if (wordsArr[2] === rightWord[counter]) {
             seCounter(counter += 1)
             setNewStyle({
-                filter: 'blur(10px)',
                 display: 'none',
             })
             setTimeout(() => {
