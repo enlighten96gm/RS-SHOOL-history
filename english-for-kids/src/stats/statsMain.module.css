@@ -111,5 +111,21 @@
     .repeat, .reset {
         font-size: 30px;
     }
+    .buttons {
+        flex-direction: column;
+        left: 0%;
+    }
 }
+@media (max-width: 400px) {
+    .theader {
+       font-size: 15px;
+    }
+    .textsingle {
+        font-size: 1em;
+    }
+    .repeat, .reset {
+        font-size: 15px;
+    }
+}
+
 

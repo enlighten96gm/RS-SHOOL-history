@@ -11,6 +11,15 @@ type PropsT = {
 
 const Header: React.FC<PropsT> = ({dataCard, onClick}) => {
     const [flag, setFlag] = useState(false)
+    const flagToggler = () => {
+        const burger = document.querySelector(`.${css.menu}`)
+        if (!flag) {
+            setFlag(true)
+        } else {
+            setFlag(false)
+            burger?.classList.remove(`${css.animate1}`)
+        }
+    }
     useEffect(() => {
         const switchNav = document.querySelector(`.${css.floatNav2}`)
         const burger = document.querySelector(`.${css.menu}`)
@@ -43,7 +52,7 @@ const Header: React.FC<PropsT> = ({dataCard, onClick}) => {
                 <div className={css.menu__btn}></div>
             </div>
             <div className={flag === false ? css.floatNav : css.floatNav2}>
-                <HeaderInfo dataCard={dataCard}/>
+                <HeaderInfo flagToggler={flagToggler} dataCard={dataCard}/>
             </div>
         </div>
     )
