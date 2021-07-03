@@ -81,6 +81,12 @@
     position: relative;
     left: 43%;
 }
+@media (max-width: 1500px) {
+    .success {
+        width: 800px;
+        height: 700px;
+    }
+}
 @media (max-width: 1150px) {
     .sets {
         height: 1450px;
