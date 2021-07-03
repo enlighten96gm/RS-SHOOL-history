@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BrowserRouter, Redirect, Route, Switch } from 'react-router-dom';
 import './App.css';
+import Footer from './footer/footer';
 import GameComponent from './game/game-comp';
 import Header from './header/header';
 import Sets from './sets/sets';
@@ -63,6 +64,7 @@ const App = () => {
             <Route path='/Statistics' render={() => <StatsMain dataCard={dataCard}/>}/>
             <Route path='/Error Game' render={() => <ErrorComponent mainFlag={mainFlag}/>} />
         </Switch>
+            <Footer />
     </BrowserRouter>
   )
 }

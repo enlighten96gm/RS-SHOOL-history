@@ -96,6 +96,10 @@
         height: 2850px;
         grid-template-columns: 1fr;
     }
+    .game__btn {
+        top: 104%;
+        left: 35%;
+    }
     .success {
         width: 400px;
         height: 300px;
