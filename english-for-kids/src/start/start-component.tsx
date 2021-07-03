@@ -44,9 +44,9 @@ const StartComp: React.FC<PropsT> = ({item, wrongWords}) => {
     const switchTwo = 'REPEAT'
     const creatStars = stars.map((item) => {
         if (item === 1) {
-            return <img src={`./images/star-win.svg`} alt="#"/>
+            return <img className={css.star} src={`./images/star-win.svg`} alt="#"/>
         } else {
-            return <img src={`./images/star.svg`} alt="#"/>
+            return <img className={css.star} src={`./images/star.svg`} alt="#"/>
         }
     })
     for (let key of Object.entries(renderArr)) {
