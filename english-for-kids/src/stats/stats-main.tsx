@@ -6,6 +6,11 @@ import css from './statsMain.module.css'
 const StatsMain: React.FC<{dataCard: DataType}> = ({dataCard}) => {
     const [rerender, setRerender] = useState(false)
     const [reverse, setReverse] = useState(true)
+    const [rus, setRus] = useState(true)
+    const [click, setClick] = useState(true)
+    const [wrong, setWrong] = useState(true)
+    const [correct, setCorrect] = useState(true)
+    let [sortFor, seSortFor] = useState('')
     const clearStorage = () => {
         window.localStorage.clear()
         setRerender(true)
@@ -39,23 +44,106 @@ const StatsMain: React.FC<{dataCard: DataType}> = ({dataCard}) => {
         rowArr.push(key)
     }
     const reverseHeandler = () => {
+      seSortFor('english')
       if (reverse === true) {
       setReverse(false)
       } else {
       setReverse(true)
       }
     }
-      if (reverse === true) {
+    const reverseRus = () => {
+      seSortFor('russian')
+      if (rus === true) {
+        setRus(false)
+        } else {
+        setRus(true)
+        }
+    }
+    const reverseClick = () => {
+      seSortFor('click')
+      if (click === true) {
+        setClick(false)
+        } else {
+          setClick(true)
+        }
+    }
+    const reverseWrong = () => {
+      seSortFor('wrong')
+      if (wrong === true) {
+        setWrong(false)
+        } else {
+        setWrong(true)
+        }
+    }
+    const reverseCorrect = () => {
+      seSortFor('correct')
+      if (correct === true) {
+        setCorrect(false)
+        } else {
+          setCorrect(true)
+        }
+    }
+
+      if (reverse === true && sortFor === 'english') {
         rowArr.sort(function(a: any, b: any) {
           if (a[0] < b[0]) return 1
           if (a[0] > b[0]) return -1
       })
-      } else {
+      } else if (reverse === false && sortFor === 'english') {
         rowArr.sort(function(a: any, b: any) {
           if (a[0] < b[0]) return -1
           if (a[0] > b[0]) return 1
       })
       }
+
+    if (rus === true && sortFor === 'russian') {
+      rowArr.sort(function(a: any, b: any) {
+        if (a[1][0] < b[1][0]) return 1
+        if (a[1][0] > b[1][0]) return -1
+    })
+    } else if (rus === false && sortFor === 'russian') {
+      rowArr.sort(function(a: any, b: any) {
+        if (a[1][0] < b[1][0]) return -1
+        if (a[1][0] > b[1][0]) return 1
+    })
+    }
+
+    if (click === true && sortFor === 'click') {
+      rowArr.sort(function(a: any, b: any) {
+        if (a[1][2].clicks < b[1][2].clicks) return 1
+        if (a[1][2].clicks > b[1][2].clicks) return -1
+    })
+    } else if (click === false && sortFor === 'click') {
+      rowArr.sort(function(a: any, b: any) {
+        if (a[1][2].clicks < b[1][2].clicks) return -1
+        if (a[1][2].clicks> b[1][2].clicks) return 1
+    })
+    }
+
+    if (wrong === true && sortFor === 'wrong') {
+      rowArr.sort(function(a: any, b: any) {
+        if (a[1][2].whong < b[1][2].whong) return 1
+        if (a[1][2].whong > b[1][2].whong) return -1
+    })
+    } else if (wrong === false && sortFor === 'wrong') {
+      rowArr.sort(function(a: any, b: any) {
+        if (a[1][2].whong < b[1][2].whong) return -1
+        if (a[1][2].whong> b[1][2].whong) return 1
+    })
+    }
+
+    if (correct === true && sortFor === 'correct') {
+      rowArr.sort(function(a: any, b: any) {
+        if (a[1][2].right < b[1][2].right) return 1
+        if (a[1][2].right > b[1][2].right) return -1
+    })
+    } else if (correct === false && sortFor === 'correct') {
+      rowArr.sort(function(a: any, b: any) {
+        if (a[1][2].right < b[1][2].right) return -1
+        if (a[1][2].right> b[1][2].right) return 1
+    })
+    }
+    
     const rederSingleRow = rowArr.map((item: any) => {
         return <SingleRow item={item}/>
     })
@@ -72,11 +160,11 @@ const StatsMain: React.FC<{dataCard: DataType}> = ({dataCard}) => {
                 <div className={css.cards}>CARDS</div>
                 <div className={css.theader}>
                     <div onClick={reverseHeandler} className={css.singleCol}>Word</div>
-                    <div className={css.singleCol}>Translation</div>
+                    <div onClick={reverseRus} className={css.singleCol}>Translation</div>
                     <div className={css.singleCol}>Category</div>
-                    <div className={css.singleCol}>Clicks</div>
-                    <div className={css.singleCol}>Wrong</div>
-                    <div className={css.singleCol}>Correct</div>
+                    <div onClick={reverseClick} className={css.singleCol}>Clicks</div>
+                    <div onClick={reverseWrong} className={css.singleCol}>Wrong</div>
+                    <div onClick={reverseCorrect} className={css.singleCol}>Correct</div>
                     <div className={css.singleCol}>% errors</div>
                 </div>
                 {rederSingleRow}

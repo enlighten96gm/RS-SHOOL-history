@@ -55,6 +55,7 @@
     grid-template-columns: repeat(7, 14.3%);
 }
 .singleCol {
+    cursor: pointer;
     text-align: center;
     color: #ff9900;
     text-shadow: black 1px 0 5px;
