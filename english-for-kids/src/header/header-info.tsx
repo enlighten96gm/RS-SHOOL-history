@@ -25,6 +25,9 @@ const HeaderInfo: React.FC<{dataCard: DataType, flagToggler: any}> = ({dataCard,
             <NavLink onClick={flagToggler} className={css.link} to='/Statistics'>
                 <div className={css.row}>Statistics</div>
             </NavLink>
+            <NavLink className={css.link} to='/Login'>
+                <div className={css.row}>Login</div>
+            </NavLink>
         </div>
     )
 }

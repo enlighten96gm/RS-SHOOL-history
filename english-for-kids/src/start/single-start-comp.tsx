@@ -22,7 +22,7 @@ const SingleStartComponent: React.FC<PropsT> = ({item, rightWord, counter, seCou
     })
     let wordsArr: any = item![1] 
     let soundArr: Array<string> = item![0]
-    console.log(wordsArr);
+    
     
     
     if (started && wordsArr[2] === rightWord[0] && noRepeat) {
