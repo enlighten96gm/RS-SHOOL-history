@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/css/main.d993dc63.chunk.css",
+    "main.js": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/main.69b21378.chunk.js",
+    "main.js.map": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/main.69b21378.chunk.js.map",
+    "runtime-main.js": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/runtime-main.de9e812d.js",
+    "runtime-main.js.map": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/runtime-main.de9e812d.js.map",
+    "static/js/2.b147078b.chunk.js": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/2.b147078b.chunk.js",
+    "static/js/2.b147078b.chunk.js.map": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/2.b147078b.chunk.js.map",
+    "static/js/3.159c3dd6.chunk.js": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/3.159c3dd6.chunk.js",
+    "static/js/3.159c3dd6.chunk.js.map": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/3.159c3dd6.chunk.js.map",
+    "index.html": "/enlighten96gm-JSFE2021Q1/english-for-kids/index.html",
+    "static/css/main.d993dc63.chunk.css.map": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/css/main.d993dc63.chunk.css.map",
+    "static/js/2.b147078b.chunk.js.LICENSE.txt": "/enlighten96gm-JSFE2021Q1/english-for-kids/static/js/2.b147078b.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.de9e812d.js",
+    "static/js/2.b147078b.chunk.js",
+    "static/css/main.d993dc63.chunk.css",
+    "static/js/main.69b21378.chunk.js"
+  ]
+}
