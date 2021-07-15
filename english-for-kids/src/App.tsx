@@ -10,6 +10,7 @@ import './App.css';
 import Footer from './footer/footer';
 import GameComponent from './game/game-comp';
 import Header from './header/header';
+import HOC from './hoc';
 import SetsApi from './login-api/Sets-api';
 import Sets from './sets/sets';
 import StartComp from './start/start-component';
@@ -130,7 +131,7 @@ const App = () => {
   
   return (
     <BrowserRouter basename={process.env.PUBLIC_URL}>
-            {admin === false ? <Header dataCard={dataCard} onClick={mainFlagHandler}/> : <AdminHeader setAdmin={setAdmin} changeColor={changeColor} adminFlag={adminFlag}/>}   
+            {admin === false ? <Header dataCard={dataCard} onClick={mainFlagHandler}/> : <AdminHeader setAdmin={setAdmin} changeColor={changeColor} adminFlag={adminFlag} correctPath={correctPath}/>}   
         <Switch>
           <Route exact path='/' render={() => <Redirect to={'/Sets'} />}/>
             <Route path='/Sets' render={() => <Sets dataCard={dataCard} mainFlag={mainFlag}/>}/>
@@ -141,6 +142,7 @@ const App = () => {
             <Route path='/Login' render={() => <Login setAdminName={setAdminName} adminName={adminName} setAdmin={setAdmin}/>}/>
             <Route path='/Register' render={() => <Registration setAdminName={setAdminName} adminName={adminName}/>}/>
             <Route path='/Categories' render={() => <AdminPanel dataCard={dataCard} adminName={adminName} rerenderHeandler={rerenderHeandler} changeColor={changeColor} setCorrectPath={setCorrectPath}/>} />
+            <Route path={'/category'} render={() => <HOC />}/>
         </Switch>
             <Footer />
     </BrowserRouter>

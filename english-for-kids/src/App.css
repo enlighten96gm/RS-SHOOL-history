@@ -42,3 +42,10 @@ body {
     /* display: none; */
     filter: blur(10px);
 }
+.lolol {
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}
