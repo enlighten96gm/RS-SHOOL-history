@@ -1,6 +1,7 @@
+import { url } from './url';
 const WordsApi = {
     postWord: async (body: any, name: any, set: any) => {
-        const response = await fetch(`http://localhost:5000/api/users/${name}/sets/${set}/game`, {
+        const response = await fetch(`${url}/api/users/${name}/sets/${set}/game`, {
             method: 'POST',
             body: JSON.stringify(body),
             headers: {
@@ -11,7 +12,7 @@ const WordsApi = {
           return data
     },
     getWords: async (name: any, set: any) => {
-        const response = await fetch(`http://localhost:5000/api/users/${name}/sets/${set}/game`, {
+        const response = await fetch(`${url}/api/users/${name}/sets/${set}/game`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'
@@ -21,7 +22,7 @@ const WordsApi = {
           return data
     },
     updateWord: async (body: any, name: any, set: any, _id: any) => {
-      const response = await fetch(`http://localhost:5000/api/users/${name}/sets/${set}/game/${_id}`, {
+      const response = await fetch(`${url}/api/users/${name}/sets/${set}/game/${_id}`, {
           method: 'PUT',
           body: JSON.stringify(body),
           headers: {
@@ -32,7 +33,7 @@ const WordsApi = {
         return data
   },
   deleteWord: async (name: any, set: any, _id: any) => {
-    const response = await fetch(`http://localhost:5000/api/users/${name}/sets/${set}/game/${_id}`, {
+    const response = await fetch(`${url}/api/users/${name}/sets/${set}/game/${_id}`, {
         method: 'DELETE',
         headers: {
           'Content-Type': 'application/json'

@@ -1,7 +1,8 @@
+import { url } from './../login-api/url';
 import { ADD_NEW_CATEGORY, ADD_NEW_WORD } from './types';
 export function createPost (name: any) {
     return async (dispatch: any) => {
-        const response = await fetch(`http://localhost:5000/api/users/${name}/sets`, {
+        const response = await fetch(`${url}/api/users/${name}/sets`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'
@@ -21,7 +22,7 @@ export function createPost (name: any) {
 }
 export function createWord (name: any, set: any) {
   return async (dispatch: any) => {
-    const response = await fetch(`http://localhost:5000/api/users/${name}/sets/${set}/game`, {
+    const response = await fetch(`${url}/api/users/${name}/sets/${set}/game`, {
             method: 'GET',
             headers: {
               'Content-Type': 'application/json'

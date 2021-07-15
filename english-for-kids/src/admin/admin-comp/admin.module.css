@@ -4,14 +4,30 @@
     padding-top: 40px;
     padding-left: 100px;
     padding-right: 100px;
+    overflow: auto;
+    height: 950px;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     gap: 20px;
 }
+@media (max-width: 2080px) {
+    .sets {
+        grid-template-columns: 1fr 1fr;
+        height: 1400px;
+        gap: 100px;
+    }
+}
+@media (max-width: 1460px) {
+    .sets {
+        grid-template-columns: 1fr;
+        height: 1400px;
+        gap: 100px;
+    }
+}
 .single {
     position: relative;
     width: 90%;
-    height: 300px;
+    height: 500px;
     margin-top: 50px;
     color: rgb(0, 0, 0);
     border-radius: 34px;
@@ -25,7 +41,7 @@
     margin-bottom: 70px;
 }
 .buttons {
-    margin-top: 40px;
+    margin-top: 200px;
     display: flex;
     flex-direction: row;
     gap: 100px;
@@ -49,7 +65,7 @@
 }
 .cross {
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 160px;
     width: 170px;
     height: 170px;
     border-radius: 50%;

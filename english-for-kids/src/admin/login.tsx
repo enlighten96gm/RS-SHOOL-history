@@ -14,9 +14,12 @@ const Login = ({setAdminName, adminName, setAdmin}: any) => {
     const dispatch = useDispatch()
 
     const adminSetUp = () => {
+        if (adminName !== login.value) {
+            alert('Please Register First')
+        }
         LoginApi.getAllLogin().then(item => {
             for (let i = 0; i < item.length; i++) {
-                if (item[i]._id === login.value) {
+                if (item[i]._id === login.value && item[i].password === password.value) {
                     setAdminName(item[i]._id)
                     setAdmin(true)
                     setTimeout(() => { history.push('/Categories') }, 500)

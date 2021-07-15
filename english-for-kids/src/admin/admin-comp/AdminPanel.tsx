@@ -67,11 +67,11 @@ const AdminPanel = ({dataCard, adminName, rerenderHeandler, changeColor, setCorr
                 ? <div onClick={changeSection} className={css.cross}>
                     <div className={css.line1}></div>
                     <div className={css.line2}></div>
-                </div> : <div className={css.buttons}>
+                 </div> 
+                : <div className={css.buttons}>
                     <div onClick={changeSection} className={css.cancel}>Cancel</div>
                     <div onClick={createCategoryHeandler} className={css.create}>Create</div>
-                    </div>}
-                
+                 </div>}
             </div>
         </div>
     )

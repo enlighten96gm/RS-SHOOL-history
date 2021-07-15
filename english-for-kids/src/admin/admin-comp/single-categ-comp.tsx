@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux'
 import { NavLink } from 'react-router-dom'
 import SetsApi from '../../login-api/Sets-api'
 import { createPost } from '../../redux/actions'
+import Sets from '../../sets/sets'
 import css from './admin.module.css'
 const SingleCategoryComp = ({item, adminName, rerenderHeandler, changeColor, setCorrectPath}: any) => {
     const dispatch = useDispatch()
@@ -39,10 +40,8 @@ const SingleCategoryComp = ({item, adminName, rerenderHeandler, changeColor, set
     
     
     const changeFullHeandler = () => {
-
         const categoryName = item[0]
         const arr: any = []
-        const categoryImage = Object.keys(item[1])
         SetsApi.getSets(adminName).then(res => {
             for (let i = 0; i < res.length; i++) {
                 if (res[i].set === categoryName) {

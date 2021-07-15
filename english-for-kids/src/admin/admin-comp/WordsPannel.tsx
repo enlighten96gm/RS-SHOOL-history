@@ -11,6 +11,7 @@ const WordsPanel = ({item, adminName}: any) => {
     const [newTranslate, setNewTranslate] =  useState('')
     const [newImage, setNewImage] = useState(null)as any
     const [newSound, setNewSound] = useState(null)as any
+    const [height, setHeight] = useState(0)
     const addNewWordheandler = () => {
         if (cardAdder === false) {
             setCardAdder(true)
