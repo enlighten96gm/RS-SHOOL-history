@@ -1,9 +1,10 @@
 const initialState = {
-    users: {}
-}
+  users: {},
+};
 
 export const UserReducer = (state = initialState, action: any) => {
-    switch (action.type) {
-        default: return state
-    }
-}
+  switch (action.type) {
+    default:
+      return state;
+  }
+};
