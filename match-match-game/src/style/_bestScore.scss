@@ -1,0 +1,91 @@
+.score {
+    position: relative;
+    z-index: 20;
+    bottom: 960px;
+    width: 100%;
+    background-color: #fc76cb;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    &__container {
+        width: 1440px;
+        height: 960px;
+        &_block {
+            height: 802px;
+            background: radial-gradient(#ff00a0, #fc76cb);
+            display: flex;
+            flex-direction: column;
+        }
+    }
+}
+.best__player {
+    margin: 10px 60px;
+    margin-top: 40px;
+    font-size: 25px;
+    color: #7a04eb;
+    text-shadow: 1px 1px 7px #7a04eb;
+}
+.player__container {
+    display: flex;
+    margin: 10px 60px;
+    width: 1030px;
+    height: 80px;
+    background: radial-gradient(#ffffff, #fc76cb);
+    box-shadow: 1px 1px 7px #ff00a0;
+    &_img {
+        position: relative;
+        margin: 0 0;
+        margin-top: 5px;
+        margin-left: 5px;
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        background: radial-gradient(#ffffff, #7a04eb);
+    }
+    &_info {
+        box-sizing: border-box;
+        position: absolute;
+        margin: 0 0;
+        margin-top: 12px;
+        margin-left: 84px;
+        color: black;
+        text-shadow: 1px 1px 7px black;
+        display: flex;
+    }
+    &_score {
+        position: absolute;
+        margin: 0 0;
+        margin-top: 30px;
+        margin-left: 880px;
+        color: black;
+        text-shadow: 1px 1px 7px black;
+        display: flex;
+    }
+}
+.player__container_info-surname {
+    margin-left: 10px;
+}
+.player__container_info-email {
+    position: relative;
+    color: black;
+    text-shadow: 1px 1px 7px black;
+    top: 45px;
+    margin: 0 0;
+}
+.player__container_score-down {
+    position: relative;
+    bottom: 8px;
+    left: 20px;
+    font-size: 30px;
+    color: #7a04eb;
+    text-shadow: 1px 1px 7px #7a04eb;
+}
+.score__upload_img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.if__score_active {
+    display: flex;
+}

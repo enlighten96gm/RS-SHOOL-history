@@ -1,0 +1,698 @@
+.game {
+    position: relative;
+    z-index: 20;
+    bottom: 960px;
+    width: 100%;
+    background-color: #fc76cb;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+// congratz 
+.congrats__button {
+    position: absolute;
+    background: radial-gradient(#000000, #1d1d1d);
+    z-index: 100;
+    top: 0px;
+    width: 100%;
+    height: 1024px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.congrats__button_inside-text {
+    position: relative;
+    bottom: 300px;
+    font-size: 55px;
+    text-shadow: 1px 1px 10px #7a04eb;
+    color: #7a04eb;
+}
+.congrats__button_inside-button {
+    position: relative;
+    display: inline-block;
+    bottom: 200px;
+    font-size: 35px;
+    font-weight: 900;
+    color: #ff00a0;
+    border: 4px solid #ff00a0;
+    text-shadow: 0 0 20px #ffffff, 
+    0 0 20px #ff00a0;
+    padding: 10px 30px;
+    background: radial-gradient(#000000, #000000);
+    border-radius: 10px;
+    cursor: pointer;
+    box-shadow: inset 0 0 0.8em 0 #ff00a0, 0 0 1em 0 #ff00a0;
+}
+.congrats__button_inside-button::before {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background: #ff00a0;
+    top: 120%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1em) rotateX(40deg) scale(1, 0.55);
+    filter: blur(1.3em);
+}
+.congrats__button_inside-text::before  {
+    pointer-events: none;
+    content: '';
+    position: absolute;
+    background: #7a04eb;
+    bottom: -70%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+
+    transform: perspective(1.5em) rotateX(50deg) translateZ(1em) scale(1, 0.55);
+    filter: blur(.6em);
+    animation: sheen linear 10s infinite alternate;
+}
+
+@keyframes sheen {
+    0% {
+        filter: blur(.8em);
+    }
+    25% {
+        filter: blur(.5em);
+    }
+    50% {
+        filter: blur(.8em);
+    }
+    75% {
+        filter: blur(.5em);
+    }
+    100% {
+        filter: blur(.8em);
+    }
+}
+.congrats__button_inside-button::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    box-shadow: 0 0 5em 0.5em #ff00a0;
+    opacity: 0;
+    transition: opacity 100ms linear;
+}
+.congrats__button_inside-button:hover {
+    background: #ff00a0;
+    color: #37193d;
+    text-shadow: none;
+}
+.congrats__button_inside-button:hover::after {
+    opacity: 1;
+}
+
+.game__container {
+    width: 1440px;
+    height: 960px;
+}
+.game__board {
+    margin-top: 40px;
+    width: 1000px;
+    height: 802px;
+    background: radial-gradient(#ff00a0, #fc76cb);
+    display: flex;
+    flex-direction: column;
+}
+.something__game {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    perspective: 500px; 
+}
+.game__board_cards {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    gap: 10px;
+    perspective: 500px; 
+}
+.game__board_cards-medium {
+    display: grid;
+    grid-template-columns: repeat(8, auto);
+    gap: 10px;
+    perspective: 500px; 
+}
+.game__board_cards-hard {
+    position: relative;
+    right: 50px;
+    display: grid;
+    grid-template-columns: repeat(10, auto);
+    gap: 10px;
+    perspective: 500px; 
+}
+.game__card {
+    position: relative;
+    width: 100px;
+    height: 120px;
+    &_face {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+        transition: transform 500ms ease-in-out;
+    }
+}
+.game__card.visible .game__card_back {
+    transform: rotateY(-180deg);
+    pointer-events: none;
+}
+.game__card.visible .game__card_front {
+    transform: rotateY(0deg);
+    pointer-events: none;
+}
+.game__card_front {
+    pointer-events: none;
+}
+.game__card.matched {
+    animation: horray 1s infinite forwards;
+    pointer-events: none;
+}
+@keyframes horray {
+    0% {
+        transform: skew(-10deg, 10deg);
+    }
+    25% {
+        transform: skew(10deg, -10deg);
+    }
+    50% {
+        transform: skew(-10deg, 10deg);
+    }
+    75% {
+        transform: skew(10deg, -10deg);
+    }
+    100% {
+        transform: skew(-10deg, 10deg);
+    }
+}
+.game__board_timer {
+    color: #7a04eb;
+    font-size: 20px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+}
+.game__card_front {
+    border: 1px solid #7a04eb;
+    transform: rotateY(180deg);
+    background-color: white;
+}
+.game__card_back {
+    border: 1px solid #7a04eb;
+    background: radial-gradient(#7a04eb, #a257e7);
+}
+.img1 {
+    background-image: url(../images/001-elephant.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img2 {
+    background-image: url(../images/002-snake.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img3 {
+    background-image: url(../images/003-hippo.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img4 {
+    background-image: url(../images/004-turtle.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img5 {
+    background-image: url(../images/005-parrot.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img6 {
+    background-image: url(../images/006-panda.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img7 {
+    background-image: url(../images/007-boar.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img8 {
+    background-image: url(../images/008-giraffe.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img9 {
+    background-image: url(../images/009-squid.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img10 {
+    background-image: url(../images/010-rhino.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img11 {
+    background-image: url(../images/011-deer.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img12 {
+    background-image: url(../images/012-stingray.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img13 {
+    background-image: url(../images/013-beetle.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img14 {
+    background-image: url(../images/014-shark.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img15 {
+    background-image: url(../images/015-walrus.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img16 {
+    background-image: url(../images/016-bat.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img17 {
+    background-image: url(../images/017-hedgehog.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img18 {
+    background-image: url(../images/018-spider.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img19 {
+    background-image: url(../images/019-ladybug.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img20 {
+    background-image: url(../images/020-dog.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img21 {
+    background-image: url(../images/021-sloth.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img22 {
+    background-image: url(../images/022-rabbit.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img23 {
+    background-image: url(../images/023-crab.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img24 {
+    background-image: url(../images/024-camel.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img25 {
+    background-image: url(../images/025-zebra.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img26 {
+    background-image: url(../images/026-beaver.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img27 {
+    background-image: url(../images/027-horse.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img28 {
+    background-image: url(../images/028-chicken.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img29 {
+    background-image: url(../images/029-fox.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img30 {
+    background-image: url(../images/030-frog.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img31 {
+    background-image: url(../images/031-platypus.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.img32 {
+    background-image: url(../images/032-whale.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion1 {
+    background-image: url(../images/question/001-amplifier.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion2 {
+    background-image: url(../images/question/002-award.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion3 {
+    background-image: url(../images/question/003-bandana.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion4 {
+    background-image: url(../images/question/004-beartrap.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion5 {
+    background-image: url(../images/question/005-butterflynet.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion6 {
+    background-image: url(../images/question/006-cage.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion7 {
+    background-image: url(../images/question/007-captaincap.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion8 {
+    background-image: url(../images/question/008-cassette.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion9 {
+    background-image: url(../images/question//009-cobweb.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion10 {
+    background-image: url(../images/question/010-computer.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion11 {
+    background-image: url(../images/question/011-DJ.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion12 {
+    background-image: url(../images/question/012-drinkcan.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion13 {
+    background-image: url(../images/question/013-drum.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion14 {
+    background-image: url(../images/question/014-earrings.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion15 {
+    background-image: url(../images/question/015-flyswatter.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion16 {
+    background-image: url(../images/question/016-gold.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion17 {
+    background-image: url(../images/question/017-goldteeth.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion18 {
+    background-image: url(../images/question/018-hat.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion19 {
+    background-image: url(../images/question/019-headphones.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion20 {
+    background-image: url(../images/question/020-hook.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion21 {
+    background-image: url(../images/question/021-hook.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion22 {
+    background-image: url(../images/question/022-ladybug.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion23 {
+    background-image: url(../images/question/023-jacket.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion24 {
+    background-image: url(../images/question/024-laptop.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion25 {
+    background-image: url(../images/question/025-mouse.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion26 {
+    background-image: url(../images/question/026-nail.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion27 {
+    background-image: url(../images/question/027-necklace.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion28 {
+    background-image: url(../images/question/028-net.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion29 {
+    background-image: url(../images/question/029-pit.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion30 {
+    background-image: url(../images/question/030-poison.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion31 {
+    background-image: url(../images/question/031-poster.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.quesyion32 {
+    background-image: url(../images/question/032-ring.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people1 {
+    background-image: url(../images/people/001-flightattendant.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people2 {
+    background-image: url(../images/people/002-freelance.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people3 {
+    background-image: url(../images/people/003-gardener.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people4 {
+    background-image: url(../images/people/004-judge.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people5 {
+    background-image: url(../images/people/005-worker.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people6 {
+    background-image: url(../images/people/006-lawyer.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people7 {
+    background-image: url(../images/people/007-magician.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people8 {
+    background-image: url(../images/people/008-maid.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people9 {
+    background-image: url(../images/people/009-manager.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people10 {
+    background-image: url(../images/people/010-mechanic.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people11 {
+    background-image: url(../images/people/011-musician.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people12 {
+    background-image: url(../images/people/012-doctor.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people13 {
+    background-image: url(../images/people/013-team.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people14 {
+    background-image: url(../images/people/014-painter.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people15 {
+    background-image: url(../images/people/015-photographer.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people16 {
+    background-image: url(../images/people/016-pilot.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people17 {
+    background-image: url(../images/people/017-plumber.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people18 {
+    background-image: url(../images/people/018-policeman.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people19 {
+    background-image: url(../images/people/019-programmer.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people20 {
+    background-image: url(../images/people/020-receptionist.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people21 {
+    background-image: url(../images/people/021-reporter.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people22 {
+    background-image: url(../images/people/022-sailor.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people23 {
+    background-image: url(../images/people/023-Salesman.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people24 {
+    background-image: url(../images/people/024-scientist.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people25 {
+    background-image: url(../images/people/025-secretary.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people26 {
+    background-image: url(../images/people/027-singer.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people27 {
+    background-image: url(../images/people/028-soldier.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people28 {
+    background-image: url(../images/people/029-student.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people29 {
+    background-image: url(../images/people/030-tailor.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people30 {
+    background-image: url(../images/people/031-teacher.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people31 {
+    background-image: url(../images/people/032-technician.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+.people32 {
+    background-image: url(../images/people/033-veterinarian.png);
+    background: cover no-repeat;
+    background-size: 100% 100%;
+}
+
+
+
+
+
+
+.if__game_active {
+    display: flex;
+}
