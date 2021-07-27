@@ -1,0 +1,123 @@
+.main {
+    position: relative;
+    z-index: 100;
+    top: 0;
+    background-color: white;
+    width: 100%;
+    height: 90px;
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 20%);
+}
+.menu {
+    position: relative;
+    top: 13px;
+    left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    transition: all .5s ease-in-out;
+}
+.menu__btn {
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(#ffffff, #84fded);
+    border-radius: 8%;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+.menu__btn::before,
+.menu__btn::after {
+    content:  '';
+    position: absolute;
+    width: 50px;
+    height: 4px;
+    background: linear-gradient(#ffffff, #10f5d6);
+    border-radius: 8%;
+    box-shadow: 0 2px 5px rgba(255, 101, 47, .2);
+    transition: all .5s ease-in-out;
+}
+.menu__btn::before {
+    transform: translateY(-16px);
+}
+.menu__btn::after {
+    transform: translateY(16px);
+}
+.menu.animate1 .menu__btn {
+    background: transparent;
+    box-shadow: none;
+}
+.menu.animate1 .menu__btn::before {
+    transform: rotate(45deg);
+}
+.menu.animate1 .menu__btn::after {
+    transform: rotate(-45deg);
+}
+.name {
+    position: absolute;
+    margin-left: 36%;
+    font-size: 70px;
+    color: #10f5c3;
+    text-shadow: #10b4f5 1px 0 3px;
+}
+.toggler {
+    position: absolute;
+    perspective: 100px;
+    left: 90%;
+    top: 30px;
+    width: 140px;
+    height: 40px;
+    border: 1px solid #00ccff;
+    border-radius: 34px;
+    background: linear-gradient(0.25turn, #ffffff, #00ccff);
+}
+.floatNav {
+    width: 15%;
+    transform: translateX(-1000%);
+    transition: 0.5s;
+}
+.floatNav2 {
+    width: 15%;
+    transform: translateX(0%);
+    transition: .5s;
+}
+@media (max-width: 1150px) {
+    .name {
+        position: absolute;
+        margin-left: 30%;
+        font-size: 60px;
+        color: #10f5c3;
+        text-shadow: #10b4f5 1px 0 3px;
+    }
+}
+@media (max-width: 1400px) {
+    .name {
+        position: absolute;
+        margin-left: 30%;
+        font-size: 50px;
+        color: #10f5c3;
+        text-shadow: #10b4f5 1px 0 3px;
+    }
+    .toggler {
+        left: 80%;
+    }
+}
+@media (max-width: 800px) {
+    .name {
+        position: absolute;
+        margin-left: 25%;
+        font-size: 30px;
+        color: #10f5c3;
+        text-shadow: #10b4f5 1px 0 3px;
+    }
+    .toggler {
+        top: 40%;
+        left: 60%;
+    }
+}
+@media (max-width: 330px) {
+    .toggler {
+        left: 55%;
+    }
+}

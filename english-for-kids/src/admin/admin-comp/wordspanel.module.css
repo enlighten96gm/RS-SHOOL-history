@@ -1,0 +1,202 @@
+.sets {
+    position: relative;
+    width: 90%;
+    height: 900px;
+    overflow: auto;
+    padding-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+.gap__words {
+    position: relative;
+    width: 90%;
+    padding-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+@media (max-width: 1750px) {
+    .gap__words {
+        grid-template-columns: 1fr 1fr;
+        /* height: 1400px; */
+        gap: 100px;
+    }
+}
+@media (max-width: 1180px) {
+    .gap__words {
+        grid-template-columns: 1fr;
+        /* height: 1400px; */
+        gap: 100px;
+    }
+}
+.single {
+    position: relative;
+    width: 90%;
+    height: 600px;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    border-radius: 34px;
+    font-size: 40px;
+    display: flex;
+    /* align-items: center; */
+    flex-direction: column;
+    border: 1px dotted black;
+}
+.single__new {
+    position: relative;
+    width: 90%;
+    height: 600px;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    border-radius: 34px;
+    font-size: 40px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    border: 1px dotted black;
+}
+.text {
+    text-align: center;
+    font-size: 50px;
+}
+.span {
+    font-size: 20px;
+    font-weight: 900;
+    margin-left: 10%;
+}
+.image__word {
+    margin-top: 10px;
+    width: 100%;
+    height: 50%;
+    border-radius: 34px;
+}
+.sound {
+    cursor: pointer;
+}
+.spansound {
+    font-size: 30px;
+    font-weight: 900;
+    margin-left: 10%;
+}
+.sound:hover {
+    text-shadow: #e210f5 1px 0 10px;
+}
+.button__change {
+    cursor: pointer;
+    margin-top: 20px;
+    margin-left: 25%;
+    width: 50%;
+    border: 1px solid black;
+    text-align: center;
+    border-radius: 34px;
+}
+.button__change:hover {
+    box-shadow: 0px 4px 20px rgb(0 0 0 / 50%);
+}
+.adder {
+    position: relative;
+    cursor: pointer;
+    margin-top: 25%;
+    width: 40%;
+    height: 40%;
+    border: 6px solid black;
+    border-radius: 50%;
+}
+.adder__lin1 {
+    position: absolute;
+    left: 49%;
+    width: 6px;
+    top: 13%;
+    height: 70%;
+    background-color: black;
+}
+.adder__lin2 {
+    position: absolute;
+    left: 49%;
+    top: 13%;
+    width: 6px;
+    height: 70%;
+    background-color: black;
+    transform: rotate(90deg);
+}
+.single__new_adder {
+    position: relative;
+    width: 90%;
+    height: 600px;
+    margin-top: 50px;
+    color: rgb(0, 0, 0);
+    border-radius: 34px;
+    font-size: 40px;
+    border: 1px dotted black;
+}
+.adder:hover {
+    transition: 1s;
+    transform: rotateY(180deg);
+}
+.word__adder {
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.input__outer {
+    position: relative;
+    margin-left: 10%;
+    width: 55%;
+    height: 50px;
+    border-radius: 34px;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+}
+.input__outer:hover {
+    box-shadow: 20px 4px 40px rgb(0 0 0 / 50%);
+}
+.sound_add_input {
+    position: absolute;
+    width: 100%;
+    height: 40px;
+    background-color: yellow;
+    border-radius: 34px;
+    opacity: 0;
+    cursor: pointer;
+}
+.input__adder {
+    margin-left: 10px;
+    width: 50%;
+    height: 30px;
+    font-size: 20px;
+    outline: none;
+}
+.sound_add, .image_add{
+    margin-top: 40px;
+    display: flex;
+    margin-left: 10px;
+}
+.buttons__adder {
+    margin-top: 20%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+.cancel__adder, .add__adder {
+    cursor: pointer;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 34px;
+}
+.cancel__adder:hover, .add__adder:hover {
+    box-shadow: 1px 4px 20px rgb(0 0 0 / 50%);
+}
+.delete__word {
+    font-size: 20px;
+    position: absolute;
+    border: 1px dotted black;
+    border-radius: 34px;
+    left: 85%;
+    top: 5%;
+    cursor: pointer;
+}
+.delete__word:hover {
+    box-shadow: 1px 4px 20px rgb(0 0 0 / 50%);
+}

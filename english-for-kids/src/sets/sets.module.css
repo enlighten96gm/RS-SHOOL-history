@@ -1,0 +1,19 @@
+.sets {
+    position: relative;
+    padding-top: 40px;
+    padding-left: 100px;
+    padding-right: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+@media (max-width: 1150px) {
+    .sets {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media (max-width: 800px) {
+    .sets {
+        grid-template-columns: 1fr;
+    }
+}

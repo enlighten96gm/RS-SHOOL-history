@@ -1,0 +1,130 @@
+.sets {
+    position: relative;
+    padding-top: 40px;
+    padding-left: 5%;
+    height: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.image {
+    margin-top: 10px;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 34px;
+    border: 2px solid white;
+}
+.star {
+    width: 3%;
+    height: 3%;
+}
+.single {
+    position: absolute;
+    cursor: pointer;
+    width: 90%;
+    height: 340px;
+    margin-top: 50px;
+    background: linear-gradient(1turn, #ffffff, #ff9100);
+    color: white;
+    text-shadow: #3b249e 1px 0 10px;
+    border-radius: 34px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+}
+.single:hover {
+    transition: 0.5s;
+    color: rgb(255, 0, 85);
+    text-shadow: #e210f5 1px 0 2px;
+    box-shadow: 10px 5px 50px #ff9900;
+}
+.game__btn {
+    position: absolute;
+    left: 72%;
+    top: 90%;
+    width: 200px;
+    height: 200px;
+    background: linear-gradient(1turn, #ffffff, #ff9100);
+    box-shadow: 10px 5px 50px #ff9100;
+    color: rgb(255, 0, 85);
+    display: flex;
+    justify-content: center;
+    font-size: 50px;
+    text-align: center;
+    transition: 1s;
+    border-radius: 10px;
+}
+.game__btn:hover {
+    cursor: pointer;
+    border-radius: 50%;
+    box-shadow: 10px 5px 50px #00ffea;
+    background: linear-gradient(1turn, #ffffff, #00ffea);
+    transition: 1s;
+}
+.text__inside {
+    position: relative;
+    top: 20%;
+}
+.success {
+    width: 1200px;
+    height: 1000px;
+    position: relative;
+    left: 25%;
+}
+.winPage {
+    text-shadow: 10px 5px 10px #ff9100;
+    color: rgb(255, 0, 85);
+    font-size: 90px;
+    position: relative;
+    left: 43%;
+}
+@media (max-width: 1500px) {
+    .success {
+        width: 800px;
+        height: 700px;
+    }
+}
+@media (max-width: 1150px) {
+    .sets {
+        height: 1450px;
+        grid-template-columns: 1fr 1fr;
+    }
+    .game__btn {
+        top: 108%;
+        left: 38%;
+    }
+    .success {
+        width: 600px;
+        height: 500px;
+    }
+}
+@media (max-width: 800px) {
+    .sets {
+        height: 2850px;
+        grid-template-columns: 1fr;
+    }
+    .game__btn {
+        top: 104%;
+        left: 35%;
+    }
+    .success {
+        width: 400px;
+        height: 300px;
+    }
+}
+@media (max-width: 400px) {
+    .sets {
+        height: 2850px;
+        grid-template-columns: 1fr;
+    }
+    .winPage {
+        font-size: 20px;
+    }
+    .success {
+        width: 200px;
+        height: 100px;
+    }
+}

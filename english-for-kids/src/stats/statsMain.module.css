@@ -1,0 +1,132 @@
+.main {
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    overflow: hidden;
+}
+.buttons {
+    position: relative;
+    margin-top: 50px;
+    left: 30%;
+    display: flex;
+    gap: 30px;
+    margin-bottom: 50px;
+}
+.repeat, .reset{
+    background: linear-gradient(1turn, #ffffff, #00ccff);
+    text-shadow: #3b249e 1px 0 10px;
+    cursor: pointer;
+    font-size: 60px;
+    border: 3px solid black;
+    border-radius: 30px;
+}
+.repeat {
+    text-align: center;
+}
+.reset {
+    text-align: center;
+}
+.repeat:hover {
+    background: linear-gradient(1turn, #ffffff, #ffd000);
+}
+.reset:hover {
+    background: linear-gradient(1turn, #ffffff, #ffd000);
+}
+.table {
+    margin: auto;
+    margin-top: 30px;
+    width: 90%;
+    height: 100%;
+    border: 3px solid black;
+}
+.cards {
+    text-align: center;
+    font-size: 60px;
+    width: 100%;
+    text-shadow: #3b249e 1px 0 10px;
+    background: linear-gradient(1turn, #ffffff, #00ccff);
+    border-bottom: 2px solid #ffd000;
+}
+.theader {
+    background: linear-gradient(1turn, #00ccff, #ffffff);
+    font-size: 60px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 14.3%);
+}
+.singleCol {
+    cursor: pointer;
+    text-align: center;
+    color: #ff9900;
+    text-shadow: black 1px 0 5px;
+}
+.gridSingle {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(7, 14.3%);
+}
+.textsingle {
+    position: relative;
+    width: 100%;
+    font-size: 3em;
+    text-align: center;
+    border-bottom: 3px solid black;
+    color: rgb(39, 35, 35);
+    text-shadow: #7979ee 1px 0 3px;
+    background: linear-gradient(0.5turn, #e47a34, #f7eab4);
+}
+.link {
+    text-decoration: none;
+}
+@media (max-width: 1670px) {
+    .theader {
+       font-size: 50px;
+    }
+}
+@media (max-width: 1400px) {
+    .theader {
+       font-size: 40px;
+    }
+    .textsingle {
+        font-size: 2em;
+    }
+}
+@media (max-width: 1300px) {
+    .theader {
+       font-size: 35px;
+    }
+    .textsingle {
+        font-size: 2em;
+    }
+    .repeat, .reset {
+        font-size: 40px;
+    }
+}
+@media (max-width: 980px) {
+    .theader {
+       font-size: 25px;
+    }
+    .textsingle {
+        font-size: 1.5em;
+    }
+    .repeat, .reset {
+        font-size: 30px;
+    }
+    .buttons {
+        flex-direction: column;
+        left: 0%;
+    }
+}
+@media (max-width: 400px) {
+    .theader {
+       font-size: 15px;
+    }
+    .textsingle {
+        font-size: 1em;
+    }
+    .repeat, .reset {
+        font-size: 15px;
+    }
+}
+
+

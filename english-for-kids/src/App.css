@@ -1,0 +1,51 @@
+body {
+    /* font-family: 'Indie Flower', cursive; */
+    font-family: 'Merriweather', serif;
+}
+.relative {
+    position: relative;
+}
+.single {
+    position: absolute;
+    cursor: pointer;
+    width: 90%;
+    height: 340px;
+    margin-top: 50px;
+    background: linear-gradient(1turn, #ffffff, #00ccff);
+    color: white;
+    text-shadow: #3b249e 1px 0 10px;
+    border-radius: 20%;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+    backface-visibility: hidden;
+    transition: transform 500ms ease-in-out;
+}
+.relative.visible .game__card_back {
+    transform: rotateY(-180deg);
+}
+.relative.visible .game__card_front {
+    transform: rotateY(0deg);
+}
+.game__card_front {
+    transform: rotateY(180deg);
+    background-color: black;
+}
+.single:hover {
+    transition: 0.5s;
+    color: rgb(255, 0, 85);
+    text-shadow: #e210f5 1px 0 2px;
+    box-shadow: 10px 5px 50px #00ccff;
+}
+.blur {
+    
+    /* display: none; */
+    filter: blur(10px);
+}
+.lolol {
+    height: 950px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+}

@@ -1,0 +1,46 @@
+.single {
+    cursor: pointer;
+    width: 90%;
+    height: 300px;
+    margin-top: 50px;
+    background: linear-gradient(1turn, #ffffff, #00ccff);
+    color: white;
+    text-shadow: #3b249e 1px 0 10px;
+    border-radius: 34px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+.gameSingle {
+    cursor: pointer;
+    width: 90%;
+    height: 300px;
+    margin-top: 50px;
+    background: linear-gradient(1turn, #ffffff, #ffa600);
+    color: white;
+    text-shadow: #3b249e 1px 0 10px;
+    border-radius: 34px;
+    font-size: 30px;
+    display: flex;
+    justify-content: center;
+}
+.image {
+    margin-top: 40px;
+    position: absolute;
+    width: 300px;
+    height: 250px;
+    border-radius: 34px;
+    border: 2px solid white;
+}
+.single:hover {
+    transition: 0.5s;
+    transform: scale(1.1);
+    color: rgb(255, 0, 85);
+    text-shadow: #e210f5 1px 0 2px;
+    box-shadow: 10px 5px 50px #00ccff;
+}
+.link {
+    position: relative;
+    text-decoration: none;
+    color: #fff;
+}
