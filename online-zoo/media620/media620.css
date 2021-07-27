@@ -1,0 +1,393 @@
+@media (max-width: 640px) {
+    .headet__main {
+        width: 640px;
+        position: fixed;
+        z-index: 1001;
+    }
+    .header__allin {
+        width: 640px;
+    }
+    .section-header {
+        padding-left: 22px;
+    }
+    .section-navigation {
+        display: none;
+    }
+    .section_theme {
+        left: 492px;
+    }
+    .baarger {
+        visibility: visible;
+        left: 580px;
+        top: 37px;
+    }
+    /* First done */
+    .watch-animal {
+        width: 640px;
+        height: 934px;
+        padding-top: 94px;
+    }
+    .watch-animal__container {
+        width: 640px;
+        height: 934px;
+    }
+    .watch-animal__text {
+        width: 599px;
+        height: 150px;
+        font-size: 64px;
+        left: 21px;
+        top: 122px;
+        line-height: 75px;
+    }
+    .watch-animal__button {
+        left: 22px;
+        top: 299px;
+    }
+    .slider1 {
+        left: -28px;
+        top: 408px;
+    }
+    .line {
+        top: 596px;
+        left: -94px;
+    }
+    .watch-animal__social {
+        top: 716px;
+        left: 20px;
+    }
+    .slider1__input {
+        top: 815px;
+        left: 187px;
+    }
+    /* Second done */
+    .how-works {
+        width: 640px;
+    }
+    .how-works__container1 {
+        width: 640px;
+        height: 883px;
+    }
+    .how-works__allin1 {
+        width: 640px;
+        height: 883px;
+    }
+    .how-works__container1_header {
+        width: 600px;
+    }
+    .how-works__container1_text {
+        width: 596px;
+    }
+    .how-works__slider {
+        width: 600px;
+        height: 323px;
+        margin-top: 62px;
+    }
+    .how-works__slider_item {
+        grid-template-columns: 600px 600px 600px 600px;
+        width: 2430px;
+        height: 323px;
+        gap: 7px
+    }
+    .how-works__slider_item1 {
+        width: 600px;
+        height: 323px;
+        margin: 0 0;
+    }
+    .how-works__slider_number1 {
+        left: 81px;
+        top: 12px;
+    }
+    .how-works__slider_number2 {
+        left: 117px;
+    }
+    .how-works__button {
+        left: 197px;
+        border-radius: 5px;
+    }
+    .how-works__allin2 {
+        width: 640px;
+        height: 870px;
+        flex-direction: column;
+    }
+    .how-works__inspire {
+        left: 2px;
+        top: -7px;
+    }
+    .how-works__inspire_text {
+        width: 282px;
+        height: 64px;
+    }
+    .how-works__mission {
+        margin-top: 18px;
+    }
+    .how-works__believe {
+        right: 0px;
+        margin-top: 63px;
+    }
+    .zoo-pets__slider-button1 {
+        display: none;
+    }
+    .zoo-pets__slider-button2 {
+        display: none;
+    }
+    .zoo-pets {
+        width: 640px;
+        height: 766px;
+    }
+    .zoo-pets__allin {
+        width: 640px;
+        height: 766px;
+        overflow: hidden;
+    }
+    .zoo-pets__header {
+        width: 639px;
+        height: 61px;
+    }
+    .zoo-pets__slider {
+        width: 598px;
+    }
+    .idiot-class {
+        position: relative;
+        left: -80px;
+    }
+    .zoo-pets__input {
+        top: 24px;
+    }
+    .zoo-pets__choose-container {
+        padding-top: 70px;
+        border-radius: 5px;
+    }
+    .pay-section {
+        width: 640px;
+        height: 1393px;
+    }
+    .pay-section__allin {
+        width: 640px;
+        height: 1393px;
+    }
+    .pay-section__header {
+        width: 500px;
+        padding-top: 106px;
+    }
+    .pay-section__text {
+        width: 528px;
+        padding-top: 24px;
+        justify-content: center;
+        text-align: center;
+    }
+    .pay-section__images {
+        flex-direction: column;
+        width: 640px;
+        height: 1007px;
+    }
+    .pay-section__images-circle1 {
+        left: 0px;
+        top: 6px;
+    }
+    .pay-section__images-circle2 {
+        left: 0px;
+        top: -27px;
+    } 
+    .pay-section__images-circle3 {
+        left: 0;
+        top: -58px;
+    }
+    .testimonials-section__slider-button1 {
+        display: none;
+    }
+    .testimonials-section__slider-button2 {
+        display: none;
+    }
+    .pay-section__button {
+        margin-top: 0px;
+        position: relative;
+        bottom: 15px;
+    }
+    .pay-section__images-arrow {
+        transform: rotate(90deg) scale(0.6);
+    }
+    .pay-section__images-arrow1 {
+        top: -42px;
+        left: 31px;
+    }
+    .pay-section__images-arrow2 {
+        top: -72px;
+        left: 31px;
+    }
+    .testimonials-section {
+        width: 640px;
+        height: 800px;
+    }
+    .testimonials-section__allin {
+        width: 640px;
+        height: 800px;
+    }
+    .testimonials-section__header {
+        width: 639px;
+        height: 64px;
+    }
+    .testimonials-section__slider {
+        width: 583px;
+        padding-top: 41px;
+    }
+    .super-idiot {
+        width: 2000px;
+        position: relative;
+        left: -203px;
+    }
+    .testimonials-section__slider-item1 {
+        width: 574px;
+    }
+    .testimonials-section__slider-item2 {
+        width: 574px;
+    }
+    .who_are-you {
+        left: -4px;
+    }
+    .who_are-you_header {
+        left: 10px;
+    }
+    .who_are-you_text {
+        width: 441px;
+    }
+    .section-map {
+        width: 640px;
+        height: 667px;
+    }
+    .section-map__allin {
+        width: 640px;
+        height: 667px;
+        overflow: hidden;
+    }
+    .section-map__header {
+        width: 640px;
+    }
+    .section-map__planet {
+        position: relative;
+        left: 20px;
+        width: 640px;
+        background-size: 599px;
+        margin-top: 50px;
+        overflow: hidden;
+        background-repeat: no-repeat;
+    }
+    .section-map__button {
+        margin-top: 0;
+        margin-bottom: 82px;
+    }
+    .card__map1 {
+        position: absolute;
+        left: 57px;
+        top: 162px;
+    }
+    .card__map2 {
+        position: absolute;
+        left: 57px;
+        top: 162px;
+    }
+    .card__map3 {
+        position: absolute;
+        left: 57px;
+        top: 162px;
+    }
+    .card__map4 {
+        position: absolute;
+        left: 57px;
+        top: 162px;
+    }
+    .section-map__planet_img1 {
+        right: 237px;
+        top: 8px;
+    }
+    .section-map__planet_img2 {
+        right: 186px;
+        bottom: 75px;
+    }
+    .section-map__planet_img3 {
+        right: 21px;
+        bottom: 110px;
+    }
+    .section-map__planet_img4 {
+        bottom: 221px;
+        left: 427px;
+    }
+    footer {
+        width: 640px;
+        height: 1068px; 
+    }
+    .footer-container {
+        width: 640px;
+        height: 1068px;
+    }
+    .footer-container__allin {
+        width: 640px;
+        height: 973px;
+        padding-top: 95px;
+        overflow: hidden;
+    }
+    .footer-container1 {
+        width: 640px;
+        height: 973px;
+        flex-direction: column;
+    }
+    .footer-container1__left {
+        width: 597px;
+        left: 0px;
+    }
+    .section-footer {
+        width: 100px;
+        margin: 0 0;
+    }
+    .section-footer__us {
+        padding-top: 126px;
+    }
+    .footer_contact__textArea {
+        width: 110%;
+    }
+    .footer_section__checkBox {
+        left: 102px;
+    }
+    .footer-section_btn {
+        left: 12px;
+        margin-top: 23px;
+    }
+    .section-footer__nav {
+        flex-direction: column;
+        bottom: 411px;
+        gap: 6px;
+        left: -1px;
+        align-items: stretch;
+        justify-content: flex-start
+    }
+    .footer-container1__right {
+        width: 466px;
+    }
+    .section-footer__nav_a {
+        margin: 0 0;
+    }
+    .footer_zoo__online {
+        margin-bottom: 45px;
+        bottom: 7px;
+    }
+    .section-footer__btn {
+        left: 227px;
+        top: -520px;
+    }
+    .footer-container2 {
+        position: relative;
+        width: 599px;
+        bottom: 130px;
+    }
+    .noora {
+        padding-top: 27px;
+    }
+    /* .section-navigation-active {
+        display: flex;
+        position: absolute;
+        justify-content: center;
+        flex-direction: column;
+        left: 517px;
+        top: 93px;
+        gap: 5px;
+    } */
+}

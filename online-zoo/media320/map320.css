@@ -1,0 +1,263 @@
+@media (max-width: 320px) {
+    .headet__main {
+        width: 320px;
+    }
+    .header__allin {
+        width: 320px;
+    }
+    .headet__main__allin {
+        width: 320px;
+    }
+    .section-header {
+        padding-left: 12px;
+    }
+    .section-navigation {
+        display: none;
+    }
+    .section_theme {
+        left: 191px;
+    }
+    .baarger {
+        left: 269px;
+    }
+    .map__section_scroll {
+        width: 320px;
+        height: 780px;
+    }
+    .map__section_scroll__allin {
+        width: 320px;
+        height: 780px;
+    }
+    .map__section-header {
+        width: 300px;
+        font-size: 22px;
+        padding-top: 18px;
+        margin-bottom: -4px;
+    }
+    .map__section-text {
+        width: 280px;
+        height: 182px;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: 400;
+    }
+    .map__section-carousel {
+        padding-top: 0px;
+        width: 300px;
+        position: relative;
+    }
+    .scroll__carousel {
+        bottom: -6px;
+        left: 21px;
+        gap: 15px;
+    }
+    .item1 {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        left: -6px;
+        bottom: 6px;
+    }
+    .item1 img {
+        width: 60px;
+        height: 60px;
+    }
+    .item2 {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        left: -58px;
+        bottom: 6px;
+    }
+    .item2 img {
+        width: 60px;
+        height: 60px;
+    }
+    .item3 {
+        width: 60px;
+        height: 60px;
+        position: relative;
+        left: -112px;
+        bottom: 7px;
+    }
+    .item3 img {
+        width: 60px;
+        height: 60px;
+    }
+    .item4 {
+        width: 60px;
+        height: 60px;
+    }
+    .item4 img {
+        width: 60px;
+        height: 60px;
+    }
+    .item5 {
+        width: 60px;
+        height: 60px;
+    }
+    .item5 img {
+        width: 60px;
+        height: 60px;
+    }
+    .item6 {
+        width: 60px;
+        height: 60px;
+    }
+    .item6 img {
+        width: 60px;
+        height: 60px;
+    }
+    .item7 {
+        width: 60px;
+        height: 60px;
+    }
+    .item7 img {
+        width: 60px;
+        height: 60px;
+    }
+    .item8 {
+        width: 60px;
+        height: 60px;
+    }
+    .item8 img {
+        width: 60px;
+        height: 60px;
+    }
+    .active__item {
+        width: 85px;
+        height: 85px;
+    }
+    .active__item img {
+        width: 75px;
+        height: 75px;
+    }
+    .arrw_slid1 {
+        right: 258px;
+        bottom: 144px;
+    }
+    .arrw_slid2 {
+        left: 274px;
+        bottom: 146px;
+    }
+    .carousel__input {
+        bottom: 21px;
+        left: 13px;
+    }
+    .map__section-location {
+        width: 280px;
+        height: 146px;
+        background-size: 107%;
+        left: -8px;
+        top: -8px;
+    }
+    .icon1 {
+        transform: scale(0.5);
+        right: 103px;
+        top: -20px;
+    }
+    .icon2 {
+        transform: scale(0.5);
+        right: 73px;
+        top: -103px;
+    }
+    .icon3 {
+        transform: scale(0.5);
+        right: -6px;
+        top: -165px;
+    }
+    .icon4 {
+        transform: scale(0.5);
+        left: 90px;
+        bottom: 284px;
+    }
+    .watch_ntm {
+        margin-top: 54px;
+    }
+
+
+
+
+    footer {
+        width: 320px;
+        height: 1100px;
+        overflow-x: hidden;
+    }
+    .footer-container {
+        width: 320px;
+        height: 1100px;
+        overflow-x: hidden;
+    }
+    .section-footer__nav {
+        bottom: 399px;
+        left: 73px;
+    }
+    .footer-container__allin {
+        width: 320px;
+        height: 1050px;
+        padding-top: 49px;
+        overflow-x: hidden;
+    }
+    .footer-container1 {
+        width: 320px;
+    }
+    .footer-container1__left {
+        width: 290px;
+        left: -5px;
+    }
+    .section-footer {
+        margin-bottom: 10px;
+    }
+    .footer_contact__textArea {
+        width: 172%;
+    }
+    .footer_section__checkBox {
+        left: 256px;
+        top: 7px;
+    }
+    .footer-section_btn {
+        left: 98px;
+        top: 3px;
+    }
+    .footer-container1__right {
+        width: 310px;
+    }
+    .footer_zoo__online {
+        left: 6px;
+        bottom: 18px;
+    }
+    .footer_zoo__adress {
+        left: 6px;
+        bottom: 29px;
+    }
+    .footer_zoo__open {
+        left: 6px;
+        bottom: 24px;
+    }
+    .section-footer__input1 input {
+        width: 295px;
+    }
+    .section-footer__input2 input {
+        width: 295px;
+    }
+    .footer_zoo__cellphone {
+        left: 3px;
+        bottom: 23px;
+    }
+    .footer_zoo__email {
+        left: 6px;
+        bottom: 22px;
+    }
+    .footer-container2 {
+        width: 300px;
+        bottom: 30px;
+    }
+    .footer__social {
+        right: 4px;
+        margin-top: -3px;
+    }
+    .section-footer__btn {
+        left: 65px;
+        top: 308px;
+    }
+}
