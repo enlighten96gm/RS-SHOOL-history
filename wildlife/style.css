@@ -1,0 +1,424 @@
+body {
+    width: 1440px;
+    margin: 0 auto;
+    padding: 0 auto;
+    background-color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+.container {
+    background-image: url(./assets/Fox.png);
+    background-color: #02160b;
+    height: 780px;
+}
+.container .header .logoHeader {
+    display: flex;
+    text-transform: uppercase;
+    padding-top: 19px;
+    height: 60px;
+}
+.container .header .logoHeader img {
+    position: relative;
+    right: 3px;
+    bottom: 0px;
+    height: 70px;
+}
+.container .header .logoMain {
+    align-self: center;
+    padding-left: 15px;
+    position: relative;
+    right: 10px;
+}
+h1 {
+    color: #fff;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 60px;
+}
+.container .header {
+    display: flex;
+    justify-content: space-between; 
+    padding-left: 120px;
+    padding-right: 120px;
+}
+
+.logoMain {
+    align-self: center;
+    padding-left: 15px;
+}
+.contacts {
+    padding-top: 24px   ;
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+}
+.contactsHeader {
+    height: 60px;
+}
+
+.contacts li a { 
+    font-size: 23px;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+}
+
+.signIn {
+    position: relative;
+    left: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-style: solid;
+    box-sizing: border-box;
+    border-width: 2px;
+    border-radius: 5px;
+    border-color: #CD6326;
+    width: 120px;
+    height: 50px;
+    margin-left: 61px; 
+    font-weight: 400;
+    cursor: pointer;
+}
+.signIn:hover {
+    background-color: #CD6326;
+}
+.signIn:active {
+    background-color: #8F5613;
+    border-color: #8F5613;
+
+}
+.Search {
+    padding-top: 8px;
+    margin-left: 61px; 
+}
+.ContactsSecond {
+    position: relative;
+    right: 2px;
+    margin-left: 61px; 
+}
+.Blog {
+    font-weight: 400;
+    position: relative;
+    right: 8px;
+    margin-left: 61px; 
+}
+.survival {
+    color: white;
+}
+/* Survival body */
+.survival {
+    font-style: inherit;
+    padding-left: 120px;
+    padding-top: 120px;
+    padding-right: 120;
+}
+
+.survival .survival-head {
+    font-weight: 400;
+    font-size: 48px;
+    letter-spacing: 2px;
+    line-height: 72px;
+    color: #CD6326;
+}
+.survival .survival-text {
+    padding-top: 51px;
+    padding-bottom: 49px;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    width: 275px;
+    height: 108px;
+}
+.survival .donate-button {
+    position: relative;
+    font-weight: 300;
+    font-size: 23px;
+    width: 160px;
+    height: 60px;
+    background-color: #CD6326;
+    justify-content: center;
+    line-height: 27px;
+    align-items: center;
+    display: flex;
+    border-radius: 5px;
+}
+.survival .donate-button:hover {
+    background-color: #E39128;
+
+}
+.survival .donate-button:active {
+    background-color: #8F5613;
+}
+
+/* articles */
+
+.articles {
+    width: 1440px;
+    height: 1368px;
+    background-color: #CCCCCC;
+    justify-content: center;
+    text-align: center;
+}
+.articles .main-articless {
+    position: relative;
+    padding-top: 120px;
+    padding-left: 558px;
+    padding-right: 558px;
+    padding-bottom: 20px;
+    font-size: 48px;
+    font-weight: 400;
+    color: #333333;
+    width: 324px;
+    height: 72px;
+}
+.articles .second-articless {
+    position: relative;
+    right: 2px;
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 400;
+    padding-left: 558px;
+    padding-right: 558px;
+    color: #666666;
+}
+.animal-images {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-gap: 60px;
+    padding-top: 120px;
+}
+
+.animal-images .lArr {
+    margin-left: 120px;
+    margin-top: 145px;
+    background-repeat: no-repeat;
+    width: 30px;
+    height: 70px;
+    background-image: url(./assets/ArrLeft.png);
+}
+.animal-images .lArr:hover {
+    cursor: pointer;
+    position: relative;
+    animation: arrow 0.5s linear 0s infinite alternate forwards running;
+}
+.animal-images .rArr:hover {
+    cursor: pointer;
+    position: relative;
+    animation: arrow 0.5s linear 0s infinite alternate forwards running;
+}
+@keyframes arrow {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(3);
+    }
+}
+.Deer {
+    font-weight: 400;
+}
+.Bird {
+    font-weight: 400;
+}
+.animal-images .Deer {
+    width: 300px;
+    height: 360px;
+    background-image: url(./assets/Deer.png);
+}
+.animal-images .Squirrel {
+    width: 300px;
+    height: 360px;
+    background-image: url(./assets/Squirrel.png);
+}
+.animal-images .Bird {
+    width: 300px;
+    height: 360px;
+    background-image: url(./assets/Bird.png);
+}
+.animal-images .rArr {
+    margin-top: 145px;
+
+    width: 30px;
+    height: 70px;
+    background-image: url(./assets/ArrRight.png);
+}
+.big-theme {
+    padding-top: 247px;
+    color: #F7F7F7;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 36px;
+    text-align: center;
+}
+.small-theme {
+    padding-top: 10px;
+    color: #F7F7F7;
+    text-align: center;
+    font-size: 17px;
+    font-weight: 400;
+    line-height: 27px;
+}
+
+.notification {
+
+    justify-content: center;
+    align-items: center;
+}
+.notification .main-notification {
+    position: relative;
+    padding-left: 457px;
+    padding-right: 457px;
+    padding-top: 239px;
+    font-weight: 400;
+    font-size: 27px;
+    width: 526px;
+    height: 41px;
+    columns: #333333;
+}
+.input-notification {
+    position: relative;
+    bottom: 10px;
+    left: 5px;
+}
+form {
+    padding-top: 61px;
+    display: inline-block;
+    position: relative;
+}
+.email {
+    position: relative;
+    top: 2px;
+    right: 5px;
+    border: none;
+    border: 1px solid #666666;
+    outline: none;
+    background-color: #CCCCCC;
+    width: 522px;
+    height: 56px;
+    font-size: 23px;
+    font-weight: 300;
+    padding-left: 15px;
+}
+.input-notification {
+    position: relative;
+    bottom: 5px;
+}
+.send {
+    border-radius: 0 5px 5px 0;
+    position: relative;
+    right: 10px;
+    top: 2px;
+    outline: none;
+    border: none;
+    width: 120px;
+    height: 60px;
+    background-color: #CD6326;
+    font-size: 23px;
+    font-weight: 300;
+    line-height: 27px;
+    color: #F7F7F7;
+    cursor: pointer;
+}
+.send:hover {
+    background-color: #E39128;
+}
+.send:active {
+    background-color: #8F5613;
+}
+.footer {
+    display: flex;
+    align-items: center;
+    
+    background-image: url(./assets/Leef.png);
+    height: 360px;
+    padding-left: 120px;
+    padding-right: 120px;
+}
+.footer .logoFooter {
+    display: flex;
+    padding-top: 150px;
+    padding-bottom: 149px;
+}
+.footer .logoFooter .logoMainFooter {
+    text-transform: uppercase;
+    padding-left: 15px;
+    width: 155px;
+    height: 60px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.logoFooter img {
+    width: 70px;
+    height: 60px;
+}
+.footer-contacts ul li a {
+    font-size: 23px;
+    font-weight: 300;
+    text-decoration: none;
+    color: white;
+    padding-left: 80px;
+    
+}
+.footer-contacts ul li {
+    list-style-type: none;
+}
+.footer-contacts ul {
+    display: flex;
+    padding-right: 80px;
+}
+
+.footer-svg ul li a {
+    justify-content: center;
+    position: relative;
+    align-items: center;
+    display: flex;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+}
+.footer-svg ul li {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    list-style-type: none;
+    width: 40px;
+    height: 40px;
+    padding-left: 27px;
+    position: relative;
+
+}
+.footer-svg ul {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    position: relative;
+}
+.Pidor {
+    padding-top: 8px;
+}
+.LearnMore {
+    position: relative;
+    left: 25px;
+}
+.AboutUs {
+    position: relative;
+    left: 14px;
+}
+.logoMainFooter {
+    position: relative;
+    right: 10px;
+}
+.logoFooter img {
+    position: relative;
+    top: 3px;
+    width: 70px;
+    height: 60px;
+}
+.footer-svg ul {
+    position: relative;
+    left: 3px;
+
+}
