@@ -1,0 +1,11 @@
+@import url(./main.css);
+@import url(./winners.css);
+body {
+    background-color: rgb(49, 49, 49);
+}
+.inactive__race {
+    display: none;
+}
+.inactive__winers {
+    display: none;
+}

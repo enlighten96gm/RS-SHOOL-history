@@ -1,0 +1,120 @@
+.button__block {
+    width: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+}
+.garage__button, .winners__button  {
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.input__block {
+    margin-top: 20px;
+}
+.first__input_block, .second__input_block {
+    display: flex;
+    margin-top: 10px;
+    gap: 7px;
+}
+.first__input_block-button, .second__input_block-button {
+    width: 100px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.buttons__block {
+    margin-top: 20px;
+    display: flex;
+    gap: 5px;
+}
+.buttons__block_1, .buttons__block_2 {
+    width: 70px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.buttons__block_3 {
+    width: 142px;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.garage__block {
+    margin-top: 80px;
+}
+.garge__inside_main {
+    color: white;
+    font-size: 25px;
+}
+.pagination {
+    padding-top: 10px;
+    font-size: 20px;
+    color: white;
+}
+.car__trace_inside {
+    display: flex;
+    gap: 10px;
+}
+.car__trace_button1, .car__trace_button2 {
+    width: 75px;
+    height: 20px;
+    margin: 5px 0;
+    text-align: center;
+    color: white;
+    border: 1px solid white;
+    cursor: pointer;
+}
+.car__trace_text {
+    margin: 5px 0;
+    color: rgb(255, 196, 0);
+}
+.car__trace_engine {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+.car__trace_engine-1 {
+    cursor: pointer;
+    border: 1px solid green;
+    font-size: 20px;
+    color: green;
+}
+.car__trace_engine-2 {
+    cursor: pointer;
+    border: 1px solid gray;
+    font-size: 20px;
+    color: gray;
+}
+.car__main {
+    position: absolute;
+    transform: translate(50px, -30px);
+    width: 60px;
+    height: 60px;
+}
+.car__main svg {
+    position: relative;
+    bottom: 12px;
+}
+.flag__main {
+    filter: invert(100%);
+    position: relative;
+    margin-right: 40px;
+    bottom: 20px;
+    float: right;
+    width: 30px;
+    height: 30px;
+    background: url(../images/flag-map-marker-1_icon-icons.com_56727.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.car__underline {
+    position: relative;
+    top: 14px;
+    width: 100%;
+    border-bottom: 3px dotted white;
+}
